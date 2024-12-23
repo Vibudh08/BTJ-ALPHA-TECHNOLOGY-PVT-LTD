@@ -1,0 +1,322 @@
+import video from "../assets/video/banner-video.mp4";
+// import shape1 from '../assets/images/about-shape1.png';
+// import shape2 from '../assets/images/about-shape2.png'
+import team from "../assets/images/Home-page/team.jpeg";
+import about from "../assets/images/Home-page/about.jpg";
+import step from "../assets/images/Home-page/step.webp";
+import about_team from "../assets/images/Home-page/about-team.webp";
+import icon1 from "../assets/images/Home-page/14.webp";
+import icon2 from "../assets/images/Home-page/19.webp";
+import icon4 from "../assets/images/Home-page/22.webp";
+import { Link } from "react-router-dom";
+import { FaRegArrowAltCircleRight } from "react-icons/fa";
+import { useState } from "react";
+import items from '../components/ServiceData'
+
+function Home() {
+const [hoveredId, setHoveredId] = useState(null);
+
+const handleMouseOver = (id) => {
+  setHoveredId(id);
+};
+
+const handleMouseOut = () => {
+  setHoveredId(null);
+};
+
+
+  return (
+    <>
+      <main className=" w-[100%]">
+        {/* Banner Section Start here */}
+
+        <div className="relative h-[715px] bg-cover bg-center overflow-hidden max-md:pt-[1000px] max-md:pb-[10px]">
+          {/* Background Video */}
+          <div className="absolute inset-0">
+            <video autoPlay loop muted className="w-full h-full object-cover">
+              <source src={video} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            {/* Dull Overlay */}
+            <div className="absolute inset-0 bg-black opacity-50"></div>
+          </div>
+
+          {/* Content */}
+          <div className="relative flex flex-col md:flex-row items-center justify-center h-full text-white">
+            <div className="text-white p-8 md:w-1/2">
+              <h2 className="text-[#fb9c24] text-lg font-semibold ">
+                GET STARTED WITH US
+              </h2>
+              <h1 className="text-5xl font-bold mt-2">
+                Grow Smarter, Not Harder
+              </h1>
+              <p className="mt-4 text-lg w-[80%]">
+                Partner with experts who ensure your business connects, the
+                right audience and thrives faster.
+              </p>
+              <Link to="contact">
+                <button className="mt-6 bg-[#fb9c24] text-black px-6 py-3 rounded-lg font-semibold flex items-center">
+                  Contact Us{" "}
+                  <FaRegArrowAltCircleRight className="ml-2 text-lg" />
+                </button>
+              </Link>
+            </div>
+            <div className="bg-white p-8 rounded-[20px] shadow-lg md:w-1/3 w-full mt-8 md:mt-0">
+              <h2 className="text-2xl font-semibold mb-6 text-black flex justify-center text-center">
+                Get A Free Consultation With Marketing Our Expert
+              </h2>
+              <form className="space-y-4 max-md:mb-[800px]">
+                <div className="flex space-x-4 text-black">
+                  <input
+                    type="text"
+                    placeholder="Name*"
+                    className="w-1/2 p-3 border rounded-lg"
+                  />
+                  <input
+                    type="email"
+                    placeholder="Email Address*"
+                    className="w-1/2 p-3 border rounded-lg"
+                  />
+                </div>
+                <div className="flex space-x-4">
+                  <input
+                    type="text"
+                    placeholder="Enter 10-digit number"
+                    className="w-1/2 p-3 border rounded-lg"
+                  />
+                  <select className="w-1/2 p-3 border rounded-lg text-gray-400">
+                    <option>Select Service</option>
+                    <option>Web Designing</option>
+                    <option>Web Development</option>
+                    <option>App Development</option>
+                    <option>Digital Marketing</option>
+                    <option>Bulk SMS</option>
+                    <option>Bulk Database</option>
+                  </select>
+                </div>
+                <textarea
+                  placeholder="Message"
+                  className="w-full p-3 border rounded-lg h-32"
+                ></textarea>
+                <button
+                  type="submit"
+                  className="w-full bg-[#fb9c24] text-black p-3 rounded-lg font-semibold flex items-center justify-center"
+                >
+                  Submit <i className="fas fa-arrow-right ml-2"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        {/* Banner Section End here  */}
+
+        {/* Who-we-are Section Start here */}
+
+        <div className="p-5 flex mt-16 ml-4 mb-10 max-lg:block max-lg:ml-0 max-lg:p-0 max-lg:justify-center">
+          <div className=" w-[50%] mr-20 max-lg:w-auto max-lg:mb-[30px] max-lg:pl-3 max-lg:flex max-lg:justify-center max-lg:mr-6">
+            {/* <img src={shape1} alt="" className="w-[96%] absolute ml-16 z-0" />
+            <img src={shape2} alt="" className="w-[96%] mt-20  absolute z-0" /> */}
+            <img
+              src={team}
+              alt=""
+              className="w-[100%] mt-5 ml-4 rounded-[20px] z-50 max-lg:mt-9"
+            />
+          </div>
+          <div className="w-[50%] ml-6 max-lg:w-[100%] max-lg:ml-0 max-lg:p-3">
+            <div>
+              <h3 className="text-[22px] text-[#ffc422] font-semibold">
+                WHO WE ARE?
+              </h3>
+              <h1 className="text-[50px] font-semibold mb-4 mt-2 leading-[4rem] max-lg:text-[40px] max-lg:leading-[3rem]">
+                Hey, We're A Team Of Creators
+              </h1>
+              <p className="leading-8 w-[95%] text-[18px] max-lg:w-[100%] max-lg:text-[16px]">
+                At T SOFT TECH Company, we’re a dynamic team of creators who
+                breathe life into technology. Passionate about innovation, we
+                design and develop tailored software and digital solutions that
+                empower businesses to flourish in the ever-evolving digital
+                landscape. With a focus on collaboration and creativity, we
+                transform ideas into impactful realities, ensuring that our
+                clients not only keep up but stand out. Let’s build something
+                extraordinary together!{" "}
+                <Link to="about">
+                  <span className="font-bold">Read More</span>
+                </Link>
+              </p>
+            </div>
+            <div className="flex gap-10 mt-5 justify-between w-[95%] max-lg:w-[100%]">
+              <div>
+                <h1 className="text-[40px] font-semibold max-md:text-[40px]">
+                  50+
+                </h1>
+                <p className="text-[18px]">Employees</p>
+              </div>
+              <div>
+                <h1 className="text-[40px] font-semibold max-md:text-[40px]">
+                  378+
+                </h1>
+                <p className="text-[18px]">Completed Projects</p>
+              </div>
+              <div>
+                <h1 className="text-[40px] font-semibold max-md:text-[40px]">
+                  326+
+                </h1>
+                <p className="text-[18px]">Trusted Customers</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Who-we-are Section End here */}
+
+        {/* Services Section Start here */}
+
+        <div className="flex flex-col text-center">
+          <h1 className="text-[3rem] font-semibold mb-4">Areas of Expertise</h1>
+          <p className="text-[1.5rem] font-medium mb-4">
+            #1 Affordable{" "}
+            <span className="text-[#fb9c24]">
+              Digital Marketing Agency In India
+            </span>{" "}
+            - An Extended Team
+          </p>
+          <p className="p-3 w-[77%] m-auto text-[1.1rem] max-md:w-[100%]">
+            SIB Infotech is a professionally managed full service web design &
+            development company in Mumbai, India. Since 2005, we have been
+            helping businesses in India, UK, Canada, Australia, and all over the
+            world to adapt and grow in an ever-changing online world by offering
+            fully functional mobile-friendly responsive, cheap Website
+            Designing, Web Development.
+          </p>
+          <div className="m-10 grid grid-cols-3 gap-0 relative max-md:grid-cols-1 max-md:m-2">
+            <div className="absolute inset-0">
+              <img
+                src={step}
+                alt="image"
+                className="w-full h-full object-cover object-center"
+              />
+              {/* Dull Overlay */}
+              <div className="absolute inset-0 bg-black opacity-50"></div>
+            </div>
+
+            {items.map((item, index) => (
+              <div
+                key={index}
+                onMouseOver={() => handleMouseOver(index)}
+                onMouseOut={handleMouseOut}
+                className="relative z-10 h-[300px] border flex flex-col justify-center text-center hover:bg-[#3979f8] brightness-[100%] text-white transition-all duration-300 ease-in "
+              >
+                <h1 className="text-[1.6rem] mb-3">{item.heading}</h1>
+                {hoveredId === index && (
+                  <>
+                    <p className="ml-5 mr-5 text-[1rem]">{item.content}</p>
+                    <button className="border w-[150px] h-[50px] self-center mt-4 text-[1.2rem] bg-white text-black hover:bg-[#3979f8] hover:text-white">
+                      Learn More
+                    </button>
+                  </>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Services Section End here */}
+
+        {/* About Section Start here */}
+
+        <div className=" relative">
+          <div className="absolute inset-0">
+            <img
+              src={about}
+              alt="image"
+              className="w-full h-full object-cover object-center"
+            />
+            {/* Dull Overlay */}
+            {/* <div className="absolute inset-0 bg-black opacity-50"></div> */}
+          </div>
+          <div className="relative flex flex-col m-10 max-lg:m-2">
+            <h1 className="self-center text-[50px] font-semibold mb-5 mt-10">
+              About Us
+            </h1>
+            <div className="flex max-lg:flex-col-reverse">
+              <div className=" w-[50%] ml-8 max-lg:w-[100%] max-lg:ml-0 max-lg:mr-1">
+                <h1 className="text-[2rem]  text-[#fb9c24] mb-4">
+                  What We Do Is
+                </h1>
+                <p className="text-[18px] mb-6">
+                  SIB Infotech is a professionally managed full service web
+                  design & development company in Mumbai, India. Since 2005 we
+                  have been helping business in India, UK, Canada, Australia and
+                  worldwide.
+                </p>
+                <div>
+                  <div className="flex border p-5 rounded-xl bg-white mb-5">
+                    <img src={icon2} alt="" className="w-[60px] h-[60px]" />
+                    <div className="ml-5 ">
+                      <h1 className="text-[20px] font-medium mb-1">
+                        Digital Marketing Services
+                      </h1>
+                      <p>
+                        We build custom software solutions that will help your
+                        business optimise operations.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex border p-5 rounded-xl bg-white mb-5">
+                    <img src={icon1} alt="" className="w-[60px] h-[60px]" />
+                    <div className="ml-5 ">
+                      <h1 className="text-[20px] font-medium mb-1">
+                        Web Designing Services
+                      </h1>
+                      <p>
+                        We build custom software solutions that will help your
+                        business optimise operations.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex border p-5 rounded-xl bg-white mb-8">
+                    <img src={icon4} alt="" className="w-[60px] h-[60px]" />
+                    <div className="ml-5 ">
+                      <h1 className="text-[20px] font-medium mb-1">
+                        Web Development Services
+                      </h1>
+                      <p>
+                        We build custom software solutions that will help your
+                        business optimise operations.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="m-5 w-[50%] max-lg:w-[100%] flex max-lg:self-center max-lg:p-4 max-lg:m-0">
+                <img
+                  src={about_team}
+                  alt="image"
+                  className="w-[auto] ml-8 mt-8 rounded-[16px] mb-10 max-lg:m-[auto]"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* About Section End here */}
+
+        {/* Marketing Section Start here */}
+
+        <div>
+          <div>
+            <h1>Digital Marketing Services</h1>
+            <p>
+              We understand that no two businesses can be the same and so is
+              there website usage and therefore they will need a different CMS
+              solution. We do Your business in your way.
+            </p>
+          </div>
+        </div>
+      </main>
+    </>
+  );
+}
+export default Home;
+
