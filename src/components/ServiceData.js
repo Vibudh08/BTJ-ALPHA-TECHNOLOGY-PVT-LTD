@@ -10,9 +10,9 @@ const items = [
       "Create user-friendly and efficient mobile apps tailored to meet your business needs with our expert development services.",
   },
   {
-    heading: "Software Development",
+    heading: "Bulk Database",
     content:
-      "We provide end-to-end software development solutions, customized to drive efficiency and innovation in your business.",
+      "A bulk database refers to a large collection of organized data, often used for mass outreach activities like email marketing, SMS campaigns, or telemarketing.",
   },
   {
     heading: "Search Engine Optimization (SEO)",
@@ -25,9 +25,9 @@ const items = [
       "Build robust and scalable websites that deliver seamless performance and exceptional user experience.",
   },
   {
-    heading: "Offshore Outsourcing",
+    heading: "Bulk SMS",
     content:
-      "Leverage cost-effective and high-quality offshore outsourcing solutions for your business growth.",
+      "Bulk SMS is a service to send large volumes of messages simultaneously for marketing, alerts, or notifications.",
   },
 ];
 export default items

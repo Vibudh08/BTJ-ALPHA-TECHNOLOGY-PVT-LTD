@@ -8,6 +8,7 @@ import SMO from "../assets/images/Home-page/SMO.jpg";
 import CM from "../assets/images/Home-page/CM.jpg";
 import PPC from "../assets/images/Home-page/PPC.jpg";
 import step from "../assets/images/Home-page/step.webp";
+import agency from "../assets/images/Home-page/agency.webp";
 import { GoArrowRight } from "react-icons/go";
 import about_team from "../assets/images/Home-page/about-team.webp";
 import icon1 from "../assets/images/Home-page/14.webp";
@@ -17,6 +18,7 @@ import { Link } from "react-router-dom";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import { useState } from "react";
 import items from "../components/ServiceData";
+import technologies from "../components/HomeDMicons";
 
 function Home() {
   const [hoveredId, setHoveredId] = useState(null);
@@ -31,13 +33,13 @@ function Home() {
 
   const [activeTab, setActiveTab] = useState("SEO");
 
-  const handleTabClick = (cityName) => {
-    setActiveTab(cityName);
+  const handleTabClick = (service) => {
+    setActiveTab(service);
   };
 
   return (
     <>
-      <main className=" w-[100%]">
+      <main className=" w-[100%]  mt-[86px]">
         {/* Banner Section Start here */}
 
         <div className="relative h-[715px] bg-cover bg-center overflow-hidden max-md:pt-[1000px] max-md:pb-[10px]">
@@ -257,9 +259,9 @@ function Home() {
                   What We Do Is
                 </h1>
                 <p className="text-[18px] mb-6">
-                  T SOFT TECH is a professionally managed full service web design
-                  & development company in Mumbai, India. Since 2005 we have
-                  been helping business in India, UK, Canada, Australia and
+                  T SOFT TECH is a professionally managed full service web
+                  design & development company in Mumbai, India. Since 2005 we
+                  have been helping business in India, UK, Canada, Australia and
                   worldwide.
                 </p>
                 <div>
@@ -500,6 +502,53 @@ function Home() {
             </div>
           </div>
         </div>
+
+        {/* Marketing Section End here */}
+
+        {/* Agency Section Start here */}
+
+        <div className="relative">
+          {/* Fixed Background */}
+          <div
+            className="absolute inset-0 bg-fixed bg-cover bg-center"
+            style={{
+              backgroundImage: `url(${agency})`,
+            }}
+          >
+            {/* Dull Overlay */}
+            <div className="absolute inset-0 bg-black opacity-70"></div>
+          </div>
+          <div className=" relative text-center text-black mb-12 pt-44 pb-10">
+            <marquee class="marq" scrollamount="18" direction="left" loop="">
+              <h1 className="text-[40px] font-bold text-white mb-3">
+                DIGITAL MARKETING & WEB DESIGNING
+              </h1>
+            </marquee>
+            <marquee class="marq" scrollamount="18" direction="right" loop="">
+              <h2 className="text-[40px] font-bold text-white">
+                WEBSITE DEVELOPMENT & SEO AGENCY
+              </h2>
+            </marquee>
+          </div>
+
+          <div className=" relative grid grid-cols-8 max-sm:grid-cols-2 max-lg:grid-cols-4 gap-4 px-10 pb-12 pt-4 ">
+            {technologies.map((tech, index) => (
+              <div
+                key={index}
+                className="flex flex-col items-center border-[0.1px] border-neutral-400 p-4 hover:bg-opacity-20 transition h-[150px]"
+              >
+                <img
+                  src={tech.icon}
+                  alt={tech.name}
+                  className="h-14 w-14 mb-5 mt-4"
+                />
+                <span className="text-white font-semibold">{tech.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Agency Section Start here */}
       </main>
     </>
   );
