@@ -3,7 +3,12 @@ import video from "../assets/video/banner-video.mp4";
 // import shape2 from '../assets/images/about-shape2.png'
 import team from "../assets/images/Home-page/team.jpeg";
 import about from "../assets/images/Home-page/about.jpg";
+import SEO from "../assets/images/Home-page/SEO.jpg";
+import SMO from "../assets/images/Home-page/SMO.jpg";
+import CM from "../assets/images/Home-page/CM.jpg";
+import PPC from "../assets/images/Home-page/PPC.jpg";
 import step from "../assets/images/Home-page/step.webp";
+import { GoArrowRight } from "react-icons/go";
 import about_team from "../assets/images/Home-page/about-team.webp";
 import icon1 from "../assets/images/Home-page/14.webp";
 import icon2 from "../assets/images/Home-page/19.webp";
@@ -11,19 +16,24 @@ import icon4 from "../assets/images/Home-page/22.webp";
 import { Link } from "react-router-dom";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import { useState } from "react";
-import items from '../components/ServiceData'
+import items from "../components/ServiceData";
 
 function Home() {
-const [hoveredId, setHoveredId] = useState(null);
+  const [hoveredId, setHoveredId] = useState(null);
 
-const handleMouseOver = (id) => {
-  setHoveredId(id);
-};
+  const handleMouseOver = (id) => {
+    setHoveredId(id);
+  };
 
-const handleMouseOut = () => {
-  setHoveredId(null);
-};
+  const handleMouseOut = () => {
+    setHoveredId(null);
+  };
 
+  const [activeTab, setActiveTab] = useState("SEO");
+
+  const handleTabClick = (cityName) => {
+    setActiveTab(cityName);
+  };
 
   return (
     <>
@@ -173,7 +183,9 @@ const handleMouseOut = () => {
         {/* Services Section Start here */}
 
         <div className="flex flex-col text-center">
-          <h1 className="text-[3rem] font-semibold mb-4">Areas of Expertise</h1>
+          <h1 className="text-[3rem] font-semibold mb-4 max-md:text-[2.8rem]">
+            Areas of Expertise
+          </h1>
           <p className="text-[1.5rem] font-medium mb-4">
             #1 Affordable{" "}
             <span className="text-[#fb9c24]">
@@ -182,7 +194,7 @@ const handleMouseOut = () => {
             - An Extended Team
           </p>
           <p className="p-3 w-[77%] m-auto text-[1.1rem] max-md:w-[100%]">
-            SIB Infotech is a professionally managed full service web design &
+            T SOFT TECH is a professionally managed full service web design &
             development company in Mumbai, India. Since 2005, we have been
             helping businesses in India, UK, Canada, Australia, and all over the
             world to adapt and grow in an ever-changing online world by offering
@@ -245,9 +257,9 @@ const handleMouseOut = () => {
                   What We Do Is
                 </h1>
                 <p className="text-[18px] mb-6">
-                  SIB Infotech is a professionally managed full service web
-                  design & development company in Mumbai, India. Since 2005 we
-                  have been helping business in India, UK, Canada, Australia and
+                  T SOFT TECH is a professionally managed full service web design
+                  & development company in Mumbai, India. Since 2005 we have
+                  been helping business in India, UK, Canada, Australia and
                   worldwide.
                 </p>
                 <div>
@@ -304,20 +316,192 @@ const handleMouseOut = () => {
 
         {/* Marketing Section Start here */}
 
-        <div>
-          <div>
-            <h1>Digital Marketing Services</h1>
-            <p>
-              We understand that no two businesses can be the same and so is
-              there website usage and therefore they will need a different CMS
-              solution. We do Your business in your way.
-            </p>
+        <div className="m-16 max-lg:m-2 ">
+          <div className="flex justify-between items-center max-lg:block ">
+            <div className="w-[70%] max-lg:w-[100%]">
+              <h1 className="text-[3rem] font-semibold mb-4 max-md:text-[2.8rem]">
+                Digital Marketing Services
+              </h1>
+              <p className="text-[1.1rem] mb-6">
+                We understand that no two businesses can be the same and so is
+                there website usage and therefore they will need a different CMS
+                solution. We do Your business in your way.
+              </p>
+            </div>
+            <button className="w-[160px] h-[60px] bg-red-600 text-white max-lg:mb-5">
+              GET A QUOTE
+            </button>
           </div>
-          <button>Get a Quote</button>
+          <hr className="h-[1.5px] bg-black" />
+          <div className="mt-10 flex max-lg:block ">
+            <div className="leading-10 ml-6 text-[20px] w-[25%] font-semibold max-lg:w-[100%] max-lg:ml-2 flex flex-col justify-start items-start mb-5  ">
+              <button onClick={() => handleTabClick("SEO")}>
+                Search Engine Optimization
+              </button>
+              <button onClick={() => handleTabClick("SMO")}>
+                Social Media Optimization
+              </button>
+              <button onClick={() => handleTabClick("CM")}>
+                Content Marketing
+              </button>
+              <button onClick={() => handleTabClick("PPC")}>
+                PPC Management Services
+              </button>
+            </div>
+
+            <div className="w-[75%] max-lg:w-[100%]  ">
+              {activeTab === "SEO" && (
+                <div className="flex max-md:block">
+                  <img
+                    src={SEO}
+                    alt=""
+                    className="w-[40%] rounded-tl-[150px] mr-8 max-md:w-[100%] max-md:mb-5"
+                  />
+                  <div className="w-[60%] max-md:w-[100%]">
+                    <h2 className="text-[2rem] font-semibold mb-3">
+                      Search Engine Optimization
+                    </h2>
+                    <h4 className="text-[1.2rem] font-semibold mb-3">
+                      T SOFT TECH SEO Services In India - Trusted By Over 1000+
+                      Companies
+                    </h4>
+                    <p className="mb-3 text text-[1.0rem] leading-6">
+                      SEO is the most efficient and effective method increase
+                      your search engine visibility and drive traffic to your
+                      website. With our SEO services we can help you get top
+                      ranking on major search engines (Google, yahoo, Bing)
+                      using our propertiory techniques developed with years of
+                      experience using white hat SEO practices and bringing an
+                      increase in organic search engine ranking.
+                    </p>
+                    <Link to={"about"}>
+                      <p className="w-[300px] inline-flex items-center text-[1.4rem] text-red-500">
+                        {" "}
+                        Learn More <GoArrowRight className="ml-1" />
+                      </p>
+                    </Link>
+                  </div>
+                </div>
+              )}
+              {activeTab === "SMO" && (
+                <div className="flex max-md:block">
+                  <img
+                    src={SMO}
+                    alt=""
+                    className="w-[40%] rounded-tl-[150px] mr-8 max-md:w-[100%] max-md:mb-5"
+                  />
+                  <div className="w-[60%] max-md:w-[100%]">
+                    <h2 className="text-[2rem] font-semibold mb-3">
+                      Social Media Optimization
+                    </h2>
+                    <h4 className="text-[1.2rem] font-semibold mb-3">
+                      Top Rated SEO Company in India
+                    </h4>
+                    <p className="mb-3 text text-[1.0rem] leading-6">
+                      Affiliate Marketing is the term used to describe a form of
+                      online advertising which consists of rewarding an
+                      affiliate for referring a visitor or rewarding a customer
+                      for performing a desired action, such as making a purchase
+                      or subscribing to a newsletter. In a way, Affiliate
+                      Marketing can be regarded as free publicity for your
+                      page—a network of related websites directing customers to
+                      purchase from yours Affiliate campaigns have the best
+                      results when they are combined with Search Engine
+                      Optimization (SEO), Pay Per Click (PPC) campaigns, email
+                      marketing support and are well-suited for travel, retail,
+                      and service industries due to their timely research
+                      process/large-volume sales.
+                    </p>
+                    <Link to={"about"}>
+                      <p className="w-[300px] inline-flex items-center text-[1.4rem] text-red-500">
+                        {" "}
+                        Learn More <GoArrowRight className="ml-1" />
+                      </p>
+                    </Link>
+                  </div>
+                </div>
+              )}
+              {activeTab === "CM" && (
+                <div className="flex max-md:block">
+                  <img
+                    src={CM}
+                    alt=""
+                    className="w-[40%] rounded-tl-[150px] mr-8 max-md:w-[100%] max-md:mb-5"
+                  />
+                  <div className="w-[60%] max-md:w-[100%]">
+                    <h2 className="text-[2rem] font-semibold mb-3">
+                      Content Marketing
+                    </h2>
+                    <h4 className="text-[1.2rem] font-semibold mb-3">
+                      Tell your Brand Story Better, Engage better with your
+                      Audience
+                    </h4>
+                    <p className="mb-3 text text-[1.0rem] leading-6">
+                      Affiliate Marketing is the term used to describe a form of
+                      online advertising which consists of rewarding an
+                      affiliate for referring a visitor or rewarding a customer
+                      for performing a desired action, such as making a purchase
+                      or subscribing to a newsletter. In a way, Affiliate
+                      Marketing can be regarded as free publicity for your
+                      page—a network of related websites directing customers to
+                      purchase from yours Affiliate campaigns have the best
+                      results when they are combined with Search Engine
+                      Optimization (SEO), Pay Per Click (PPC) campaigns, email
+                      marketing support and are well-suited for travel, retail,
+                      and service industries due to their timely research
+                      process/large-volume sales.
+                    </p>
+                    <Link to={"about"}>
+                      <p className="w-[300px] inline-flex items-center text-[1.4rem] text-red-500">
+                        {" "}
+                        Learn More <GoArrowRight className="ml-1" />
+                      </p>
+                    </Link>
+                  </div>
+                </div>
+              )}
+              {activeTab === "PPC" && (
+                <div className="flex max-md:block">
+                  <img
+                    src={PPC}
+                    alt=""
+                    className="w-[40%] rounded-tl-[150px] mr-8 max-md:w-[100%] max-md:mb-5"
+                  />
+                  <div className="w-[60%] max-md:w-[100%]">
+                    <h2 className="text-[2rem] font-semibold mb-3">
+                      PPC Management Services
+                    </h2>
+                    <h4 className="text-[1.2rem] font-semibold mb-3">
+                      T SOFT TECH is an innovative PPC management company
+                    </h4>
+                    <p className="mb-3 text text-[1.0rem] leading-6">
+                      T SOFT TECH is an innovative digital marketing, AdWords
+                      management, remarketing and PPC management company with
+                      proven track record to take your PPC campaigns to the next
+                      level and provide you with integrated, adverting and
+                      marketing solution. Pay-per-click(PPC) advertising allows
+                      you to reach your target customers searching for your
+                      products and services online by using target keywords. Pay
+                      per click represent a model of internet marketing where an
+                      advertiser run an ad and he will get charged if there will
+                      be a click on his ad. Advertiser pay a fees every time on
+                      his ad whenever he will get clicked. The most popular type
+                      of pay per click ad is search engine advertisement.
+                    </p>
+                    <Link to={"about"}>
+                      <p className="w-[300px] inline-flex items-center text-[1.4rem] text-red-500">
+                        {" "}
+                        Learn More <GoArrowRight className="ml-1" />
+                      </p>
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
         </div>
       </main>
     </>
   );
 }
 export default Home;
-
