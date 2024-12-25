@@ -14,6 +14,11 @@ import about_team from "../assets/images/Home-page/about-team.webp";
 import icon1 from "../assets/images/Home-page/14.webp";
 import icon2 from "../assets/images/Home-page/19.webp";
 import icon4 from "../assets/images/Home-page/22.webp";
+import ecommerce from "../assets/images/Home-page/ecommerce.png";
+import responsive from "../assets/images/Home-page/responsive.png";
+import settings from "../assets/images/Home-page/settings.png";
+import web from "../assets/images/Home-page/web-design.png";
+import programming from "../assets/images/Home-page/programming.webp";
 import { Link } from "react-router-dom";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import { useState } from "react";
@@ -336,7 +341,7 @@ function Home() {
           </div>
           <hr className="h-[1.5px] bg-black" />
           <div className="mt-10 flex max-lg:block ">
-            <div className="leading-10 ml-6 text-[20px] w-[25%] font-semibold max-lg:w-[100%] max-lg:ml-2 flex flex-col justify-start items-start mb-5  ">
+            <div className="leading-10 ml-6 text-[18px] w-[25%] font-semibold max-lg:w-[100%] max-lg:ml-2 flex flex-col justify-start items-start mb-5  ">
               <button onClick={() => handleTabClick("SEO")}>
                 Search Engine Optimization
               </button>
@@ -549,6 +554,103 @@ function Home() {
         </div>
 
         {/* Agency Section Start here */}
+
+        {/* Offering Section Start here */}
+
+        <div className="bg-gray-100 py-10 pt-16 max-sm:py-5 max-sm:pt-10">
+          <div className="container mx-auto px-4 flex max-lg:flex-col-reverse">
+            <div className="grid grid-cols-2 max-sm:grid-cols-1 max-lg:grid-cols-2 gap-6 w-[66%] max-lg:w-[100%] ">
+              <div className="bg-white shadow-md rounded-lg p-6 mt-5 pb-10">
+                <div className="flex  w-[100px] h-[100px] bg-zinc-100 rounded-full items-center justify-center mb-4">
+                  <img
+                    src={ecommerce}
+                    alt="Website Designing"
+                    className="h-16 w-16"
+                  />
+                </div>
+                <h3 className="text-lg font-bold text-gray-800">
+                  Website Development
+                </h3>
+                <p className="text-gray-600 mt-2">
+                  Build robust and scalable websites that deliver seamless
+                  performance and exceptional user experience.
+                </p>
+              </div>
+
+              <div className="bg-white shadow-md rounded-lg p-6">
+                <div className="flex  w-[100px] h-[100px] bg-zinc-100 rounded-full  items-center justify-center mb-4">
+                  <img
+                    src={web}
+                    alt="Custom Website Designing"
+                    className="h-16 w-16"
+                  />
+                </div>
+                <h3 className="text-lg font-bold text-gray-800">Bulk SMS</h3>
+                <p className="text-gray-600 mt-2">
+                  Bulk SMS is a service to send large volumes of messages
+                  simultaneously for marketing, alerts, or notifications.
+                </p>
+              </div>
+
+              <div className="bg-white shadow-md rounded-lg p-6 mb-5 max-md:mb-0">
+                <div className="flex  w-[100px] h-[100px] bg-zinc-100 rounded-full  items-center justify-center mb-4">
+                  <img
+                    src={responsive}
+                    alt="Responsive Website Designing"
+                    className="h-16 w-16"
+                  />
+                </div>
+                <h3 className="text-lg font-bold text-gray-800">
+                  Responsive Website Designing
+                </h3>
+                <p className="text-gray-600 mt-2">
+                  Your website is your home on the internet. The Website Design
+                  is the first and foremost area to focus on as it represents
+                  the virtual face of a company.
+                </p>
+              </div>
+
+              <div className="bg-white shadow-md rounded-lg p-6 mt-5 max-md:mt-0">
+                <div className="flex  w-[100px] h-[100px] bg-zinc-100 rounded-full  items-center justify-center mb-4">
+                  <img
+                    src={settings}
+                    alt="E-commerce Website"
+                    className="h-16 w-16"
+                  />
+                </div>
+                <h3 className="text-lg font-bold text-gray-800">
+                  Bulk Database
+                </h3>
+                <p className="text-gray-600 mt-2">
+                  A bulk database refers to a large collection of organized
+                  data, often used for mass outreach activities like email
+                  marketing, SMS campaigns, or telemarketing.
+                </p>
+              </div>
+            </div>
+
+            <div className="w-[34%] pl-10 max-lg:w-[100%] m-auto max-sm:pl-0">
+              <div className="mt-8 flex justify-center">
+                <img
+                  src={programming}
+                  alt="Website Design Illustration"
+                  className="h-96 w-auto"
+                />
+              </div>
+              <div className="text-center mb-8 ">
+                <h1 className="text-3xl font-bold text-gray-800 flex justify-start">
+                  Website Design Services
+                </h1>
+                <p className="text-gray-600 mt-4 flex text-start">
+                  We use the latest technology and design innovations to develop
+                  creative, smart & user-friendly websites to successfully
+                  connect users with brands. Empower yourself with the best
+                  website design company in India.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
     </>
   );
