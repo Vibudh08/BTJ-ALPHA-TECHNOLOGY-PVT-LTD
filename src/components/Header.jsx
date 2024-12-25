@@ -3,6 +3,7 @@ import logo from "../assets/images/logo.jpg";
 import { FaAlignJustify } from "react-icons/fa6";
 import { FiArrowRightCircle } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import { IoIosArrowDown } from "react-icons/io";
 
 function Header() {
   const [show, setShow] = useState("show");
@@ -20,7 +21,7 @@ function Header() {
           />
           <div className="max-lg:relative max-lg:bg-black">
             <div
-              className={`${show} w-full flex max-lg:flex-col max-lg:absolute  max-lg:mt-[375px] max-lg:top-1/2 max-lg:left-1/2 max-lg:transform max-lg:-translate-x-1/2 max-lg:-translate-y-1/2 max-lg:w-[250px] max-lg:bg-white max-lg:text-black z-50 max-lg:pb-10 max-lg:pl-5 max-lg:rounded-[12px] transition-all duration-300 ease-in delay-300`}
+              className={`${show} w-full flex max-lg:flex-col max-lg:absolute max-lg:mt-[375px] max-lg:top-1/2 max-lg:left-1/2 max-lg:transform max-lg:-translate-x-1/2 max-lg:-translate-y-1/2 max-lg:w-[250px] max-lg:bg-white max-lg:text-black z-50 max-lg:pb-10 max-lg:pl-5 max-lg:rounded-[12px] transition-all duration-300 ease-in delay-300`}
             >
               <ul className="flex mt-5 mr-40 text-lg gap-8 font-semibold max-lg:block transition-all duration-300 ease-in delay-300">
                 <Link to="/">
@@ -33,9 +34,39 @@ function Header() {
                     About Us
                   </li>
                 </Link>
-                <li className="max-lg:text-xl max-lg:w-40 max-lg:text-[30px] max-lg:p-4 max-lg:mb-4 hover:underline hover:underline-offset-8 hover:decoration-2 hover:decoration-[#fb9c24]">
-                  Services
-                </li>
+                <div className="relative group">
+                  <li className="relative group max-lg:text-xl max-lg:w-40 max-lg:text-[30px] max-lg:p-4 max-lg:mb-4 hover:underline hover:underline-offset-8 hover:decoration-2 hover:decoration-[#fb9c24] cursor-pointer mr-1">
+                    Services
+                    <span className="absolute mt-2 text-md transition-transform duration-500 group-hover:rotate-180 ">
+                      <IoIosArrowDown />
+                    </span>
+                  </li>
+
+                  <ul className="absolute hidden group-hover:block bg-white shadow-lg mt-2 w-[280px] rounded-[12px] opacity-0 hover:translate-y-4 transition-all duration-700 ease-in-out group-hover:opacity-100 group-hover:translate-y-4">
+                    <li className="px-4 py-4 hover:bg-gray-100 border rounded-t-[12px]">
+                      Website Designing
+                    </li>
+                    <li className="px-4 py-4 hover:bg-gray-100 border">
+                      Website Development
+                    </li>
+                    <li className="px-4 py-4 hover:bg-gray-100 border">
+                      Mobile App Development
+                    </li>
+                    <li className="px-4 py-4 hover:bg-gray-100 border">
+                      Search Engine Optimization
+                    </li>
+                    <li className="px-4 py-4 hover:bg-gray-100 border">
+                      Social Media Marketing
+                    </li>
+                    <li className="px-4 py-4 hover:bg-gray-100 border">
+                      Facebook Ads
+                    </li>
+                    <li className="px-4 py-4 hover:bg-gray-100 border rounded-b-[12px]">
+                      Google Ads
+                    </li>
+                  </ul>
+                </div>
+
                 <li className="max-lg:text-xl max-lg:w-40 max-lg:text-[30px] max-lg:p-4 max-lg:mb-4 hover:underline hover:underline-offset-8 hover:decoration-2 hover:decoration-[#fb9c24]">
                   Bulk SMS
                 </li>

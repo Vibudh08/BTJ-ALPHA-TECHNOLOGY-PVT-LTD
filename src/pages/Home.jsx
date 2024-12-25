@@ -557,7 +557,7 @@ function Home() {
 
         {/* Offering Section Start here */}
 
-        <div className="bg-gray-100 py-10 pt-16 max-sm:py-5 max-sm:pt-10">
+        <div className="bg-gray-100 py-10 pt-16 max-sm:py-5 max-sm:pt-10 pb-14">
           <div className="container mx-auto px-4 flex max-lg:flex-col-reverse">
             <div className="grid grid-cols-2 max-sm:grid-cols-1 max-lg:grid-cols-2 gap-6 w-[66%] max-lg:w-[100%] ">
               <div className="bg-white shadow-md rounded-lg p-6 mt-5 pb-10">

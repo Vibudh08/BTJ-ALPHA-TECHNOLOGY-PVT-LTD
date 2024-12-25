@@ -7,9 +7,9 @@ import { FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#191970] text-white py-8 pt-[100px]">
+    <footer className="bg-[#191970] text-white py-8 pt-[110px]">
       <div className="container mx-auto px-4">
-        <div className="flex flex-wrap justify-between mb-10">
+        <div className="flex flex-wrap justify-between mb-12">
           {/* Logo Section */}
           <div className="mb-6 w-full md:w-[50%]">
             <img src={logo} alt="" className="w-[250px] h-auto mb-6" />
@@ -27,7 +27,7 @@ const Footer = () => {
           </div>
 
           {/* Navigation Links */}
-          <div className="mb-6 w-full md:w-[25%] ">
+          <div className="mb-6 w-full md:w-[28%] mt-4">
             <h3 className="text-lg font-semibold text-[26px] mb-6">Company</h3>
             <ul className="mt-4 space-y-2 text-[20px] leading-10">
               <li className="text-[#ffffffb2] hover:text-white">Home</li>
@@ -37,7 +37,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="mb-6 w-full md:w-[25%] ">
+          <div className="mb-6 w-full md:w-[22%] mt-5">
             <h3 className="text-lg font-semibold text-[26px] mb-6">Support</h3>
             <ul className="mt-4 space-y-2 text-[20px] leading-10">
               <li className="text-[#ffffffb2] hover:text-white">Contact Us</li>
