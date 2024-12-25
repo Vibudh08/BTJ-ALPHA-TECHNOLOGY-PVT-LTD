@@ -1,5 +1,5 @@
 import { useState } from "react";
-import logo from "../assets/images/Home-page/logo.jpg";
+import logo from "../assets/images/logo.jpg";
 import { FaAlignJustify } from "react-icons/fa6";
 import { FiArrowRightCircle } from "react-icons/fi";
 import { Link } from "react-router-dom";
