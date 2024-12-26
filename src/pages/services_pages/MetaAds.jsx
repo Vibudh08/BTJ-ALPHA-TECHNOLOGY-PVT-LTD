@@ -1,8 +1,49 @@
 import React from "react";
 import metabg from "../../assets/images/meta-ads/hero/metabg.png";
 import meta from "../../assets/images/meta-ads/hero/meta.png";
+import lead from "../../assets/images/meta-ads/lead.webp";
+import trends from "../../assets/images/meta-ads/trends.webp";
+import partner from "../../assets/images/meta-ads/partner.webp";
 
 function MetaAds() {
+   const cards = [
+     {
+       icon: "🔍",
+       title: "Meta Certified Experts",
+       description:
+         "Already have a Meta Ads account? We’ll dive deep into your current strategy and provide a detailed report, pinpointing areas where we can help you maximize your results on Facebook & Instagram.",
+     },
+     {
+       icon: "💵",
+       title: "Fair Pricing",
+       description:
+         "We believe in transparency with pricing. With our fixed fee model, you’ll know exactly what you’re paying for, based on your account performance or your specific goals.",
+     },
+     {
+       icon: "🤝",
+       title: "Flexible Agreements",
+       description:
+         "We offer flexibility in how we work together, starting with month-to-month options. Our goal is to exceed your expectations and build a lasting partnership with you.",
+     },
+     {
+       icon: "📋",
+       title: "Meta Ads Audit",
+       description:
+         "Our team is fully certified in Meta Ads, and we provide ongoing training to keep up with platform changes. We’re committed to ensuring your campaigns succeed with the latest insights and strategies.",
+     },
+     {
+       icon: "👥",
+       title: "2x Meta Certified Campaign Managers",
+       description:
+         "Every Meta Ads account we manage is supported by two certified experts. You’ll have dedicated access to our team, offering the support of a full-scale digital marketing department.",
+     },
+     {
+       icon: "📈",
+       title: "Detailed Reporting",
+       description:
+         "We believe in the power of clear reporting to track success. We provide regular updates on the performance of your Facebook campaigns, so you’re always informed about the progress of your account.",
+     },
+   ];
   return (
     <main>
       {/* Banner Section Start Here */}
@@ -135,7 +176,92 @@ function MetaAds() {
 
       {/* Banner Section End Here */}
 
-      
+      {/* Who-we-are Section Start Here */}
+
+      <section className="partners flex flex-wrap items-center bg-black text-white py-10 px-5 mb-8 max-lg:flex-col-reverse">
+        {/* Text Content */}
+        <div className="text-content flex-1 mr-8 ml-8 mt-5 w-[55%] max-lg:w-[100%] max-lg:mx-2">
+          <h2 className="text-orange-500 uppercase mb-2 text-2xl">
+            Who We Are
+          </h2>
+          <h1 className="text-[2.9rem] font-semibold leading-tight mb-8 w-[100%]">
+            Your Trusted Partner in Digital Transformation
+          </h1>
+          <p className="text-[1.2rem] mb-8 w-[95%]">
+            We're here to guide you through the ever-changing digital landscape,
+            helping you achieve unparalleled growth and success.
+          </p>
+
+          <div className=" flex flex-wrap w-[95%] max-lg:flex-col max-lg:w-[100%]">
+            {/* Features */}
+            <div className="features flex flex-col gap-5 mb-5 w-[50%] max-lg:w-[100%]">
+              <div className="feature flex items-center gap-4 mb-5">
+                <img
+                  src={lead}
+                  alt="Industry Insights Icon"
+                  className="w-20 h-20 mr-1"
+                />
+                <p className="text-2xl font-semibold mr-5">
+                  Industry Insights & Trends
+                </p>
+              </div>
+              <div className="feature flex items-center gap-4">
+                <img src={trends} alt="Focus Icon" className="w-20 h-20 mr-2" />
+                <p className="text-2xl font-semibold mr-5">
+                  Focus on Core Business Activities
+                </p>
+              </div>
+            </div>
+
+            {/* Details */}
+            <ul className="details list-none pl-0 space-y-4 w-[50%] max-lg:w-[100%]">
+              {[
+                "Detailed Market & Category Insight",
+                "People insight to reach the right audience",
+                "Strategic media planning & growth strategy",
+                "Robust execution methodology",
+                "Detailed insight & reporting",
+              ].map((detail, index) => (
+                <li key={index} className="flex text-lg w-[88%] leading-6 ml-5">
+                  <span className="text-orange-500 text-2xl mr-2">↗</span>
+                  {detail}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* Image Content */}
+        <div className="image-content flex-1 w-[45%] mr-4 max-lg:w-[100%] ">
+          <img
+            src={partner}
+            alt="Team Presentation"
+            className="w-full rounded-xl "
+          />
+        </div>
+      </section>
+
+      {/* Who-we-are Section End Here */}
+
+      {/* Cards Section Start Here */}
+      <section className="cards-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 p-10 mb-8">
+        {cards.map((card, index) => (
+          <div
+            key={index}
+            className="card bg-white rounded-lg shadow-lg border p-5 text-center"
+          >
+            <div className="icon text-3xl mb-3 text-red-500">{card.icon}</div>
+            <h3 className="text-xl font-semibold text-gray-800 mb-2">
+              {card.title}
+            </h3>
+            <p className="text-gray-600 text-base leading-relaxed">
+              {card.description}
+            </p>
+          </div>
+        ))}
+      </section>
+
+      {/* Cards Section End Here */}
     </main>
   );
 }
