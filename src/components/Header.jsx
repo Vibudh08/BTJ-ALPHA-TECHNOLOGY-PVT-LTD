@@ -35,14 +35,16 @@ function Header() {
                   </li>
                 </Link>
                 <div className="relative group">
-                  <li className="relative group max-lg:text-xl max-lg:w-40 max-lg:text-[30px] max-lg:p-4 max-lg:mb-4 hover:underline hover:underline-offset-8 hover:decoration-2 hover:decoration-[#fb9c24] cursor-pointer mr-1">
-                    Services
-                    <span className="absolute mt-2 text-md transition-transform duration-500 group-hover:rotate-180 ">
-                      <IoIosArrowDown />
-                    </span>
-                  </li>
+                  <Link to="services">
+                    <li className="relative group max-lg:text-xl max-lg:w-40 max-lg:text-[30px] max-lg:p-4 max-lg:mb-4 hover:underline hover:underline-offset-8 hover:decoration-2 hover:decoration-[#fb9c24] cursor-pointer mr-1 max-md:mb-0">
+                      Services
+                      <span className="absolute mt-2 text-md transition-transform duration-500 group-hover:rotate-180 ">
+                        <IoIosArrowDown />
+                      </span>
+                    </li>
+                  </Link>
 
-                  <ul className="absolute hidden group-hover:block bg-white shadow-lg mt-2 w-[280px] rounded-[12px] opacity-0 hover:translate-y-4 transition-all duration-700 ease-in-out group-hover:opacity-100 group-hover:translate-y-4">
+                  <ul className="absolute hidden group-hover:block bg-white shadow-lg mt-2 max-md:mt-0 w-[280px] rounded-[12px] opacity-0 hover:translate-y-4 transition-all duration-700 ease-in-out group-hover:opacity-100 group-hover:translate-y-4 z-50">
                     <li className="px-4 py-4 hover:bg-gray-100 border rounded-t-[12px]">
                       Website Designing
                     </li>
@@ -58,9 +60,11 @@ function Header() {
                     <li className="px-4 py-4 hover:bg-gray-100 border">
                       Social Media Marketing
                     </li>
-                    <li className="px-4 py-4 hover:bg-gray-100 border">
-                      Facebook Ads
-                    </li>
+                    <Link to="meta-ads">
+                      <li className="px-4 py-4 hover:bg-gray-100 border">
+                        Facebook Ads
+                      </li>
+                    </Link>
                     <li className="px-4 py-4 hover:bg-gray-100 border rounded-b-[12px]">
                       Google Ads
                     </li>
@@ -85,7 +89,7 @@ function Header() {
               <Link to="contact">
                 <button className="w-[170px] mr-7 mb-2 font-bold mt-2 border-solid border-orange-500 border pl-5 pr-9 h-14 rounded-2xl text-1xl">
                   Get In Touch
-                  <span className="absolute mt-1 ml-2 text-xl">
+                  <span className="absolute mt-1 ml-2 text-xl z-0">
                     <FiArrowRightCircle />
                   </span>
                 </button>

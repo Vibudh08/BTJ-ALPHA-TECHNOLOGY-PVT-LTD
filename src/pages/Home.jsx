@@ -651,6 +651,8 @@ function Home() {
             </div>
           </div>
         </div>
+
+        {/* Offering Section End here */}
       </main>
     </>
   );
