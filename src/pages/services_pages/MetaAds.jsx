@@ -4,46 +4,9 @@ import meta from "../../assets/images/meta-ads/hero/meta.png";
 import lead from "../../assets/images/meta-ads/lead.webp";
 import trends from "../../assets/images/meta-ads/trends.webp";
 import partner from "../../assets/images/meta-ads/partner.webp";
+import { workItems, cards, progressItems } from "../../components/MetaAdsData";
 
 function MetaAds() {
-   const cards = [
-     {
-       icon: "🔍",
-       title: "Meta Certified Experts",
-       description:
-         "Already have a Meta Ads account? We’ll dive deep into your current strategy and provide a detailed report, pinpointing areas where we can help you maximize your results on Facebook & Instagram.",
-     },
-     {
-       icon: "💵",
-       title: "Fair Pricing",
-       description:
-         "We believe in transparency with pricing. With our fixed fee model, you’ll know exactly what you’re paying for, based on your account performance or your specific goals.",
-     },
-     {
-       icon: "🤝",
-       title: "Flexible Agreements",
-       description:
-         "We offer flexibility in how we work together, starting with month-to-month options. Our goal is to exceed your expectations and build a lasting partnership with you.",
-     },
-     {
-       icon: "📋",
-       title: "Meta Ads Audit",
-       description:
-         "Our team is fully certified in Meta Ads, and we provide ongoing training to keep up with platform changes. We’re committed to ensuring your campaigns succeed with the latest insights and strategies.",
-     },
-     {
-       icon: "👥",
-       title: "2x Meta Certified Campaign Managers",
-       description:
-         "Every Meta Ads account we manage is supported by two certified experts. You’ll have dedicated access to our team, offering the support of a full-scale digital marketing department.",
-     },
-     {
-       icon: "📈",
-       title: "Detailed Reporting",
-       description:
-         "We believe in the power of clear reporting to track success. We provide regular updates on the performance of your Facebook campaigns, so you’re always informed about the progress of your account.",
-     },
-   ];
   return (
     <main>
       {/* Banner Section Start Here */}
@@ -244,6 +207,7 @@ function MetaAds() {
       {/* Who-we-are Section End Here */}
 
       {/* Cards Section Start Here */}
+
       <section className="cards-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 p-10 mb-8">
         {cards.map((card, index) => (
           <div
@@ -262,6 +226,76 @@ function MetaAds() {
       </section>
 
       {/* Cards Section End Here */}
+
+      {/* Commitment Section Start Here */}
+
+      <section className="commitment flex flex-col lg:flex-row justify-between items-start bg-black text-white px-10 py-12 my-8">
+        {/* Left Section */}
+        <div className="left-section flex-1 lg:pr-10">
+          <h4 className="text-[#fd9e1c] font-semibold text-2xl uppercase mb-3 mt-5">
+            Why Choose Us
+          </h4>
+          <h1 className="text-5xl maxlg:text-5xl font-semibold mb-7 leading-tight">
+            Commitment, Quality, & Results
+          </h1>
+          <p className="text-xl font-semibold mb-4">
+            We’re passionate about driving your business performance through
+            smart strategies.
+          </p>
+          <p className="text-xl">
+            "Using data to create personalized, seamless experiences that lead
+            to meaningful business growth."
+          </p>
+        </div>
+
+        {/* Right Section */}
+        <div className="right-section flex-1 mt-12 max-lg:mt-0 ">
+          {progressItems.map((item, index) => (
+            <div key={index} className="progress-item mb-8">
+              <p className="text-base mb-4 ">{item.text}</p>
+              <div className="flex items-center">
+                <div className="progress-bar w-full bg-white h-1 rounded overflow-hidden">
+                  <div
+                    className="progress bg-[#fd9e1c] h-full rounded-l"
+                    style={{ width: `${item.percentage}%` }}
+                  ></div>
+                </div>
+                <span className="percentage text-sm ml-2">
+                  {item.percentage}%
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Commitment Section End Here */}
+
+      {/* work section start here */}
+
+      <section className="work text-center py-10 px-5">
+        <h1 className="text-5xl font-semibold text-blue-500 mb-7">
+          We work for
+        </h1>
+        <p className="text-lg text-gray-600 mb-10">
+          Do you have a website in mind? Then, we're here for you! We work
+          around the clock to transform your ideas into reality.
+        </p>
+        <div className="grid grid-cols-6 gap-5 justify-items-center max-md:grid-cols-2">
+          {workItems.map((item, index) => (
+            <div key={index} className="text-center mb-6">
+              <img
+                src={item.src}
+                alt={item.alt}
+                className="w-36 h-36 mb-5 rounded-lg"
+              />
+              <p className="text-sm font-bold text-gray-800">{item.title}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* work section end here */}
     </main>
   );
 }
