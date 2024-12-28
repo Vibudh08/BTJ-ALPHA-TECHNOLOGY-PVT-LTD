@@ -4,7 +4,9 @@ import meta from "../../assets/images/meta-ads/hero/meta.png";
 import lead from "../../assets/images/meta-ads/lead.webp";
 import trends from "../../assets/images/meta-ads/trends.webp";
 import partner from "../../assets/images/meta-ads/partner.webp";
+import dedicated from "../../assets/images/meta-ads/dedicated.webp";
 import { workItems, cards, progressItems } from "../../components/MetaAdsData";
+import { Link } from "react-router-dom";
 
 function MetaAds() {
   return (
@@ -242,17 +244,17 @@ function MetaAds() {
             We’re passionate about driving your business performance through
             smart strategies.
           </p>
-          <p className="text-xl">
+          <p className="text-xl max-lg:mb-10">
             "Using data to create personalized, seamless experiences that lead
             to meaningful business growth."
           </p>
         </div>
 
         {/* Right Section */}
-        <div className="right-section flex-1 mt-12 max-lg:mt-0 ">
+        <div className="right-section flex-1 mt-12 max-lg:mt-0 max-lg:w-[100%]">
           {progressItems.map((item, index) => (
             <div key={index} className="progress-item mb-8">
-              <p className="text-base mb-4 ">{item.text}</p>
+              <p className="text-base mb-2 ">{item.text}</p>
               <div className="flex items-center">
                 <div className="progress-bar w-full bg-white h-1 rounded overflow-hidden">
                   <div
@@ -296,6 +298,44 @@ function MetaAds() {
       </section>
 
       {/* work section end here */}
+
+      <section className="dedicated-team flex flex-col items-center justify-around p-5 gap-8 max-w-7xl mx-auto mb-12 w-[80%] max-lg:w-[100%] max-lg:p-5">
+        <h1 className="text-5xl font-semibold text-center mb-6">
+          Hire us as your dedicated team
+        </h1>
+        <div className="whole-content flex flex-col md:flex-row items-center max-lg:block max-lg:m-auto">
+          <div className="team-image mb-5 md:mb-0 md:mr-10 w-[45%] max-lg:w-[100%] ">
+            <img
+              src={dedicated}
+              alt="Team working"
+              className="w-auto rounded-lg shadow-md max-lg:mb-8"
+            />
+          </div>
+          <div className="team-content max-w-2xl w-[55%] max-lg:w-[100%]">
+            <p className="text-[2rem] text-blue-600 mb-6 leading-10">
+              We'll deploy a skilled team to build your product.
+            </p>
+            <ul className="list-none mb-5">
+              <li className="text-xl mb-3 flex items-start">
+                <span>•</span>
+                <span className="ml-2">Time-centric pricing.</span>
+              </li>
+              <li className="text-xl mb-6 flex items-start">
+                <span>•</span>
+                <span className="ml-2">
+                  Works best for freelancers, business consultants, and agencies
+                  with already set processes.
+                </span>
+              </li>
+            </ul>
+            <Link to="about">
+              <button className="know-more-btn bg-black text-white py-2 px-4 rounded-md hover:bg-gray-800 transition duration-300">
+                Know More →
+              </button>
+            </Link>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
