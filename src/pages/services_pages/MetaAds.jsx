@@ -305,6 +305,8 @@ function MetaAds() {
 
       {/* work section end here */}
 
+      {/* dedicated section start here */}
+
       <section className="dedicated-team flex flex-col items-center justify-around p-5 gap-8 max-w-7xl mx-auto mb-12 w-[80%] max-lg:w-[100%] max-lg:p-5">
         <h1 className="text-5xl font-semibold text-center mb-6">
           Hire us as your dedicated team
@@ -342,6 +344,10 @@ function MetaAds() {
           </div>
         </div>
       </section>
+
+      {/* dedicated section end here */}
+
+      {/* services section start here */}
 
       <section className="services text-center p-10 bg-black text-white mb-10">
         <h1 className="text-[2.8rem] font-semibold mb-5">
@@ -453,6 +459,10 @@ function MetaAds() {
         </div>
       </section>
 
+      {/* services section end here */}
+
+      {/* three-boxes section start here */}
+
       <section className="pt-10 pb-16 ">
         <div className="grid w-[70%] grid-cols-3 m-auto gap-4 max-lg:grid-cols-1">
           <div className="border h-[310px] rounded-xl bg-[#0073bf] transition-transform duration-300 ease-linear hover:scale-105">
@@ -486,6 +496,8 @@ function MetaAds() {
           </div>
         </div>
       </section>
+
+      {/* three-boxes section end here */}
     </main>
   );
 }

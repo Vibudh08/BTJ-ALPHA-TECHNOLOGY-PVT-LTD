@@ -65,9 +65,11 @@ function Header() {
                         Facebook Ads
                       </li>
                     </Link>
-                    <li className="px-4 py-4 hover:bg-gray-100 border rounded-b-[12px]">
-                      Google Ads
-                    </li>
+                    <Link to="google-ads">
+                      <li className="px-4 py-4 hover:bg-gray-100 border rounded-b-[12px]">
+                        Google Ads
+                      </li>
+                    </Link>
                   </ul>
                 </div>
 

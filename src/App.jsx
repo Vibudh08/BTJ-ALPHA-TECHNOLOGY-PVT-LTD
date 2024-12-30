@@ -7,6 +7,7 @@ import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 import Services from "./pages/Services";
 import MetaAds from "./pages/services_pages/MetaAds";
+import GoogleAds from "./pages/services_pages/GoogleAds";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="contact" element={<Contact/>}/>
           <Route path="services" element={<Services/>}/>
           <Route path="meta-ads" element={<MetaAds/>}/>
+          <Route path="google-ads" element={<GoogleAds/>}/>
         </Routes>
         <Footer/>
       </BrowserRouter>
