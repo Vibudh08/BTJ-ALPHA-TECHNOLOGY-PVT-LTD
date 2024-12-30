@@ -1,4 +1,33 @@
+import { useState } from "react";
+import n2 from "../../assets/images/google-ads/n2.svg";
+import rect from "../../assets/images/google-ads/rect.webp";
+
+
 function GoogleAds() {
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const toggleAccordion = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+  const accordionData = [
+    {
+      header: "For Lead Generation",
+      body: "Google Ads are a powerful tool for generating high-quality leads. Search Ads work best for connecting with users actively searching for your services. You can also leverage YouTube Search Ads and Dynamic Search Ads for additional reach and engagement.",
+    },
+    {
+      header: "For eCommerce Sites",
+      body: "For eCommerce businesses, Shopping Ads (now part of Performance Max) are highly effective. These campaigns use Google’s smart bidding and automation to optimize your ads, helping you drive more sales with less effort.",
+    },
+    {
+      header: "For Mobile App Promotion",
+      body: "Have a mobile app on Android or iOS? Universal App Campaigns are your go-to solution. These ads help you boost app installations and increase user engagement. They are cost-effective and deliver measurable results.",
+    },
+    {
+      header: "For YouTube Video Ads",
+      body: "If growing your YouTube channel is a priority, Video Ads can help you increase views, build your subscriber base, and boost brand awareness. With multiple ad formats available, you can customize campaigns based on your goals, budget, and target audience.",
+    },
+  ];
+
   return (
     <main className="bg-gradient-to-b from-[#f7f0ff] to-[#ffffff]">
       {/* agency section start here */}
@@ -117,7 +146,95 @@ function GoogleAds() {
       </section>
 
       {/* search section end here */}
+
+      {/* management section start here */}
+
+      <section className="flex items-center justify-between p-10 bg-gradient-to-r from-blue-900 to-blue-600 text-white  max-lg:flex-col  max-lg:m-auto">
+        {/* Left Image Column */}
+        <div className="flex-1 text-center  ">
+          <img
+            src={n2}
+            alt="Google Ads"
+            className="h-auto rounded-md ml-14 max-lg:ml-0 max-lg:pr-16"
+          />
+        </div>
+
+        {/* Right Content Column */}
+        <div className="flex-1 pl-5">
+          <h2 className="text-2xl mb-5 leading-snug">
+            Your Google Ads management team will:
+          </h2>
+          <div className="flex justify-between gap-5 max-lg:flex-col">
+            {/* First Column of List */}
+            <ul className="list-none space-y-2">
+              <li>✅ Research your industry</li>
+              <li>✅ Plan your campaign</li>
+              <li>✅ Write your ad copy</li>
+              <li>✅ Design your conversion-optimized landing pages</li>
+            </ul>
+            {/* Second Column of List */}
+            <ul className="list-none space-y-2">
+              <li>✅ Setup and launch your campaign</li>
+              <li>✅ Proactively adjust your bids</li>
+              <li>✅ Track your conversions</li>
+              <li>✅ Report on your campaign performance</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* management section end here */}
+
+      {/* accordion section start here */}
+
+      <section className="flex flex-wrap items-center justify-center gap-8 p-6 py-20 bg-gray-100">
+        {/* Left Content */}
+        <div className="flex-1 min-w-[300px] max-w-[600px]">
+          <h2 className="text-5xl font-[650] text-gray-800 mb-8 leading-snug">
+            What Type of Google Ads is Right for You?
+          </h2>
+          <p className="text-gray-600 mb-6 text-lg">
+            Your goals matter! Use Search Ads to connect with people actively
+            searching, Display Ads to boost brand visibility, Video Ads to
+            captivate with engaging content, and Shopping Ads to showcase your
+            products directly to shoppers.
+          </p>
+          <div className="bg-white border border-gray-300 rounded-md">
+            {accordionData.map((item, index) => (
+              <div key={index} className="border-b last:border-none ">
+                <div
+                  className="flex justify-between items-center px-4 py-3 cursor-pointer hover:bg-gray-100"
+                  onClick={() => toggleAccordion(index)}
+                >
+                  <span className="font-semibold text-gray-800 text-lg">
+                    {item.header}
+                  </span>
+                  <span className="text-gray-500">
+                    {activeIndex === index ? "−" : "+"}
+                  </span>
+                </div>
+                {activeIndex === index && (
+                  <div className="px-4 py-3 bg-gray-50">
+                    <p className="text-gray-600 text-sm">{item.body}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Right Image */}
+        <div className="flex-1 min-w-[350px] max-w-[500px] text-center">
+          <img
+            src={rect}
+            alt="Google Ads Services"
+            className="w-full rounded-lg mt-4 ml-8"
+          />
+        </div>
+      </section>
+
+      {/* accordion section end here */}
     </main>
   );
 }
-export default GoogleAds
+export default GoogleAds;
