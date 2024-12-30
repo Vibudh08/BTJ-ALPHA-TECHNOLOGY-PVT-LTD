@@ -5,6 +5,12 @@ import lead from "../../assets/images/meta-ads/lead.webp";
 import trends from "../../assets/images/meta-ads/trends.webp";
 import partner from "../../assets/images/meta-ads/partner.webp";
 import dedicated from "../../assets/images/meta-ads/dedicated.webp";
+import audience from "../../assets/images/meta-ads/audience.webp";
+import growth from "../../assets/images/meta-ads/growth.webp";
+import target from "../../assets/images/meta-ads/target.webp";
+import arrow from "../../assets/images/meta-ads/arrow.webp";
+import marketing from "../../assets/images/meta-ads/marketing.webp";
+import Strategy from "../../assets/images/meta-ads/Strategy.webp";
 import { workItems, cards, progressItems } from "../../components/MetaAdsData";
 import { Link } from "react-router-dom";
 
@@ -333,6 +339,150 @@ function MetaAds() {
                 Know More →
               </button>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="services text-center p-10 bg-black text-white mb-10">
+        <h1 className="text-[2.8rem] font-semibold mb-5">
+          Our Meta Ads Services
+        </h1>
+        <p className="text-lg text-gray-300 mb-10">
+          Harness the full spectrum of advertising opportunities within the Meta
+          ecosystem. Dive deep into the various facets of Meta advertising,
+          tailored to engage, resonate, and deliver.
+        </p>
+        <div className="services-container flex flex-wrap justify-center gap-10 ">
+          <div className="service-card bg-[#1c438d] rounded-lg p-5 w-[350px] shadow-lg text-left transition-transform duration-300 ease-linear hover:translate-y-[-10px]">
+            <img
+              src={audience}
+              alt="Campaign Icon"
+              className="w-48 h-48 mx-auto mb-4"
+            />
+            <h3 className="text-3xl font-semibold mb-5 mt-3">
+              Campaign Strategy & Execution
+            </h3>
+            <p className="text-sm mb-4">
+              Crafting campaigns that don’t just get seen, but get results.
+              Every ad is a message, and we ensure yours is clear, compelling,
+              and targeted.
+            </p>
+            <ul className="list-none space-y-2 mt-5">
+              <li>
+                <b>Campaign Strategy & Execution:</b> Tailored strategies built
+                around your unique goals.
+              </li>
+              <li>
+                <b>Ad Creative Design:</b> Stunning visuals paired with
+                compelling narratives.
+              </li>
+              <li>
+                <b>Performance Tracking & Reporting:</b> Real-time insights to
+                stay ahead of the curve.
+              </li>
+            </ul>
+          </div>
+
+          <div className="service-card bg-[#1c438d] rounded-lg p-5 w-[350px] shadow-lg text-left transition-transform duration-300 ease-linear hover:translate-y-[-10px]">
+            <img
+              src={growth}
+              alt="Content Icon"
+              className="w-48 h-48 mx-auto mb-4"
+            />
+            <h3 className="text-3xl font-semibold mb-5 mt-3">
+              Content & Creative Optimization
+            </h3>
+            <p className="text-sm mb-4">
+              We dive deep into analytics to refine, finesse, and elevate your
+              campaigns.
+            </p>
+            <ul className="list-none space-y-2 mt-5">
+              <li>
+                <b>Ad Creative A/B Testing:</b> Determine the most effective
+                visuals and messages.
+              </li>
+              <li>
+                <b>Multimedia Content Guidance:</b> Leverage visuals, videos,
+                and interactive elements for deeper engagement.
+              </li>
+              <li>
+                <b>Ad Copywriting & Refinement:</b> Words that inspire action
+                and build brand loyalty.
+              </li>
+            </ul>
+          </div>
+
+          <div className="service-card bg-[#1c438d] rounded-lg p-5 w-[350px] shadow-lg text-left transition-transform duration-300 ease-linear hover:translate-y-[-10px]">
+            <img
+              src={target}
+              alt="Targeting Icon"
+              className="w-48 h-48 mx-auto mb-4"
+            />
+            <h3 className="text-3xl font-semibold mb-5 mt-3">
+              Advanced Targeting & Retargeting
+            </h3>
+            <p className="text-sm mb-4">
+              Ensuring your ads reach the people who matter most. From fresh
+              faces to familiar ones, maximize every interaction.
+            </p>
+            <ul className="list-none space-y-2 mt-5">
+              <li>
+                <b>Audience Segmentation:</b> Precise targeting based on
+                behavior, interests, and more.
+              </li>
+              <li>
+                <b>Dynamic Retargeting:</b> Reconnect with potential customers
+                using data-driven strategies.
+              </li>
+              <li>
+                <b>Lookalike Audience Creation:</b> Expand your reach to
+                potential customers similar to your best ones.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="cta-buttons flex justify-center gap-5 mt-10">
+          <Link to="contact">
+            <button className="contact-btn bg-orange-500 text-white py-2 px-6 rounded-md text-lg hover:opacity-90 transition">
+              Contact Us
+            </button>
+          </Link>
+          <button className="audit-btn bg-teal-500 text-white py-2 px-6 rounded-md text-lg hover:opacity-90 transition">
+            Get a Free Audit
+          </button>
+        </div>
+      </section>
+
+      <section className="pt-10 pb-16 ">
+        <div className="grid w-[70%] grid-cols-3 m-auto gap-4 max-lg:grid-cols-1">
+          <div className="border h-[310px] rounded-xl bg-[#0073bf] transition-transform duration-300 ease-linear hover:scale-105">
+            <img src={arrow} alt="" className="w-40 h-40 mx-auto mb-2 mt-4" />
+            <p className="px-7 flex text-center text-[18px] text-white max-xl:text-[16px] ">
+              Improved Target Audience, Increased Brand Awareness, And Targeted
+              Drip Funnel Strategies: a Killer ROI
+            </p>
+          </div>
+          <div className="border h-[310px] rounded-xl bg-[#0073bf] transition-transform duration-300 ease-linear hover:scale-105">
+            <img
+              src={marketing}
+              alt=""
+              className="w-40 h-40 mx-auto mb-2 mt-4"
+            />
+            <p className="px-7 flex text-center text-[18px] text-white max-xl:text-[16px] ">
+              Out-of-the-box Strategies, Compelling Ad Copy, High-Quality Ads,
+              and Landing Pages: Skyrocket Conversions
+            </p>
+          </div>
+          <div className="border h-[310px] rounded-xl bg-[#0073bf] transition-transform duration-300 ease-linear hover:scale-105">
+            <img
+              src={Strategy}
+              alt=""
+              className="w-40 h-40 mx-auto mb-2 mt-4"
+            />
+            <p className="px-7 flex text-center text-[18px] text-white max-xl:text-[16px] ">
+              A/B Testing, Data-based Optimization, Tracking and Reporting:
+              Scalable Growth and Profits
+            </p>
           </div>
         </div>
       </section>
