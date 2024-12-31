@@ -1,7 +1,14 @@
 import { useState } from "react";
 import n2 from "../../assets/images/google-ads/n2.svg";
 import rect from "../../assets/images/google-ads/rect.webp";
-
+import education from '../../assets/images/google-ads/icons/education.webp';
+import food from '../../assets/images/google-ads/icons/food.webp';
+import healthcare from '../../assets/images/google-ads/icons/healthcare.webp';
+import hospitality from '../../assets/images/google-ads/icons/hospitality.webp';
+import hotel from '../../assets/images/google-ads/icons/hotel.webp';
+import real from '../../assets/images/google-ads/icons/real-estate.webp';
+import retail from '../../assets/images/google-ads/icons/retail.webp';
+import travel from '../../assets/images/google-ads/icons/travel.webp';
 
 function GoogleAds() {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -187,10 +194,10 @@ function GoogleAds() {
 
       {/* accordion section start here */}
 
-      <section className="flex flex-wrap items-center justify-center gap-8 p-6 py-20 bg-gray-100">
+      <section className="flex flex-wrap items-center justify-center gap-8 p-6 py-20">
         {/* Left Content */}
         <div className="flex-1 min-w-[300px] max-w-[600px]">
-          <h2 className="text-5xl font-[650] text-gray-800 mb-8 leading-snug">
+          <h2 className="text-5xl max-lg:text-3xl font-[650] text-gray-800 mb-8 leading-snug">
             What Type of Google Ads is Right for You?
           </h2>
           <p className="text-gray-600 mb-6 text-lg">
@@ -228,12 +235,90 @@ function GoogleAds() {
           <img
             src={rect}
             alt="Google Ads Services"
-            className="w-full rounded-lg mt-4 ml-8"
+            className="w-full rounded-lg mt-4 ml-8 max-lg:ml-0"
           />
         </div>
       </section>
 
       {/* accordion section end here */}
+
+      {/* industries section start here */}
+
+      <section className="max-w-screen-xl mx-auto px-4 py-10 text-center mb-10">
+        {/* Heading */}
+        <h2 className="text-3xl lg:text-5xl font-semibold text-gray-800 mb-12">
+          Industries We Serve
+        </h2>
+
+        {/* Industries Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 mb-12 ">
+          {[
+            {
+              img: real,
+              title: "Real Estate",
+            },
+            {
+              img: healthcare,
+              title: "Healthcare",
+            },
+            {
+              img: food,
+              title: "Food and Beverages",
+            },
+            {
+              img: hospitality,
+              title: "Hospitality",
+            },
+            {
+              img: retail,
+              title: "Retail",
+            },
+            {
+              img: travel,
+              title: "Travel",
+            },
+            {
+              img: education,
+              title: "Education and Learning",
+            },
+            {
+              img: hotel,
+              title: "Hotel",
+            },
+          ].map((industry, index) => (
+            <div
+              key={index}
+              className="bg-white border border-gray-300 rounded-lg p-6 shadow-md hover:shadow-lg transition-transform duration-300 transform hover:-translate-y-2"
+            >
+              <img
+                src={industry.img}
+                alt={industry.title}
+                className="w-20 h-20 mx-auto mb-4"
+              />
+              <h3 className="text-lg font-medium text-gray-700">
+                {industry.title}
+              </h3>
+            </div>
+          ))}
+        </div>
+
+        {/* Call-to-Action Section */}
+        <div className="bg-blue-600 text-white p-6 rounded-lg flex flex-col lg:flex-row  items-center gap-4 mx-8">
+          <p className="text-lg lg:text-xl font-semibold flex-grow flex">
+            Ads That Propel Your Growth to New Heights
+          </p>
+          <div className="flex gap-4">
+            <button className="bg-white text-blue-600 font-semibold px-6 py-2 rounded-md hover:bg-gray-200 transition">
+              Call Now
+            </button>
+            <button className="bg-white text-blue-600 font-semibold px-6 py-2 rounded-md hover:bg-gray-200 transition">
+              Connect With Us
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* industries section end here */}
     </main>
   );
 }
