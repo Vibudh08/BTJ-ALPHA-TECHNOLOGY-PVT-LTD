@@ -1,14 +1,22 @@
 import { useState } from "react";
 import n2 from "../../assets/images/google-ads/n2.svg";
 import rect from "../../assets/images/google-ads/rect.webp";
-import education from '../../assets/images/google-ads/icons/education.webp';
-import food from '../../assets/images/google-ads/icons/food.webp';
-import healthcare from '../../assets/images/google-ads/icons/healthcare.webp';
-import hospitality from '../../assets/images/google-ads/icons/hospitality.webp';
-import hotel from '../../assets/images/google-ads/icons/hotel.webp';
-import real from '../../assets/images/google-ads/icons/real-estate.webp';
-import retail from '../../assets/images/google-ads/icons/retail.webp';
-import travel from '../../assets/images/google-ads/icons/travel.webp';
+import education from "../../assets/images/google-ads/icons/education.webp";
+import food from "../../assets/images/google-ads/icons/food.webp";
+import healthcare from "../../assets/images/google-ads/icons/healthcare.webp";
+import hospitality from "../../assets/images/google-ads/icons/hospitality.webp";
+import hotel from "../../assets/images/google-ads/icons/hotel.webp";
+import real from "../../assets/images/google-ads/icons/real-estate.webp";
+import retail from "../../assets/images/google-ads/icons/retail.webp";
+import travel from "../../assets/images/google-ads/icons/travel.webp";
+import first from "../../assets/images/google-ads/1.webp";
+import second from "../../assets/images/google-ads/2.webp";
+import third from "../../assets/images/google-ads/3.webp";
+import flexibility from "../../assets/images/google-ads/flexibility.webp";
+import laptop from "../../assets/images/google-ads/laptop.webp";
+import laptop2 from "../../assets/images/google-ads/laptop2.webp";
+import google from "../../assets/images/google-ads/google.webp";
+import { Link } from "react-router-dom";
 
 function GoogleAds() {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -39,7 +47,7 @@ function GoogleAds() {
     <main className="bg-gradient-to-b from-[#f7f0ff] to-[#ffffff]">
       {/* agency section start here */}
 
-      <section className="flex flex-col lg:flex-row justify-between items-center px-4 lg:px-16 py-12 max-w-screen-xl mx-auto pt-44 pb-28 ">
+      <section className="flex flex-col lg:flex-row justify-between items-center px-4 lg:px-16 py-12 max-w-screen-xl mx-auto pt-44 pb-20 ">
         {/* Content Section */}
         <div className="max-w-full  text-center lg:text-left w-[40%] max-lg:w-[90%] ">
           <h1 className="text-5xl max-lg:text-5xl font-bold leading-[3.6rem] mb-8 text-black ">
@@ -308,17 +316,199 @@ function GoogleAds() {
             Ads That Propel Your Growth to New Heights
           </p>
           <div className="flex gap-4">
-            <button className="bg-white text-blue-600 font-semibold px-6 py-2 rounded-md hover:bg-gray-200 transition">
-              Call Now
-            </button>
-            <button className="bg-white text-blue-600 font-semibold px-6 py-2 rounded-md hover:bg-gray-200 transition">
-              Connect With Us
-            </button>
+            <Link to="contact">
+              <button className="bg-white text-blue-600 font-semibold px-6 py-2 rounded-md hover:bg-gray-200 transition">
+                Connect With Us
+              </button>
+            </Link>
           </div>
         </div>
       </section>
 
       {/* industries section end here */}
+
+      <section className="business bg-black text-white p-5 border border-black">
+        <h1 className="title text-center text-4xl mb-14 mt-6 font-semibold">
+          Where Does Your Business Stand Right Now?
+        </h1>
+        <div className="cards flex justify-center gap-5 flex-wrap mb-10">
+          <div className="card bg-[#1a2a48] rounded-lg w-80 p-5 shadow-lg transition-transform duration-300 transform hover:scale-105">
+            <h3 className="text-center text-2xl font-semibold mb-4">
+              No Google Ads
+            </h3>
+            <img
+              src={third}
+              alt="No Google Ads"
+              className="w-full rounded-lg mb-4"
+            />
+            <p>
+              <span className="font-bold">Low Business:</span> Still relying on
+              just networks and other channels?
+            </p>
+          </div>
+
+          <div className="card bg-[#1a2a48] rounded-lg w-80 p-5 shadow-lg transition-transform duration-300 transform hover:scale-105">
+            <h3 className="text-center text-2xl font-semibold mb-4">
+              Weak Google Ads Strategy
+            </h3>
+            <img
+              src={first}
+              alt="Weak Google Ads"
+              className="w-full rounded-lg mb-4"
+            />
+            <p>
+              <span className="font-bold">Money Drain:</span> Don't let an
+              ineffective strategy drain your budget.
+            </p>
+          </div>
+
+          <div className="card bg-[#1a2a48] rounded-lg w-80 p-5 shadow-lg transition-transform duration-300 transform hover:scale-105">
+            <h3 className="text-center text-2xl font-semibold mb-4">
+              Strong Google Ads Strategy
+            </h3>
+            <img
+              src={second}
+              alt="Strong Google Ads"
+              className="w-full rounded-lg mb-4"
+            />
+            <p>
+              <span className="font-bold">Fast Track Your Business:</span>{" "}
+              Optimize your journey with our expert strategy.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="flexibility w-full flex flex-wrap justify-center items-center p-5 bg-black shadow-lg text-white">
+        <h1 className="text-center text-4xl uppercase mb-10 text-cyan-500 shadow-md shadow-cyan-500">
+          Flexibility Sets Us Apart: Explore Our Agency's "Flexi-Fast Offer"
+        </h1>
+        <div className="content-flex flex w-full flex-wrap max-md:flex-col">
+          {/* Image Section */}
+          <div className="image-section flex-1 text-center">
+            <img
+              src={flexibility}
+              alt="Business Strategy Chess Image"
+              className="w-[500px] max-w-full rounded-lg mx-auto"
+            />
+          </div>
+          {/* Content Section */}
+          <div className="content-section flex-1 p-5">
+            <ul className="list-none m-0 p-0">
+              <li className="flex items-center mb-4 p-3 border border-cyan-500 rounded-full bg-white/10">
+                <span className="text-cyan-500 mr-2">▶</span>
+                <span className="text-md">Powerful Google Ads Strategy</span>
+              </li>
+              <li className="flex items-center mb-4 p-3 border border-cyan-500 rounded-full bg-white/10">
+                <span className="text-cyan-500 mr-2">▶</span>
+                <span className="text-md">
+                  Achieve results in just 3 months
+                </span>
+              </li>
+              <li className="flex items-center mb-4 p-3 border border-cyan-500 rounded-full bg-white/10">
+                <span className="text-cyan-500 mr-2">▶</span>
+                <span className="text-md">
+                  Zero retainer fees; retain us based on performance
+                </span>
+              </li>
+              <li className="flex items-center mb-4 p-3 border border-cyan-500 rounded-full bg-white/10">
+                <span className="text-cyan-500 mr-2">▶</span>
+                <span className="text-md">
+                  No binding contracts, stop services anytime
+                </span>
+              </li>
+              <li className="flex items-center mb-4 p-3 border border-cyan-500 rounded-full bg-white/10">
+                <span className="text-cyan-500 mr-2">▶</span>
+                <span className="text-md">
+                  Fixed Fee for Ad spends up to 10 Lac INR
+                </span>
+              </li>
+              <li className="flex items-center mb-4 p-3 border border-cyan-500 rounded-full bg-white/10">
+                <span className="text-cyan-500 mr-2">▶</span>
+                <span className="text-md">Bi-weekly meetings</span>
+              </li>
+              <li className="flex items-center mb-4 p-3 border border-cyan-500 rounded-full bg-white/10">
+                <span className="text-cyan-500 mr-2">▶</span>
+                <span className="text-md">Creative Advertising Ideas</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="max-w-screen-xl mx-auto px-4 mb-8 py-8">
+        {/* Heading */}
+        <h1 className="text-3xl lg:text-4xl font-bold text-center mt-10">
+          The Numbers Speak: Our Success Story
+        </h1>
+        <div className="text-center text-gray-600 mt-2 mb-10">
+          A glimpse into our experience, clientele, and performance metrics.
+        </div>
+        <div className="w-12 h-1 bg-blue-500 mx-auto mb-8"></div>
+
+        {/* Grid Section */}
+        <div className="grid grid-cols-3 gap-6 max-sm:grid-cols-2">
+          {/* Card 1 */}
+          <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <img
+              src={laptop}
+              alt="Laptop showing analytics charts"
+              className="w-full h-auto"
+            />
+          </div>
+
+          {/* Card 2 */}
+          <div className="bg-teal-500 text-white text-center flex items-center justify-center rounded-lg shadow-md p-6">
+            <div>
+              <span className="text-4xl font-bold ">115%</span>
+              <br />
+              <span className="text-lg font-medium ">
+                INCREASE IN PPC ENGAGEMENT
+              </span>
+            </div>
+          </div>
+
+          {/* Card 3 */}
+          <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <img
+              src={laptop2}
+              alt="Laptop showing performance metrics"
+              className="w-full h-auto"
+            />
+          </div>
+
+          {/* Card 4 */}
+          <div className="bg-blue-500 text-white text-center flex items-center justify-center rounded-lg shadow-md p-6">
+            <div>
+              <span className="text-4xl font-bold">225%</span>
+              <br />
+              <span className="text-lg font-medium">
+                INCREASE IN PPC CONVERSIONS
+              </span>
+            </div>
+          </div>
+
+          {/* Card 5 */}
+          <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <img
+              src={google}
+              alt="Two business people shaking hands with Google Partner logo"
+              className="w-full h-auto"
+            />
+          </div>
+
+          {/* Card 6 */}
+          <div className="bg-yellow-500 text-white text-center flex items-center justify-center rounded-lg shadow-md p-6">
+            <div>
+              <span className="text-4xl font-bold">78%</span>
+              <br />
+              <span className="text-lg font-medium">
+                DECREASE IN PPC AD SPEND
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
