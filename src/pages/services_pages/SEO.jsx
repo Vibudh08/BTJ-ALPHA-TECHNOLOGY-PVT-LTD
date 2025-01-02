@@ -85,7 +85,7 @@ function SEO() {
       <section className="max-w-7xl mx-auto my-12 py-5 px-4">
         {/* Section Title */}
         <div className="text-center mb-8">
-          <h1 className="text-2xl lg:text-3xl font-bold mb-6">
+          <h1 className="text-2xl lg:text-4xl font-bold mb-6">
             Why Does Your Business Need{" "}
             <span className="text-orange-500">SEO Services in Delhi</span>
           </h1>
@@ -160,7 +160,7 @@ function SEO() {
         </div>
       </section>
 
-      {/* Banner section end here */}
+      {/* Business section end here */}
     </main>
   );
 }

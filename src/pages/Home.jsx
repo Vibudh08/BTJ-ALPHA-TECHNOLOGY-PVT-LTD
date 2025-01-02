@@ -1,6 +1,4 @@
 import video from "../assets/video/banner-video.mp4";
-// import shape1 from '../assets/images/about-shape1.png';
-// import shape2 from '../assets/images/about-shape2.png'
 import team from "../assets/images/Home-page/team.jpeg";
 import about from "../assets/images/Home-page/about.jpg";
 import SEO from "../assets/images/Home-page/SEO.jpg";
@@ -22,8 +20,8 @@ import programming from "../assets/images/Home-page/programming.webp";
 import { Link } from "react-router-dom";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import { useState } from "react";
-import items from "../components/ServiceData";
-import technologies from "../components/HomeDMicons";
+import {items} from "../components/HomePageData";
+import {technologies} from "../components/HomePageData";
 
 function Home() {
   const [hoveredId, setHoveredId] = useState(null);
@@ -132,8 +130,6 @@ function Home() {
 
         <div className="p-5 flex mt-16 ml-4 mb-10 max-lg:block max-lg:ml-0 max-lg:p-0 max-lg:justify-center">
           <div className=" w-[50%] mr-20 max-lg:w-auto max-lg:mb-[30px] max-lg:pl-3 max-lg:flex max-lg:justify-center max-lg:mr-6">
-            {/* <img src={shape1} alt="" className="w-[96%] absolute ml-16 z-0" />
-            <img src={shape2} alt="" className="w-[96%] mt-20  absolute z-0" /> */}
             <img
               src={team}
               alt=""
