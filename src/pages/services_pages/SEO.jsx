@@ -1,4 +1,11 @@
 import hero from "../../assets/images/seo/Hero.webp";
+import main from "../../assets/images/seo/main section.webp";
+import app from "../../assets/images/seo/expect-icons/app.webp";
+import brand from "../../assets/images/seo/expect-icons/brand-awareness.webp";
+import revenue from "../../assets/images/seo/expect-icons/increase-revenue.webp";
+import traffic from "../../assets/images/seo/expect-icons/more traffic.webp";
+import smm from "../../assets/images/seo/expect-icons/smm.webp";
+import user from "../../assets/images/seo/expect-icons/user-engagement.webp";
 
 function SEO() {
   return (
@@ -7,7 +14,7 @@ function SEO() {
 
       <section className="flex flex-wrap justify-between items-center p-10 bg-[#0A192F] text-white mt-20 pt-20 pb-28">
         {/* Content Section */}
-        <div className="w-full lg:w-[45%] mb-8 lg:mb-0 px-4">
+        <div className="w-full lg:w-[45%] mb-8 lg:mb-0 px-4 ml-5 max-lg:ml-0">
           <p className="text-lg lg:text-xl mb-6 ">
             Rated Excellent by 195+ Happy Customers
           </p>
@@ -161,6 +168,63 @@ function SEO() {
       </section>
 
       {/* Business section end here */}
+
+      {/* Expect section start here */}
+
+      <section className="bg-[#0073bf] flex flex-col lg:flex-row text-center lg:text-left py-12 px-4">
+        {/* Image Section */}
+        <div className="flex justify-center items-center w-full  lg:w-[50%]">
+          <img
+            src={main}
+            alt="Laptop Graphic"
+            className="w-80 lg:w-[500px] lg:mb-0"
+          />
+        </div>
+
+        {/* Content Section */}
+        <div className="flex flex-col items-center lg:items-start w-full lg:w-[50%] ml-5 mt-5 max-lg:ml-0">
+          <h1 className="text-white text-2xl lg:text-[2.6rem] font-semibold leading-tight mb-8 max-w-xl flex text-center">
+            What Can You Expect From T SOFTTECH SEO Services!
+          </h1>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-xl ml-5 max-lg:ml-0">
+            {/* Benefits */}
+            <div className="flex flex-col items-center text-center text-white">
+              <img
+                src={traffic}
+                alt="Traffic Icon"
+                className="w-20 h-20 mb-4"
+              />
+              <p className="text-lg">More Traffic</p>
+            </div>
+            <div className="flex flex-col items-center text-center text-white">
+              <img
+                src={revenue}
+                alt="Revenue Icon"
+                className="w-20 h-20 mb-4"
+              />
+              <p className="text-lg">Increase Revenue</p>
+            </div>
+            <div className="flex flex-col items-center text-center text-white">
+              <img src={user} alt="Brand Icon" className="w-20 h-20 mb-4" />
+              <p className="text-lg w-[200px]">More Brand Awareness</p>
+            </div>
+            <div className="flex flex-col items-center text-center text-white">
+              <img src={smm} alt="Growth Icon" className="w-20 h-20 mb-4" />
+              <p className="text-lg w-[200px]">More Business Growth</p>
+            </div>
+            <div className="flex flex-col items-center text-center text-white">
+              <img src={brand} alt="Trust Icon" className="w-20 h-20 mb-4" />
+              <p className="text-lg ">More Trust and Authority</p>
+            </div>
+            <div className="flex flex-col items-center text-center text-white">
+              <img src={app} alt="Leads Icon" className="w-20 h-20 mb-4" />
+              <p className="text-lg">More Leads</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Expect section end here */}
     </main>
   );
 }
