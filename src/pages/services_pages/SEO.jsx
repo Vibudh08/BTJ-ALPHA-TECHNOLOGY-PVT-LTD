@@ -1,6 +1,10 @@
+import hero from "../../assets/images/seo/Hero.webp";
+
 function SEO() {
   return (
     <main>
+      {/* Banner section start here */}
+
       <section className="flex flex-wrap justify-between items-center p-10 bg-[#0A192F] text-white mt-20 pt-20 pb-28">
         {/* Content Section */}
         <div className="w-full lg:w-[45%] mb-8 lg:mb-0 px-4">
@@ -73,7 +77,91 @@ function SEO() {
           </form>
         </div>
       </section>
+
+      {/* Banner section end here */}
+
+      {/* Business section start here */}
+
+      <section className="max-w-7xl mx-auto my-12 py-5 px-4">
+        {/* Section Title */}
+        <div className="text-center mb-8">
+          <h1 className="text-2xl lg:text-3xl font-bold mb-6">
+            Why Does Your Business Need{" "}
+            <span className="text-orange-500">SEO Services in Delhi</span>
+          </h1>
+          <p className="text-base text-gray-600 px-4">
+            Whether you are a small business or a medium-sized firm, without SEO
+            services, you cannot present yourself in front of your targeted
+            audience. Some more reasons have been given here:
+          </p>
+        </div>
+
+        {/* Content */}
+        <div className="flex flex-wrap gap-8 items-center max-lg:block">
+          {/* Image Section */}
+          <div className="flex-1 flex justify-center items-center">
+            <img
+              src={hero}
+              alt="SEO Analysis"
+              className="max-w-4/5 rounded-lg max-lg:mb-8"
+            />
+          </div>
+
+          {/* Text Section */}
+          <div className="flex-1 flex flex-col justify-center">
+            <ul className="space-y-4">
+              <li className="flex items-start text-lg">
+                <i className="fa fa-check-square text-orange-500 mr-3"></i>
+                <span>
+                  <strong>You need to be on the 1st page:</strong> According to
+                  experts, 90% of people do not even go to the 2nd page. So, you
+                  need to be on the first page if you want to improve your ROI.
+                </span>
+              </li>
+              <li className="flex items-start text-lg">
+                <i className="fa fa-check-square text-orange-500 mr-3"></i>
+                <span>
+                  <strong>
+                    Improve the online visibility of your business:
+                  </strong>{" "}
+                  By getting better online visibility, you can get recognized as
+                  a reliable brand and generate high volumes of leads and sales.
+                </span>
+              </li>
+              <li className="flex items-start text-lg">
+                <i className="fa fa-check-square text-orange-500 mr-3"></i>
+                <span>
+                  <strong>Target the right audience:</strong> ‘Quality wins over
+                  Quantity’. It is even more relevant when it comes to website
+                  traffic. With our industry-focused SEO strategies, you can
+                  touch the untapped market and convert them into lifetime
+                  customers.
+                </span>
+              </li>
+              <li className="flex items-start text-lg">
+                <i className="fa fa-check-square text-orange-500 mr-3"></i>
+                <span>
+                  <strong>Raise user experience:</strong> SEO is more than using
+                  the right keywords. To remain a loyal brand, you must provide
+                  your users with enhanced experiences so that they can ask you
+                  for more.
+                </span>
+              </li>
+              <li className="flex items-start text-lg">
+                <i className="fa fa-check-square text-orange-500 mr-3"></i>
+                <span>
+                  <strong>Affordable yet comprehensive marketing:</strong> When
+                  compared to other traditional marketing methods, SEO is much
+                  more affordable and effective at the same time.
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Banner section end here */}
     </main>
   );
 }
-export default SEO
+export default SEO;
