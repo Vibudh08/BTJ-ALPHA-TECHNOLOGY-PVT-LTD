@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import Services from "./pages/Services";
 import MetaAds from "./pages/services_pages/MetaAds";
 import GoogleAds from "./pages/services_pages/GoogleAds";
+import SEO from "./pages/services_pages/SEO";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="services" element={<Services/>}/>
           <Route path="meta-ads" element={<MetaAds/>}/>
           <Route path="google-ads" element={<GoogleAds/>}/>
+          <Route path="search-engine-optimization" element={<SEO/>}/>
         </Routes>
         <Footer/>
       </BrowserRouter>

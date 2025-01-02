@@ -54,9 +54,11 @@ function Header() {
                     <li className="px-4 py-4 hover:bg-gray-100 border">
                       Mobile App Development
                     </li>
-                    <li className="px-4 py-4 hover:bg-gray-100 border">
-                      Search Engine Optimization
-                    </li>
+                    <Link to="search-engine-optimization">
+                      <li className="px-4 py-4 hover:bg-gray-100 border">
+                        Search Engine Optimization
+                      </li>
+                    </Link>
                     <li className="px-4 py-4 hover:bg-gray-100 border">
                       Social Media Marketing
                     </li>
