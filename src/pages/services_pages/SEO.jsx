@@ -6,6 +6,8 @@ import revenue from "../../assets/images/seo/expect-icons/increase-revenue.webp"
 import traffic from "../../assets/images/seo/expect-icons/more traffic.webp";
 import smm from "../../assets/images/seo/expect-icons/smm.webp";
 import user from "../../assets/images/seo/expect-icons/user-engagement.webp";
+import {services} from '../../components/SeoData'
+import {features} from '../../components/SeoData'
 
 function SEO() {
   return (
@@ -206,15 +208,15 @@ function SEO() {
             </div>
             <div className="flex flex-col items-center text-center text-white">
               <img src={user} alt="Brand Icon" className="w-20 h-20 mb-4" />
-              <p className="text-lg w-[200px]">More Brand Awareness</p>
+              <p className="text-lg w-[200px]">Brand Awareness</p>
             </div>
             <div className="flex flex-col items-center text-center text-white">
               <img src={smm} alt="Growth Icon" className="w-20 h-20 mb-4" />
-              <p className="text-lg w-[200px]">More Business Growth</p>
+              <p className="text-lg w-[200px]">Business Growth</p>
             </div>
             <div className="flex flex-col items-center text-center text-white">
               <img src={brand} alt="Trust Icon" className="w-20 h-20 mb-4" />
-              <p className="text-lg ">More Trust and Authority</p>
+              <p className="text-lg ">Trust and Authority</p>
             </div>
             <div className="flex flex-col items-center text-center text-white">
               <img src={app} alt="Leads Icon" className="w-20 h-20 mb-4" />
@@ -225,6 +227,85 @@ function SEO() {
       </section>
 
       {/* Expect section end here */}
+
+      {/* Result section start here */}
+
+      <section className="px-4 py-8 max-w-[1300px] mx-auto text-center mt-6 pb-16">
+        {/* Header Section */}
+        <div className="flex flex-col lg:flex-row mb-8 lg:px-5">
+          <h1 className="text-3xl font-semibold leading-relaxed text-start lg:w-1/2 lg:pr-8 max-sm:mb-5">
+            GET REAL RESULTS WITH COMMERCIAL ADS PPC SERVICES
+          </h1>
+          <p className="text-base lg:text-lg leading-6 lg:w-1/2 text-center max-lg:text-start">
+            Commercial Ads.Co is a top pay-per-click agency in Delhi NCR that
+            uses cutting-edge digital marketing techniques to get remarkable
+            outcomes. We optimise your return on investment and propel notable
+            expansion by utilizing cutting-edge technologies and industry best
+            practices.
+          </p>
+        </div>
+
+        {/* Services Section */}
+        <div className="grid grid-cols-3 max-sm:grid-cols-1 max- gap-6 max-w-[800px] mx-auto">
+          {/* Service Items */}
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="flex items-center bg-gray-100 border border-gray-300 rounded-lg p-4 shadow-md hover:scale-105 hover:bg-[#0073bf] hover:text-white transition-transform duration-300"
+            >
+              <img src={service.img} alt={service.text} className="w-12 h-12" />
+              <p className="ml-4 text-sm font-medium text-start">
+                {service.text}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Result section end here */}
+
+      {/* Grow section start here */}
+
+      <section className="grow-section py-8 w-4/5 mx-auto mb-10">
+        <div className="header text-center">
+          <h1 className="text-4xl font-semibold mb-6">
+            How Can We Help You Grow Your Business through SEO?
+          </h1>
+          <p className="text-gray-600 mb-4">
+            Just remember! Result-driven SEO does not just happen! It requires
+            so many things including long-term commitment and robust strategies.
+            But when you join your hands with Digital Markitors – a top SEO
+            company in Delhi-NCR, you can expect stable and better results.
+          </p>
+          <p className="text-gray-600">
+            Countless service providers are there charging a hefty amount but
+            why pay even a single penny when the traffic is not relevant!! Our
+            search engine optimisation services, on the other hand, are not just
+            focused on keywords and helping people find you online but driving
+            relevant traffic to your website. JUST THINK and decide what you
+            want!
+          </p>
+        </div>
+        <div className="features flex flex-wrap justify-center gap-5 mt-8">
+          {features.map((feature, index) => (
+            <div
+              key={index}
+              className="feature-item bg-white border border-gray-300 rounded-full w-36 h-36 flex flex-col items-center justify-center shadow-md transform transition-transform duration-300 hover:scale-110"
+            >
+              <img
+                src={feature.img}
+                alt={feature.alt}
+                className="w-16 h-16 mb-2"
+              />
+              <h3 className="text-[13px] font-medium text-gray-800">
+                {feature.title}
+              </h3>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Grow section end here */}
     </main>
   );
 }
