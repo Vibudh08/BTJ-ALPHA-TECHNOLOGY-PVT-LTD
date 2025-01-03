@@ -6,7 +6,13 @@ import revenue from "../../assets/images/seo/expect-icons/increase-revenue.webp"
 import traffic from "../../assets/images/seo/expect-icons/more traffic.webp";
 import smm from "../../assets/images/seo/expect-icons/smm.webp";
 import user from "../../assets/images/seo/expect-icons/user-engagement.webp";
-import {services,features,cities} from '../../components/SeoData'
+import {
+  services,
+  features,
+  cities,
+  service,
+  specialised,
+} from "../../components/SeoData";
 
 function SEO() {
   return (
@@ -265,7 +271,7 @@ function SEO() {
 
       {/* Grow section start here */}
 
-      <section className="grow-section py-8 w-4/5 mx-auto mb-10">
+      <section className="grow-section py-8 w-4/5 max-lg:w-full max-lg:p-6 mx-auto mb-10">
         <div className="header text-center">
           <h1 className="text-4xl font-semibold mb-6">
             How Can We Help You Grow Your Business through SEO?
@@ -308,7 +314,7 @@ function SEO() {
 
       {/* Presence section start here */}
 
-      <section className="presence py-8 mx-auto bg-[#ececec] mb-10 w-[85%]">
+      <section className="presence py-8 mx-auto bg-[#ececec] mb-10 w-[85%] max-lg:w-[100%]">
         <h1 className="text-3xl font-semibold text-start text-[#0068a1] mb-8 ml-5">
           Our Presence in Other Cities
         </h1>
@@ -326,6 +332,70 @@ function SEO() {
       </section>
 
       {/* Presence section start here */}
+
+      {/* Marketing section start here */}
+
+      <section className="marketing py-10 mx-auto bg-gradient-to-b from-[#e0f7fa] to-white mb-8 w-[85%] max-lg:w-[100%]">
+        <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8">
+          Our Hyperlocal Marketing Services <br /> Comprehensive Solutions for
+          Local Growth
+        </h2>
+        <div className="services-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 ">
+          {service.map((services, index) => (
+            <div
+              key={index}
+              className="service-item bg-white m-5 p-5 border border-gray-300 rounded-lg shadow-lg hover:shadow-lg transition-transform transform hover:translate-y-[-5px]"
+            >
+              <div className="header flex items-center mb-4">
+                <img
+                  src={services.img}
+                  alt={services.title}
+                  className="h-20 w-20 mr-4"
+                />
+                <h3 className="text-xl font-semibold text-gray-800">
+                  {services.title}
+                </h3>
+              </div>
+              <p className="text-gray-600 mb-2 font-semibold">
+                {services.description1}
+              </p>
+              {services.description2 && (
+                <p className="text-gray-600 font-semibold">
+                  {services.description2}
+                </p>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Marketing section start here */}
+
+      {/* specialised section start here */}
+
+      <section className="services mx-auto  w-[85%] max-lg:w-[100%] text-center bg-white p-6 rounded-lg shadow-md">
+        <h1 className="text-4xl font-semibold text-gray-800 mb-6">
+          Our Specialized Services
+        </h1>
+        <hr className="w-1/12 mx-auto h-1 bg-black mb-8" />
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+          {specialised.map((service, index) => (
+            <div 
+              key={index}
+              className="service flex flex-col items-center border border-gray-400 p-4 hover:shadow-lg transition-shadow duration-300"
+            >
+              <img
+                src={service.img}
+                alt={service.title}
+                className="w-12 h-12 mb-3"
+              />
+              <p className="text-sm text-gray-700">{service.title}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* specialised section start here */}
     </main>
   );
 }
