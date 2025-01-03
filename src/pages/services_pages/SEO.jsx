@@ -6,8 +6,7 @@ import revenue from "../../assets/images/seo/expect-icons/increase-revenue.webp"
 import traffic from "../../assets/images/seo/expect-icons/more traffic.webp";
 import smm from "../../assets/images/seo/expect-icons/smm.webp";
 import user from "../../assets/images/seo/expect-icons/user-engagement.webp";
-import {services} from '../../components/SeoData'
-import {features} from '../../components/SeoData'
+import {services,features,cities} from '../../components/SeoData'
 
 function SEO() {
   return (
@@ -306,6 +305,27 @@ function SEO() {
       </section>
 
       {/* Grow section end here */}
+
+      {/* Presence section start here */}
+
+      <section className="presence py-8 mx-auto bg-[#ececec] mb-10 w-[85%]">
+        <h1 className="text-3xl font-semibold text-start text-[#0068a1] mb-8 ml-5">
+          Our Presence in Other Cities
+        </h1>
+        <div className="city-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 bg-white m-5">
+          {cities.map((city, index) => (
+            <div
+              key={index}
+              className="city-item flex items-center bg-white p-4 border border-[#ececec]"
+            >
+              <img src={city.img} alt={city.alt} className="w-16 h-16 mr-4" />
+              <p className="text-[#0068a1] text-lg font-normal">{city.name}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Presence section start here */}
     </main>
   );
 }
