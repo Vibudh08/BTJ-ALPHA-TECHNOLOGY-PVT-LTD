@@ -1,7 +1,81 @@
+import { BsArrowRight } from "react-icons/bs";
+import { BsArrowLeft } from "react-icons/bs";
+import React, { useRef } from "react";
 import team from "../assets/images/Home-page/team.jpeg";
-import { Link } from "react-router-dom";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
 function About() {
+  const sliderRef = useRef(null);
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1, 
+    responsive: [
+      {
+        breakpoint: 1024, // For tablets and smaller screens
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 768, // For mobile devices
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 500, // For mobile devices
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+
+  const handleNext = () => {
+    sliderRef.current.slickNext(); // Move to the next slide
+  };
+
+  const handlePrev = () => {
+    sliderRef.current.slickPrev(); // Move to the previous slide
+  };
+  const teamMembers = [
+    {
+      name: "Rohan Verma",
+      role: "Sr. PHP Developer",
+      image: "/team-members/rohan.webp",
+      linkedin: "#",
+    },
+    {
+      name: "MOHD ZAID",
+      role: "Android Developer",
+      image: "/team-members/zaid.webp",
+      linkedin: "https://www.linkedin.com/in/mohd-zaid-chaudhary-b682a2276",
+    },
+    {
+      name: "Vibudh Rathore",
+      role: "Front End Developer",
+      image: "/team-members/vibudh.webp",
+      linkedin: "https://www.linkedin.com/in/vibudh08",
+    },
+    {
+      name: "Gaurav Shrivastav",
+      role: "Front End Developer",
+      image: "/team-members/gaurav.webp",
+      linkedin: "https://www.linkedin.com/in/gaurav-shrivastav-649b852a2/",
+    },
+    {
+      name: "Nishant",
+      role: "Front End Intern",
+      image: "/team-members/nishant.webp",
+      linkedin: "https://www.linkedin.com/in/nishant-kumar-193a0633a/",
+    },
+  ];
   return (
     <main>
       {/* Who-we-are Section Start here */}
@@ -56,6 +130,8 @@ function About() {
         </div>
       </section>
 
+      {/* Who-we-are Section End here */}
+
       <section className="mx-14 mb-12 max-md:mx-5">
         <h2 className="border w-[140px] p-2 pl-3 text-[20px] rounded-[12px] tracking-widest leading-7 bg-[#ecf1f1] text-[#191970] font-semibold">
           ABOUT US{" "}
@@ -87,7 +163,61 @@ function About() {
         </div>
       </section>
 
-      {/* Who-we-are Section End here */}
+      <section className="team-area py-12 px-6">
+        <div className="container mx-auto text-center">
+          <div className="text-center mb-10">
+            <h5 className="text-yellow-500 text-lg uppercase">
+              Exceptional Team
+            </h5>
+            <h2 className="text-4xl font-bold mt-2">Meet with our team</h2>
+            <p className="text-gray-600 mt-4">
+              Discover the driving force behind Marketi. Working collaboratively
+              to deliver innovative digital marketing solutions that elevate
+              your brand.
+            </p>
+          </div>
+
+          {/* Slider */}
+          <Slider {...settings} ref={sliderRef}>
+            {teamMembers.map((member, index) => (
+              <div key={index} className=" flex-shrink-0 p-4 ">
+                <div className="bg-white shadow-lg rounded-lg text-center pb-5">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className=" mx-auto rounded-tl-[12px] rounded-tr-[12px] mb-4"
+                  />
+                  <h5 className="text-lg font-bold text-start ml-2">
+                    {member.name}
+                  </h5>
+                  <h6 className="text-gray-500 text-start ml-2">
+                    {member.role}
+                  </h6>
+                </div>
+              </div>
+            ))}
+          </Slider>
+
+          {/* Navigation Buttons */}
+          <div className="flex justify-center  mt-8">
+            <button
+              onClick={handlePrev}
+              className="text-3xl rounded text-slate-600 hover:text-slate-950"
+            >
+              <BsArrowLeft />
+            </button>
+            <div className="tracking-[10px] font-extrabold text-[25px] text-orange-400 pl-5 pr-3 pb-2 mb-2">
+              ....
+            </div>
+            <button
+              onClick={handleNext}
+              className="text-3xl rounded text-slate-600 hover:text-slate-950"
+            >
+              <BsArrowRight />
+            </button>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
