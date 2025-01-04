@@ -133,7 +133,7 @@ function Home() {
             <img
               src={team}
               alt=""
-              className="w-[100%] mt-5 ml-4 rounded-[20px] z-50 max-lg:mt-9"
+              className="w-[100%] mt-5 ml-4 rounded-[20px] z-0 max-lg:mt-9"
             />
           </div>
           <div className="w-[50%] ml-6 max-lg:w-[100%] max-lg:ml-0 max-lg:p-3">
