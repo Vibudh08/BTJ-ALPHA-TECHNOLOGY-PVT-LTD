@@ -12,6 +12,9 @@ import lead from "../assets/images/seo/lead.webp";
 import seo from "../assets/images/seo/seo.webp";
 import traffic from "../assets/images/seo/traffic.webp";
 import roi from "../assets/images/seo/ROI.webp";
+import one from "../assets/images/seo/1st.webp" 
+import two from "../assets/images/seo/2nd.webp" 
+import three from "../assets/images/seo/3.webp" 
 
 const services = [
   {
@@ -298,4 +301,74 @@ const specialised = [
     title: "Blogging Services",
   },
 ];
-export { services, features, cities, service, specialised };
+
+const stories = [
+  {
+    title: "Increased 46% Bookings for a Popular Clinic",
+    img: one,
+    subtitle: "Increased 46% Bookings for a Popular Clients",
+    description:
+      "In just six months, we quadrupled the organic traffic for a well-known clinic through focused SEO strategies. By implementing a guest posting approach to build high-quality backlinks, we boosted targeted traffic. As a result, patient inquiries grew by 64%, leading to a 46% increase in consultation and treatment bookings.",
+  },
+  {
+    title: "Achieved 23% Increase in Quality Leads for a Real Estate Agency",
+    img: two,
+    subtitle:
+      "Achieved a 23% Increase in Quality Leads for a Real Estate Agency",
+    description:
+      "A well-known real estate agency aimed to enhance its online presence and attract more potential buyers. With our focused SEO strategies and content marketing efforts, we doubled their organic traffic in just 3 months. This surge in targeted traffic led to a 50% increase in brand name searches for relevant queries, resulting in a 37% rise in closed deals compared to the previous quarter.",
+  },
+  {
+    title: "400% Increase in Average Order Value for a Dry Fruit Company",
+    img: three,
+    subtitle: "400% Increase in Average Order Value for Our Connected Company",
+    description:
+      "Despite having a fully stocked website, our connected dry fruit company was facing profitability challenges. After a thorough analysis, we identified that the average order value (AOV) was a critical factor. By implementing targeted upselling strategies, we increased their AOV by 400%, resulting in significant profit growth. Within just 90 days, we also optimized the website for search engines, ensuring it ranked at the top for all relevant dry fruit searches on Google.",
+  },
+];
+
+const faqs = [
+  {
+    question: "My business is struggling to get noticed online, how can Google Ads help?",
+    answer: "If your business isn’t showing up when potential customers search for your products or services, you're missing out. We help you create targeted Search Ads that put your business in front of the right audience exactly when they're looking for what you offer. This increased visibility leads to more clicks and conversions, helping you stand out in a crowded market."
+  },
+  {
+    question: "I’m spending money on Google Ads but not seeing any results. What am I doing wrong?",
+    answer: "It’s frustrating when your ad spend isn’t paying off. Often, the issue is a misaligned strategy or improper targeting. We perform a detailed audit of your current campaigns, identifying areas where your ads are underperforming. By optimizing your keywords, ad copy, and targeting, we ensure you get the best ROI, helping you stop wasting money and start seeing real results."
+  },
+  {
+    question: "My competitors are outranking me on Google. How can I catch up?",
+    answer: "It can feel impossible to compete when your competitors dominate the search results. We help level the playing field by implementing SEO and paid ad strategies that ensure your ads rank higher. With our expertise, we target the most profitable keywords, optimize your landing pages, and drive quality traffic that increases your chances of outranking your competitors."
+  },
+  {
+    question: "I’m unsure how to increase my sales through Google Ads. Can you help with strategy?",
+    answer: "Many businesses face difficulty turning clicks into actual sales. The problem often lies in the strategy. We work with you to create a custom Google Ads strategy that not only drives traffic but also focuses on conversion optimization. From crafting compelling ad copy to fine-tuning your landing pages, we ensure your ads are aligned with your sales goals, turning visitors into loyal customers."
+  },
+  {
+    question: "My business is new, and I don’t know where to start with Google Ads. How do I get my first customer?",
+    answer: "Starting from scratch can feel overwhelming, especially when you're not sure where to invest your marketing dollars. We help you set up Google Ads campaigns that maximize your visibility to the right audience. By focusing on specific, high-intent keywords and building compelling ads, we get your business in front of potential customers and help you make your first sale."
+  },
+  {
+    question: "My website has low conversion rates despite decent traffic. How can Google Ads fix this?",
+    answer: "Traffic is important, but conversion is key. If you're getting clicks but not converting, the issue often lies in your website or landing pages. We provide expert landing page optimization as part of your Google Ads campaign to ensure your visitors are more likely to take action. By refining your ad targeting, improving your landing page experience, and optimizing your calls-to-action, we boost your conversion rates."
+  },
+  {
+    question: "I’m not sure if Google Ads is worth the investment. How can I track whether it’s delivering results?",
+    answer: "It's tough to justify spending on ads if you can't see the impact. With our transparent tracking and performance insights, we help you monitor key metrics such as conversions, cost per acquisition (CPA), and return on ad spend (ROAS). We break down the numbers in simple terms, so you can make data-driven decisions about your ad spend and ensure you're getting the results you need."
+  },
+  {
+    question: "I’ve tried Google Ads before and didn’t get much engagement. How do I stand out now?",
+    answer: "It’s easy for ads to get lost in the noise, but with the right strategy, your ads can truly stand out. We refine your ad copy and creative strategy, use highly targeted keywords, and implement remarketing techniques to re-engage visitors who’ve already shown interest. Our tailored approach ensures your ads capture attention and drive engagement."
+  },
+  {
+    question: "I’m running Google Ads, but my customer acquisition costs are too high. What can I do?",
+    answer: "High customer acquisition costs are a common issue when campaigns aren’t optimized. We focus on reducing your cost per conversion by fine-tuning your targeting, ad copy, and landing pages. By using more relevant keywords and optimizing your bidding strategy, we help lower your acquisition costs while increasing quality leads."
+  },
+  {
+    question: "My business operates locally, how can I use Google Ads to attract nearby customers?",
+    answer: "For local businesses, location targeting is crucial. We help set up geo-targeted Google Ads campaigns, ensuring your ads reach customers in your specific location or service area. By focusing on local keywords and optimizing for local search intent, we make sure you're visible to people ready to make a purchase in your area."
+  }
+]
+
+
+export { services, features, cities, service, specialised, stories, faqs};

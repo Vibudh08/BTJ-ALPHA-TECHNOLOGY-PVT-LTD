@@ -12,9 +12,16 @@ import {
   cities,
   service,
   specialised,
+  stories,
+  faqs,
 } from "../../components/SeoData";
+import { useState } from "react";
 
 function SEO() {
+  const [answer, setAnswer] = useState(null);
+  const handleToggle = (index) => {
+    setAnswer(answer === index ? null : index);
+  };
   return (
     <main>
       {/* Banner section start here */}
@@ -373,14 +380,14 @@ function SEO() {
 
       {/* specialised section start here */}
 
-      <section className="services mx-auto  w-[85%] max-lg:w-[100%] text-center bg-white p-6 rounded-lg shadow-md">
+      <section className="services mx-auto  w-[85%] max-lg:w-[100%] text-center bg-white p-6 rounded-lg shadow-md mb-16">
         <h1 className="text-4xl font-semibold text-gray-800 mb-6">
           Our Specialized Services
         </h1>
         <hr className="w-1/12 mx-auto h-1 bg-black mb-8" />
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
           {specialised.map((service, index) => (
-            <div 
+            <div
               key={index}
               className="service flex flex-col items-center border border-gray-400 p-4 hover:shadow-lg transition-shadow duration-300"
             >
@@ -396,6 +403,77 @@ function SEO() {
       </section>
 
       {/* specialised section start here */}
+
+      {/* Convinced section start here */}
+
+      <section className="convinced mx-auto max-w-5xl p-6 text-center">
+        <h2 className="text-4xl font-bold text-gray-800 mb-4">
+          Still Not Convinced?
+        </h2>
+        <p className="text-gray-600 text-lg mb-8">
+          Check Out More Success Stories
+        </p>
+        <div className="stories-grid space-y-6">
+          {stories.map((story, index) => (
+            <div
+              key={index}
+              className="story-item flex flex-col lg:flex-row items-center gap-6 bg-white p-6 rounded-lg shadow-lg border border-gray-300"
+            >
+              <div className="story-left flex max-lg:flex-col items-center text-center bg-[#0056b3] text-white p-6 rounded-lg w-1/2 max-md:w-full">
+                <h3 className="text-2xl m-1 font-semibold mb-4">
+                  {story.title}
+                </h3>
+                <img
+                  src={story.img}
+                  alt={story.title}
+                  className="w-[240px] rounded-lg"
+                />
+              </div>
+              <div className="story-right flex-1 text-left">
+                <h4 className="text-2xl font-semibold text-gray-800 mb-2">
+                  {story.subtitle}
+                </h4>
+                <p className="text-gray-600 text-base">{story.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Convinced section start here */}
+
+      {/* Faq Section start here */}
+
+      <section className="faq mx-auto max-w-5xl p-6 bg-white rounded-lg shadow-lg mb-12">
+        <h2 className="text-2xl font-bold text-gray-800 mb-4">FAQs</h2>
+        {faqs &&
+          faqs.map((item, index) => (
+            <div className="faq-item border-t border-gray-300" key={index}>
+              <button
+                onClick={() => handleToggle(index)}
+                className="faq-question w-full bg-[#0056b3] text-white p-4 text-left text-[16px] flex justify-between items-center"
+              >
+                {item.question}
+                {answer === index ? (
+                  <span className="ml-2 text-xs">▲</span>
+                ) : (
+                  <span className="ml-2 text-xs">▼</span>
+                )}
+              </button>
+              {answer === index && (
+                <div
+                  className="faq-answer overflow-hidden bg-gray-100 px-4"
+                >
+                  <p className="text-[14px] text-gray-700 py-3 leading-7">
+                    {item.answer}
+                  </p>
+                </div>
+              )}
+            </div>
+          ))}
+      </section>
+
+      {/* Faq Section start here */}
     </main>
   );
 }
