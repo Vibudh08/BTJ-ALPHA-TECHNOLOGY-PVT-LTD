@@ -5,9 +5,24 @@ import team from "../assets/images/Home-page/team.jpeg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { Link } from "react-router-dom";
+import { FaRegArrowAltCircleRight } from "react-icons/fa";
+import { FaStar } from "react-icons/fa6";
 
 function About() {
   const sliderRef = useRef(null);
+  const sliderRef2 = useRef(null);
+
+  var setting = {
+    dots: false,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 1000,
+    autoplaySpeed: 4000,
+    cssEase: "linear",
+  };
 
   const settings = {
     dots: false,
@@ -40,9 +55,15 @@ function About() {
   const handleNext = () => {
     sliderRef.current.slickNext(); // Move to the next slide
   };
+  const handleNext2 = () => {
+    sliderRef2.current.slickNext(); // Move to the next slide
+  };
 
   const handlePrev = () => {
     sliderRef.current.slickPrev(); // Move to the previous slide
+  };
+  const handlePrev2 = () => {
+    sliderRef2.current.slickPrev(); // Move to the previous slide
   };
   const teamMembers = [
     {
@@ -211,6 +232,134 @@ function About() {
             </div>
             <button
               onClick={handleNext}
+              className="text-3xl rounded text-slate-600 hover:text-slate-950"
+            >
+              <BsArrowRight />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section className="p-10 flex max-lg:block">
+        <div className="w-1/2 max-lg:w-full">
+          <h3 className="text-[22px] tracking-widest text-[#ffc422] font-semibold ">
+            CLIENT TESTIMONIALS
+          </h3>
+          <h1 className="text-[45px] font-semibold w-[80%] mb-5">
+            What Our Clients Say About T SOFT TECH
+          </h1>
+          <p className="text-[18px]">
+            Discover how T SOFT TECH has empowered businesses across India with
+            innovative, customized digital solutions.
+          </p>
+          <Link to="contact ">
+            <button className="mt-8 bg-[#fb9c24] text-black px-6 py-3 rounded-lg font-semibold flex items-center mb-12">
+              Get Started <FaRegArrowAltCircleRight className="ml-2 text-lg" />
+            </button>
+          </Link>
+          <hr className="h-[1px] bg-black mb-10 w-[90%]" />
+          <div className="flex">
+            <img src="/about-page/user.webp" className=" w-[100px]" alt="" />
+            <h1 className="mt-1 text-lg ml-3">Happy Clients of T SOFT TECH</h1>
+          </div>
+        </div>
+        <div className="w-1/2 max-lg:w-full max-lg:mt-10">
+          <Slider {...setting} ref={sliderRef2}>
+            <div className="p-8 rounded-[12px]  bg-[#f7f7f7]">
+              <h1 className="text-[28px] mb-10">
+                "T SOFT TECH has transformed our online presence with their
+                expertise. They understood our vision and delivered beyond our
+                expectations."
+              </h1>
+              <hr className="h-[1.2px] bg-black" />
+              <div className="flex justify-between">
+                <div className="flex mt-8">
+                  <img
+                    src="/about-page/m4.webp"
+                    className="w-[100px] rounded-full"
+                    alt=""
+                  />
+                  <h1 className="text-2xl mt-8 ml-5 font-semibold">
+                    Rajesh Kumar
+                  </h1>
+                </div>
+                <div className="flex items-center mt-8 text-xl ">
+                  <FaStar className="text-orange-400 mr-1" />
+                  <FaStar className="text-orange-400 mr-1" />
+                  <FaStar className="text-orange-400 mr-1" />
+                  <FaStar className="text-orange-400 mr-1" />
+                  <FaStar className="text-orange-400 mr-1" />
+                </div>
+              </div>
+            </div>
+            <div className="p-8 rounded-[12px] bg-[#f7f7f7]">
+              <h1 className="text-[28px] mb-10">
+                "Working with T SOFT TECH was one of the best decisions for our
+                business. Their targeted strategies significantly boosted our
+                customer engagement."
+              </h1>
+              <hr className="h-[1.2px] bg-black" />
+              <div className="flex justify-between">
+                <div className="flex mt-8">
+                  <img
+                    src="/about-page/f2.jpg"
+                    className="w-[100px] rounded-full object-cover object-center"
+                    alt=""
+                  />
+                  <h1 className="text-2xl mt-8 ml-5 font-semibold">
+                    Priya Sharma
+                  </h1>
+                </div>
+                <div className="flex items-center mt-8 text-xl ">
+                  <FaStar className="text-orange-400 mr-1" />
+                  <FaStar className="text-orange-400 mr-1" />
+                  <FaStar className="text-orange-400 mr-1" />
+                  <FaStar className="text-orange-400 mr-1" />
+                  <FaStar className="text-orange-400 mr-1" />
+                </div>
+              </div>
+            </div>
+            <div className="p-8 rounded-[12px] bg-[#f7f7f7]">
+              <h1 className="text-[28px] mb-10">
+                "T SOFT TECH has an excellent team that delivered a seamless
+                experience from start to finish. They’ve given us the digital
+                edge we needed."
+              </h1>
+              <hr className="h-[1.2px] bg-black" />
+              <div className="flex justify-between">
+                <div className="flex mt-8">
+                  <img
+                    src="/about-page/m2.webp"
+                    className="w-[100px] rounded-full"
+                    alt=""
+                  />
+                  <h1 className="text-2xl mt-8 ml-5 font-semibold">
+                    Sanjay Gupta
+                  </h1>
+                </div>
+                <div className="flex items-center mt-8 text-xl ">
+                  <FaStar className="text-orange-400 mr-1" />
+                  <FaStar className="text-orange-400 mr-1" />
+                  <FaStar className="text-orange-400 mr-1" />
+                  <FaStar className="text-orange-400 mr-1" />
+                  <FaStar className="text-orange-400 mr-1" />
+                </div>
+              </div>
+            </div>
+          </Slider>
+          {/* Navigation Buttons */}
+          <div className="flex justify-center  mt-8">
+            <button
+              onClick={handlePrev2}
+              className="text-3xl rounded text-slate-600 hover:text-slate-950"
+            >
+              <BsArrowLeft />
+            </button>
+            <div className="tracking-[10px] font-extrabold text-[25px] text-orange-400 pl-5 pr-3 pb-2 mb-2">
+              ...
+            </div>
+            <button
+              onClick={handleNext2}
               className="text-3xl rounded text-slate-600 hover:text-slate-950"
             >
               <BsArrowRight />
