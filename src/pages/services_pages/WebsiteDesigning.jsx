@@ -310,13 +310,13 @@ function WebsiteDesigning() {
         ))}
       </section>
 
-      <div className="flex flex-col items-center mb-20">
+      <section className="flex flex-col items-center mb-20">
         {cards.map((card, index) => (
           <div
             key={index}
             className={`flex  flex-row max-lg:flex-col ${
               index % 2 != 0 ? "lg:flex-row-reverse" : ""
-            } sticky top-[50px] w-[70%] max-md:w-[100%] bg-white border shadow-lg rounded-xl overflow-hidden px-8 max-md:px-2`}
+            } sticky top-[50px] w-[75%] max-md:w-[100%] bg-white border shadow-lg rounded-xl overflow-hidden px-8 max-md:px-2`}
           >
             <div className="p-8 w-[45%] max-lg:w-[100%] max-md:p-0">
               <img
@@ -433,7 +433,115 @@ function WebsiteDesigning() {
             </div>
           </div>
         )}
-      </div>
+      </section>
+
+      <section className="px-20 py-10 max-md:px-2 max-md:py-2">
+        <div className="flex max-lg:flex-col justify-between  m-auto max-md:block">
+          <div className="w-[55%] max-lg:w-[100%]">
+            <h2 className="border w-[180px] p-2 pl-3 text-[20px] rounded-[12px] tracking-widest leading-7 bg-[#ecf1f1] text-[#191970] font-semibold mb-5">
+              OUR SERVICES
+            </h2>
+            <h1 className="text-[55px] max-md:text-[45px] font-semibold leading-[4rem]">
+              Why Choose T SOFT TECH for Website Design
+            </h1>
+          </div>
+          <div className="text-lg w-[40%] max-lg:w-[100%] mt-36 max-lg:mt-6 max-md:w-[100%] max-md:mt-10">
+            Join us on a journey where every pixel is purposeful, every click is
+            intentional, and every visit is a step toward digital success.
+          </div>
+        </div>
+        <div className=" flex mt-12 mb-10 max-lg:block max-lg:ml-0 max-lg:p-0 max-lg:justify-center">
+          <div className=" w-[45%] mr-20 max-lg:w-auto max-lg:mb-[30px] max-lg:pl-3 max-lg:flex max-lg:justify-center max-lg:mr-6 mt-8">
+            <img
+              src="/website-design/about-two-image.webp"
+              alt=""
+              className="w-[100%] mt-5 ml-4 rounded-[20px] z-0 max-lg:mt-9 mb-6 "
+            />
+          </div>
+          <div className="w-[55%] max-lg:w-[100%] max-lg:ml-0 max-lg:p-3  ">
+            <div className="flex">
+              <div className="flex items-center">
+                <img
+                  src="/website-design/about-icon1.webp"
+                  className="w-[120px] h-[60px]"
+                  alt=""
+                />
+              </div>
+              <div className="ml-5">
+                <h1 className="text-3xl font-semibold mb-4">
+                  Custom Website Design
+                </h1>
+                <p className="leading-[1.6rem]">
+                  Our designs are tailored to reflect your brand's unique
+                  identity, ensuring a memorable user experience that resonates
+                  with your target audience.
+                </p>
+              </div>
+            </div>
+            <hr className="h-[1.4px] bg-gray-400 mt-10 mb-10" />
+            <div className="flex">
+              <div className="flex items-center">
+                <img
+                  src="/website-design/about-icon2.webp"
+                  className="w-[110px] h-[60px]"
+                  alt=""
+                />
+              </div>
+              <div className="ml-8">
+                <h1 className="text-3xl font-semibold mb-4">
+                  Responsive Design
+                </h1>
+                <p className="leading-[1.6rem]">
+                  We create responsive websites that provide a seamless
+                  experience across all devices, ensuring your visitors can
+                  engage with your content anytime, anywhere.
+                </p>
+              </div>
+            </div>
+            <hr className="h-[1.4px] bg-gray-400 mt-10 mb-10" />
+            <div className="flex">
+              <div className="flex items-center">
+                <img
+                  src="/website-design/about-icon3.webp"
+                  className="w-[110px] h-[60px]"
+                  alt=""
+                />
+              </div>
+              <div className="ml-6">
+                <h1 className="text-3xl font-semibold mb-4">
+                  SEO-Optimized Design
+                </h1>
+                <p className="leading-[1.6rem]">
+                  Every website we build is optimized for search engines,
+                  ensuring better visibility and higher rankings, driving
+                  organic traffic to your site.
+                </p>
+              </div>
+            </div>
+            <hr className="h-[1.4px] bg-gray-400 mt-10 mb-10" />
+            <div className="flex">
+              <div className="flex items-center">
+                <img
+                  src="/website-design/about-icon4.webp"
+                  className="w-[110px] h-[60px]"
+                  alt=""
+                />
+              </div>
+              <div className="ml-8">
+                <h1 className="text-3xl font-semibold mb-4">
+                  Ongoing Support and Maintenance
+                </h1>
+                <p className="leading-[1.6rem]">
+                  We believe in long-term partnerships. Our team provides
+                  continuous support and maintenance to ensure your website
+                  evolves alongside your business needs.
+                </p>
+              </div>
+            </div>
+            <hr className="h-[1.4px] bg-gray-400 mt-10 mb-10" />
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
