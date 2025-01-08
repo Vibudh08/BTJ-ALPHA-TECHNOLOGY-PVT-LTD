@@ -83,9 +83,11 @@ function Header() {
                 <li className="max-lg:text-xl max-lg:w-40 max-lg:text-[30px] max-lg:p-4 max-lg:mb-4 hover:underline hover:underline-offset-8 hover:decoration-2 hover:decoration-[#fb9c24]">
                   Blog
                 </li>
-                <li className="max-lg:text-xl max-lg:w-40 max-lg:text-[30px] max-lg:p-4 max-lg:mb-4 hover:underline hover:underline-offset-8 hover:decoration-2 hover:decoration-[#fb9c24]">
-                  Portfolio
-                </li>
+                <Link to="portfolio">
+                  <li className="max-lg:text-xl max-lg:w-40 max-lg:text-[30px] max-lg:p-4 max-lg:mb-4 hover:underline hover:underline-offset-8 hover:decoration-2 hover:decoration-[#fb9c24]">
+                    Portfolio
+                  </li>
+                </Link>
                 <Link to="contact">
                   <li className="max-lg:text-xl max-lg:w-40 max-lg:text-[30px] max-lg:p-4 max-lg:mb-4 hover:underline hover:underline-offset-8 hover:decoration-2 hover:decoration-[#fb9c24]">
                     Contact

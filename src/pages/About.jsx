@@ -192,7 +192,7 @@ function About() {
             </h5>
             <h2 className="text-4xl font-bold mt-2">Meet with our team</h2>
             <p className="text-gray-600 mt-4">
-              Discover the driving force behind Marketi. Working collaboratively
+              Discover the driving force behind Marketing. Working collaboratively
               to deliver innovative digital marketing solutions that elevate
               your brand.
             </p>
@@ -202,12 +202,13 @@ function About() {
           <Slider {...settings} ref={sliderRef}>
             {teamMembers.map((member, index) => (
               <div key={index} className=" flex-shrink-0 p-4 ">
-                <div className="bg-white shadow-lg rounded-lg text-center pb-5">
+                <div className="bg-white shadow-lg rounded-lg text-center pb-5 overflow-hidden">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className=" mx-auto rounded-tl-[12px] rounded-tr-[12px] mb-4"
+                    className="mx-auto rounded-tl-[12px] rounded-tr-[12px] mb-4 transition-transform duration-300 transform hover:scale-110  object-cover"
                   />
+
                   <h5 className="text-lg font-bold text-start ml-2">
                     {member.name}
                   </h5>

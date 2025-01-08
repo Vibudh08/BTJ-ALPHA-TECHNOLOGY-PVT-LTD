@@ -10,6 +10,7 @@ import MetaAds from "./pages/services_pages/MetaAds";
 import GoogleAds from "./pages/services_pages/GoogleAds";
 import SEO from "./pages/services_pages/SEO";
 import WebsiteDesigning from "./pages/services_pages/WebsiteDesigning";
+import Portfolio from "./pages/Portfolio";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact/>}/>
+          <Route path="portfolio" element={<Portfolio/>}/>
           <Route path="services" element={<Services/>}/>
           <Route path="meta-ads" element={<MetaAds/>}/>
           <Route path="google-ads" element={<GoogleAds/>}/>
