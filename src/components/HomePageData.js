@@ -46,9 +46,9 @@ const items = [
       "Create user-friendly and efficient mobile apps tailored to meet your business needs with our expert development services.",
   },
   {
-    heading: "Bulk Database",
+    heading: "Social Media Marketing (SMM)",
     content:
-      "A bulk database refers to a large collection of organized data, often used for mass outreach activities like email marketing, SMS campaigns, or telemarketing.",
+      "Boost your brand visibility and engagement across platforms like Instagram, Facebook, and LinkedIn. Reach your target audience with tailored content and paid campaigns.",
   },
   {
     heading: "Search Engine Optimization (SEO)",

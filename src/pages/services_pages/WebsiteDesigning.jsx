@@ -1,6 +1,11 @@
 import { useState } from "react";
+import { useEffect } from "react";
+
 
 function WebsiteDesigning() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   const [isPopupOpen, setPopupOpen] = useState(false);
 
   const openForm = () => setPopupOpen(true);
@@ -173,7 +178,7 @@ function WebsiteDesigning() {
 
   return (
     <main>
-      <section className="p-5 flex mt-32 ml-4 mb-10 max-lg:block max-lg:ml-0 max-lg:p-0 max-lg:justify-center">
+      <section className="p-5 flex mt-20 ml-4 mb-10 max-md:mb-5 max-lg:block max-lg:ml-0 max-lg:p-0 max-lg:justify-center">
         <div className=" w-[50%] mr-20 max-lg:w-auto max-lg:mb-[30px] max-lg:pl-3 max-lg:flex max-lg:justify-center max-lg:mr-6">
           <img
             src="/website-design/web-design.jpg"
@@ -181,18 +186,18 @@ function WebsiteDesigning() {
             className="w-[100%] mt-5 ml-4 rounded-[20px] z-0 max-lg:mt-9 border"
           />
         </div>
-        <div className="w-[50%] max-lg:w-[100%] max-lg:ml-0 max-lg:p-3 mt-24">
+        <div className="w-[50%] max-lg:w-[100%] max-lg:ml-0 max-lg:p-3 mt-24 max-md:mt-8">
           <div>
             <h3 className="text-[22px] text-[#ffc422] font-semibold tracking-widest">
               OUR SERVICES
             </h3>
-            <h1 className="text-[50px] font-semibold mb-4 mt-2 leading-[4rem] max-lg:text-[40px] max-lg:leading-[3rem]">
-              Website Design Services Offered by T SOFT TECH
+            <h1 className="text-[36px] max-md:text-[30px] font-semibold mb-4 mt-2 leading-[3.5rem] max-md:leading-[2.5rem] max-lg:text-[40px] max-lg:leading-[3rem]">
+              Website Design Services Offered by BTJ ALPHA TECHNOLOGY PVT LTD
             </h1>
             <p className="leading-8 w-[95%] text-[18px] max-lg:w-[100%] max-lg:text-[16px]">
-              Welcome to T SOFT TECH, where the art of website design comes to
+              Welcome to BTJ ALPHA TECHNOLOGY PVT LTD, where the art of website design comes to
               life. In the digital age, your website serves as the virtual
-              storefront of your brand. At T SOFT TECH, we specialize in
+              storefront of your brand. At BTJ ALPHA TECHNOLOGY PVT LTD, we specialize in
               creating visually captivating and user-centric websites that not
               only showcase your brand but also engage and convert visitors.
             </p>
@@ -203,18 +208,18 @@ function WebsiteDesigning() {
       <section className="p-10 max-md:p-2">
         <div className="flex justify-between w-[95%] m-auto max-md:block">
           <div>
-            <h2 className="text-xl text-[#ffc422] font-semibold tracking-widest mb-2">
+            <h2 className="text-xl max-md:text-lg text-[#ffc422] font-semibold tracking-widest mb-2">
               HOW DO WE WORK
             </h2>
-            <h1 className="text-5xl font-semibold">Our Work Process</h1>
+            <h1 className="text-5xl font-semibold max-md:text-4xl">Our Work Process</h1>
           </div>
-          <div className="text-lg w-[40%] mt-2 max-md:w-[100%] max-md:mt-10">
-            Discover T Soft Tech’s strategic approach to digital marketing and
+          <div className="text-lg w-[40%] mt-2 max-md:mt-4 max-md:w-[100%] ">
+            Discover BTJ ALPHA TECHNOLOGY PVT LTD’s strategic approach to digital marketing and
             website design, crafted to boost engagement, visibility, and
             business growth.
           </div>
         </div>
-        <div className="m-auto  pt-16">
+        <div className="m-auto  pt-16 max-md:pt-6">
           <div className="absolute w-[90%] mt-12  ml-5 flex justify-center z-0">
             <img
               src="/website-design/process-line.webp"
@@ -223,7 +228,7 @@ function WebsiteDesigning() {
             />
           </div>
           <div className="relative grid grid-cols-4 max-lg:grid-cols-2 max-sm:grid-cols-1">
-            <div className="p-5 text-center">
+            <div className="p-5 max-md:px-0 text-center">
               <div className="flex justify-center mb-5 z-50">
                 <img
                   src="/website-design/process-icon1.webp"
@@ -238,7 +243,7 @@ function WebsiteDesigning() {
                 is perfectly tailored to your unique needs.
               </p>
             </div>
-            <div className="p-5 text-center">
+            <div className="p-5  max-md:px-0 text-center">
               <div className="flex justify-center mb-5">
                 <img
                   src="/website-design/process-icon1.webp"
@@ -253,7 +258,7 @@ function WebsiteDesigning() {
                 website design, digital marketing, and more.
               </p>
             </div>
-            <div className="p-5 text-center">
+            <div className="p-5  max-md:px-0 text-center">
               <div className="flex justify-center mb-5">
                 <img
                   src="/website-design/process-icon1.webp"
@@ -268,7 +273,7 @@ function WebsiteDesigning() {
                 and user experience.
               </p>
             </div>
-            <div className="p-5 text-center">
+            <div className="p-5  max-md:px-0 text-center">
               <div className="flex justify-center mb-5">
                 <img
                   src="/website-design/process-icon1.webp"
@@ -441,11 +446,11 @@ function WebsiteDesigning() {
             <h2 className="border w-[180px] p-2 pl-3 text-[20px] rounded-[12px] tracking-widest leading-7 bg-[#ecf1f1] text-[#191970] font-semibold mb-5">
               OUR SERVICES
             </h2>
-            <h1 className="text-[55px] max-md:text-[45px] font-semibold leading-[4rem]">
-              Why Choose T SOFT TECH for Website Design
+            <h1 className="text-[55px] max-md:text-[25px] font-semibold leading-[4rem] max-md:leading-[2.5rem]">
+              Why Choose BTJ ALPHA TECHNOLOGY PVT LTD for Website Design
             </h1>
           </div>
-          <div className="text-lg w-[40%] max-lg:w-[100%] mt-36 max-lg:mt-6 max-md:w-[100%] max-md:mt-10">
+          <div className="text-lg w-[40%] max-lg:w-[100%] mt-36 max-lg:mt-6 max-md:w-[100%] max-md:mt-4">
             Join us on a journey where every pixel is purposeful, every click is
             intentional, and every visit is a step toward digital success.
           </div>

@@ -16,8 +16,13 @@ import {
   faqs,
 } from "../../components/SeoData";
 import { useState } from "react";
+import { useEffect } from "react";
+
 
 function SEO() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   const [answer, setAnswer] = useState(null);
   const handleToggle = (index) => {
     setAnswer(answer === index ? null : index);
@@ -26,13 +31,13 @@ function SEO() {
     <main>
       {/* Banner section start here */}
 
-      <section className="flex flex-wrap justify-between items-center p-10 bg-[#0A192F] text-white mt-20 pt-20 pb-28">
+      <section className="flex flex-wrap justify-between items-center p-10 max-md:px-1 bg-[#0A192F] text-white mt-[75px] pt-20 pb-28">
         {/* Content Section */}
         <div className="w-full lg:w-[45%] mb-8 lg:mb-0 px-4 ml-5 max-lg:ml-0">
-          <p className="text-lg lg:text-xl mb-6 ">
+          <p className="text-lg lg:text-xl mb-6 max-md:mb-1">
             Rated Excellent by 195+ Happy Customers
           </p>
-          <h1 className="text-3xl lg:text-6xl font-bold leading-relaxed mb-5">
+          <h1 className="text-3xl lg:text-6xl font-bold leading-relaxed max-md:leading-snug mb-5">
             The Best SEO Services Agency in India
           </h1>
           <p className="text-base lg:text-lg leading-relaxed">
@@ -43,7 +48,7 @@ function SEO() {
         </div>
 
         {/* Form Section */}
-        <div className="w-full lg:w-2/5 bg-[#0A192F] p-6 rounded-lg shadow-md text-center">
+        <div className="w-full lg:w-2/5 bg-[#0A192F] p-6 max-md:px-0 rounded-lg shadow-md text-center">
           <h2 className="text-3xl font-semibold mb-8">
             Get a Free Website Audit From Our SEO Specialists
           </h2>
@@ -53,14 +58,14 @@ function SEO() {
               name="name"
               placeholder="Name*"
               required
-              className="w-4/5 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
+              className="w-4/5 max-md:w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
             />
             <input
               type="email"
               name="email"
               placeholder="Email*"
               required
-              className="w-4/5 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
+              className="w-4/5 max-md:w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
             />
             <input
               type="tel"
@@ -73,25 +78,25 @@ function SEO() {
               onInput={(e) =>
                 (e.target.value = e.target.value.replace(/[^0-9]/g, ""))
               }
-              className="w-4/5 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
+              className="w-4/5 max-md:w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
             />
             <input
               type="url"
               name="website_url"
               placeholder="Enter Your Website URL"
               required
-              className="w-4/5 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
+              className="w-4/5 max-md:w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
             />
             <textarea
               name="needs"
               placeholder="Describe Your Needs"
               rows="3"
               required
-              className="w-4/5 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
+              className="w-4/5 max-md:w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
             ></textarea>
             <button
               type="submit"
-              className="w-4/5 h-12 bg-orange-500 text-white font-bold py-2 rounded-md hover:bg-orange-600 transition duration-300"
+              className="w-4/5 max-md:w-full h-12 bg-orange-500 text-white font-bold py-2 rounded-md hover:bg-orange-600 transition duration-300"
             >
               Free Website Audit
             </button>
@@ -198,7 +203,7 @@ function SEO() {
         {/* Content Section */}
         <div className="flex flex-col items-center lg:items-start w-full lg:w-[50%] ml-5 mt-5 max-lg:ml-0">
           <h1 className="text-white text-2xl lg:text-[2.6rem] font-semibold leading-tight mb-8 max-w-xl flex text-center">
-            What Can You Expect From T SOFTTECH SEO Services!
+            What Can You Expect From BTJ ALPHA TECHNOLOGY PVT LTD SEO Services!
           </h1>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-xl ml-5 max-lg:ml-0">
             {/* Benefits */}
@@ -249,7 +254,7 @@ function SEO() {
             GET REAL RESULTS WITH COMMERCIAL ADS PPC SERVICES
           </h1>
           <p className="text-base lg:text-lg leading-6 lg:w-1/2 text-center max-lg:text-start">
-            Commercial Ads.Co is a top pay-per-click agency in Delhi NCR that
+            BTJ ALPHA TECHNOLOGY PVT LTD is a top pay-per-click agency in Delhi NCR that
             uses cutting-edge digital marketing techniques to get remarkable
             outcomes. We optimise your return on investment and propel notable
             expansion by utilizing cutting-edge technologies and industry best
@@ -380,12 +385,12 @@ function SEO() {
 
       {/* specialised section start here */}
 
-      <section className="services mx-auto  w-[85%] max-lg:w-[100%] text-center bg-white p-6 rounded-lg shadow-md mb-16">
+      <section className="services mx-auto  w-[85%] max-lg:w-[100%] text-center bg-white p-6 max-md:px-2 rounded-lg shadow-md mb-16">
         <h1 className="text-4xl font-semibold text-gray-800 mb-6">
           Our Specialized Services
         </h1>
         <hr className="w-1/12 mx-auto h-1 bg-black mb-8" />
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4 max-md:gap-2">
           {specialised.map((service, index) => (
             <div
               key={index}
@@ -444,7 +449,7 @@ function SEO() {
 
       {/* Faq Section start here */}
 
-      <section className="faq mx-auto max-w-5xl p-6 bg-white rounded-lg shadow-lg mb-12">
+      <section className="faq mx-auto max-w-5xl p-6 max-md:px-2 bg-white rounded-lg shadow-lg mb-12">
         <h2 className="text-2xl font-bold text-gray-800 mb-4">FAQs</h2>
         {faqs &&
           faqs.map((item, index) => (

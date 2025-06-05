@@ -1,13 +1,16 @@
 import { BsArrowRight } from "react-icons/bs";
 import { BsArrowLeft } from "react-icons/bs";
 import React, { useRef } from "react";
-import team from "../assets/images/Home-page/team.jpeg";
+import team from "/aboutpage-team.jpeg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import { FaStar } from "react-icons/fa6";
+import { useEffect } from "react";
+
+
 
 function About() {
   const sliderRef = useRef(null);
@@ -51,6 +54,10 @@ function About() {
       },
     ],
   };
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
 
   const handleNext = () => {
     sliderRef.current.slickNext(); // Move to the next slide
@@ -101,8 +108,8 @@ function About() {
     <main>
       {/* Who-we-are Section Start here */}
 
-      <section className="p-5 flex mt-32 ml-4 mb-10 max-lg:block max-lg:ml-0 max-lg:p-0 max-lg:justify-center">
-        <div className=" w-[50%] mr-20 max-lg:w-auto max-lg:mb-[30px] max-lg:pl-3 max-lg:flex max-lg:justify-center max-lg:mr-6">
+      <section className="p-5 flex mt-20 ml-4 mb-10 max-lg:block max-lg:ml-0 max-lg:p-0 max-lg:justify-center">
+        <div className=" w-[50%] mr-10 max-lg:w-auto max-lg:mb-[30px] max-lg:pl-3 max-lg:flex max-lg:justify-center max-lg:mr-6">
           <img
             src={team}
             alt=""
@@ -110,55 +117,58 @@ function About() {
           />
         </div>
         <div className="w-[50%] ml-6 max-lg:w-[100%] max-lg:ml-0 max-lg:p-3">
-          <div>
-            <h3 className="text-[22px] text-[#ffc422] font-semibold">
-              WHO WE ARE?
-            </h3>
-            <h1 className="text-[50px] font-semibold mb-4 mt-2 leading-[4rem] max-lg:text-[40px] max-lg:leading-[3rem]">
-              Hey, We're A Team Of Creators
-            </h1>
-            <p className="leading-8 w-[95%] text-[18px] max-lg:w-[100%] max-lg:text-[16px]">
-              At T SOFT TECH Company, we’re a dynamic team of creators who
-              breathe life into technology. Passionate about innovation, we
-              design and develop tailored software and digital solutions that
-              empower businesses to flourish in the ever-evolving digital
-              landscape. With a focus on collaboration and creativity, we
-              transform ideas into impactful realities, ensuring that our
-              clients not only keep up but stand out. Let’s build something
-              extraordinary together!
-            </p>
+            <div>
+              <h3 className="text-[20px] text-[#ffc422] font-semibold">
+                WHO WE ARE?
+              </h3>
+              <h1 className="text-[42px] font-semibold mb-4 mt-0 leading-[4rem] max-lg:text-[36px] max-lg:leading-[3rem]">
+                Hey, We're A Team Of Creators
+              </h1>
+              <p className="leading-8 max-md:leading-6 w-[95%] text-[17px] max-lg:w-[100%] max-lg:text-[14px]">
+                At BTJ ALPHA TECHNOLOGY PVT LTD, we’re a dynamic team of creators who
+                breathe life into technology. Passionate about innovation, we
+                design and develop tailored software and digital solutions that
+                empower businesses to flourish in the ever-evolving digital
+                landscape. With a focus on collaboration and creativity, we
+                transform ideas into impactful realities, ensuring that our
+                clients not only keep up but stand out. Let’s build something
+                extraordinary together!{" "}
+                <Link to="about">
+                  <span className="font-bold">Read More</span>
+                </Link>
+              </p>
+            </div>
+            <div className="flex gap-10 mt-5 justify-between w-[95%] max-lg:w-[100%]">
+              <div>
+                <h1 className="text-[38px] font-semibold max-md:text-[40px]">
+                  50+
+                </h1>
+                <p className="text-[18px]">Employees</p>
+              </div>
+              <div>
+                <h1 className="text-[38px] font-semibold max-md:text-[40px]">
+                  378+
+                </h1>
+                <p className="text-[18px]">Completed Projects</p>
+              </div>
+              <div>
+                <h1 className="text-[38px] font-semibold max-md:text-[40px]">
+                  326+
+                </h1>
+                <p className="text-[18px]">Trusted Customers</p>
+              </div>
+            </div>
           </div>
-          <div className="flex gap-10 mt-5 justify-between w-[95%] max-lg:w-[100%]">
-            <div>
-              <h1 className="text-[40px] font-semibold max-md:text-[40px]">
-                50+
-              </h1>
-              <p className="text-[18px]">Employees</p>
-            </div>
-            <div>
-              <h1 className="text-[40px] font-semibold max-md:text-[40px]">
-                378+
-              </h1>
-              <p className="text-[18px]">Completed Projects</p>
-            </div>
-            <div>
-              <h1 className="text-[40px] font-semibold max-md:text-[40px]">
-                326+
-              </h1>
-              <p className="text-[18px]">Trusted Customers</p>
-            </div>
-          </div>
-        </div>
       </section>
 
       {/* Who-we-are Section End here */}
 
-      <section className="mx-14 mb-12 max-md:mx-5">
+      <section className="mx-14 mb-12 max-md:mx-3">
         <h2 className="border w-[140px] p-2 pl-3 text-[20px] rounded-[12px] tracking-widest leading-7 bg-[#ecf1f1] text-[#191970] font-semibold">
           ABOUT US{" "}
         </h2>
-        <h1 className="mt-6 text-[30px] max-md:text-[25px] font-semibold text-gray-600 mb-10">
-          At T SOFT TECH, we specialize in digital marketing and website design,
+        <h1 className="mt-6 text-[30px] max-md:text-[22px] font-semibold text-gray-600 mb-10">
+          At BTJ ALPHA TECHNOLOGY PVT LTD, we specialize in digital marketing and website design,
           crafting solutions that empower businesses to stand out, engage, and
           grow in the digital world.
         </h1>
@@ -184,7 +194,7 @@ function About() {
         </div>
       </section>
 
-      <section className="team-area py-12 px-6">
+      <section className="team-area py-12 px-6 max-md:py-2 max-md:px-3">
         <div className="container mx-auto text-center">
           <div className="text-center mb-10">
             <h5 className="text-yellow-500 text-lg uppercase">
@@ -201,22 +211,23 @@ function About() {
           {/* Slider */}
           <Slider {...settings} ref={sliderRef}>
             {teamMembers.map((member, index) => (
-              <div key={index} className=" flex-shrink-0 p-4 ">
-                <div className="bg-white shadow-lg rounded-lg text-center pb-5 overflow-hidden">
+              <div key={index} className="flex-shrink-0 p-4">
+              <div className="bg-white shadow-lg rounded-lg text-center pb-5 overflow-hidden">
+                <div className="overflow-hidden rounded-t-lg">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="mx-auto rounded-tl-[12px] rounded-tr-[12px] mb-4 transition-transform duration-300 transform hover:scale-110  object-cover"
+                    className="mx-auto w-full transition-transform duration-300 transform hover:scale-110 object-cover"
                   />
-
-                  <h5 className="text-lg font-bold text-start ml-2">
-                    {member.name}
-                  </h5>
-                  <h6 className="text-gray-500 text-start ml-2">
-                    {member.role}
-                  </h6>
                 </div>
+            
+                <h5 className="text-lg font-bold text-start ml-2 mt-4">
+                  {member.name}
+                </h5>
+                <h6 className="text-gray-500 text-start ml-2">{member.role}</h6>
               </div>
+            </div>
+            
             ))}
           </Slider>
 
@@ -241,16 +252,16 @@ function About() {
         </div>
       </section>
 
-      <section className="p-10 flex max-lg:block">
+      <section className="p-10 flex max-lg:block max-md:p-4">
         <div className="w-1/2 max-lg:w-full">
           <h3 className="text-[22px] tracking-widest text-[#ffc422] font-semibold ">
             CLIENT TESTIMONIALS
           </h3>
-          <h1 className="text-[45px] font-semibold w-[80%] mb-5">
-            What Our Clients Say About T SOFT TECH
+          <h1 className="text-[45px] max-md:text-[30px] font-semibold w-[80%] max-md:w-full mb-5">
+            What Our Clients Say About BTJ ALPHA TECHNOLOGY PVT LTD
           </h1>
           <p className="text-[18px]">
-            Discover how T SOFT TECH has empowered businesses across India with
+            Discover how BTJ ALPHA TECHNOLOGY PVT LTD has empowered businesses across India with
             innovative, customized digital solutions.
           </p>
           <Link to="contact ">
@@ -261,19 +272,19 @@ function About() {
           <hr className="h-[1px] bg-black mb-10 w-[90%]" />
           <div className="flex">
             <img src="/about-page/user.webp" className=" w-[100px]" alt="" />
-            <h1 className="mt-1 text-lg ml-3">Happy Clients of T SOFT TECH</h1>
+            <h1 className="mt-1 text-lg ml-3">Happy Clients of BTJ ALPHA TECHNOLOGY PVT LTD</h1>
           </div>
         </div>
         <div className="w-1/2 max-lg:w-full max-lg:mt-10">
           <Slider {...setting} ref={sliderRef2}>
-            <div className="p-8 rounded-[12px]  bg-[#f7f7f7]">
+            <div className="p-8 max-md:p-4 rounded-[12px]  bg-[#f7f7f7]">
               <h1 className="text-[28px] mb-10">
-                "T SOFT TECH has transformed our online presence with their
+                "BTJ ALPHA TECHNOLOGY PVT LTD has transformed our online presence with their
                 expertise. They understood our vision and delivered beyond our
                 expectations."
               </h1>
               <hr className="h-[1.2px] bg-black" />
-              <div className="flex justify-between">
+              <div className="flex max-md:block justify-between">
                 <div className="flex mt-8">
                   <img
                     src="/about-page/m4.webp"
@@ -293,14 +304,14 @@ function About() {
                 </div>
               </div>
             </div>
-            <div className="p-8 rounded-[12px] bg-[#f7f7f7]">
+            <div className="p-8 max-md:p-4 rounded-[12px] bg-[#f7f7f7]">
               <h1 className="text-[28px] mb-10">
-                "Working with T SOFT TECH was one of the best decisions for our
+                "Working with BTJ ALPHA TECHNOLOGY PVT LTD was one of the best decisions for our
                 business. Their targeted strategies significantly boosted our
                 customer engagement."
               </h1>
               <hr className="h-[1.2px] bg-black" />
-              <div className="flex justify-between">
+              <div className="flex max-md:block justify-between">
                 <div className="flex mt-8">
                   <img
                     src="/about-page/f2.jpg"
@@ -320,14 +331,14 @@ function About() {
                 </div>
               </div>
             </div>
-            <div className="p-8 rounded-[12px] bg-[#f7f7f7]">
+            <div className="p-8 max-md:p-4 rounded-[12px] bg-[#f7f7f7]">
               <h1 className="text-[28px] mb-10">
-                "T SOFT TECH has an excellent team that delivered a seamless
+                "BTJ ALPHA TECHNOLOGY PVT LTD has an excellent team that delivered a seamless
                 experience from start to finish. They’ve given us the digital
                 edge we needed."
               </h1>
               <hr className="h-[1.2px] bg-black" />
-              <div className="flex justify-between">
+              <div className="flex max-md:block justify-between">
                 <div className="flex mt-8">
                   <img
                     src="/about-page/m2.webp"

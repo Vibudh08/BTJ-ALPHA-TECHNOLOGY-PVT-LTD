@@ -13,13 +13,18 @@ import marketing from "../../assets/images/meta-ads/marketing.webp";
 import Strategy from "../../assets/images/meta-ads/Strategy.webp";
 import { workItems, cards, progressItems } from "../../components/MetaAdsData";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+
 
 function MetaAds() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   return (
     <main>
       {/* Banner Section Start Here */}
 
-      <section className="relative agency flex max-lg:flex-col max-lg:justify-center  items-center w-full overflow-hidden shadow-lg bg-gradient-to-t from-black/50 to-black/50 bg-cover mt-[90px]  ">
+      <section className="relative agency flex max-lg:flex-col max-lg:justify-center  items-center w-full overflow-hidden shadow-lg bg-gradient-to-t from-black/50 to-black/50 bg-cover mt-[70px]  ">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -30,8 +35,8 @@ function MetaAds() {
           <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
         {/* Left Section */}
-        <div className="relative left-section bg-transparent p-10 flex-1 text-white mt-4">
-          <h1 className="text-6xl font-semibold mb-10">Meta Ads Agency</h1>
+        <div className="relative left-section bg-transparent p-10 !px-4 flex-1 text-white mt-4">
+          <h1 className="text-6xl max-md:text-4xl font-semibold max-md:ml-3 mb-10">Meta Ads Agency</h1>
           <ul className="space-y-4 mb-8">
             {[
               "Get a Winning Facebook Ads Strategy",
@@ -43,16 +48,16 @@ function MetaAds() {
             ].map((item, index) => (
               <li
                 key={index}
-                className="flex items-center text-[1.4rem] leading-8"
+                className="flex items-center text-[1.4rem] max-md:text-[1rem] max-md:leading-5 leading-8"
               >
-                <span className="text-orange-500 mr-3">●</span>
+                <span className="text-orange-500 max-md:ml-3 mr-3">●</span>
                 {item}
               </li>
             ))}
           </ul>
           <a
             href="tel:01245206456"
-            className="call-button inline-block bg-[#0000ff] text-white py-3 px-5 rounded-3xl font-bold text-lg hover:bg-blue-800"
+            className="call-button inline-block bg-[#0000ff] max-md:ml-3 text-white py-3 px-5 rounded-3xl font-bold text-lg hover:bg-blue-800"
           >
             Call 01245 206456
           </a>
@@ -139,7 +144,7 @@ function MetaAds() {
               type="submit"
               className="w-full py-3 bg-orange-500 text-white font-bold text-lg rounded-md hover:bg-orange-600"
             >
-              Send
+              Submit
             </button>
           </form>
         </div>
@@ -155,7 +160,7 @@ function MetaAds() {
           <h2 className="text-orange-500 uppercase mb-2 text-2xl">
             Who We Are
           </h2>
-          <h1 className="text-[2.9rem] font-semibold leading-tight mb-8 w-[100%]">
+          <h1 className="text-[2.9rem] max-md:text-[2rem] font-semibold leading-tight mb-8 w-[100%]">
             Your Trusted Partner in Digital Transformation
           </h1>
           <p className="text-[1.2rem] mb-8 w-[95%]">
@@ -193,7 +198,7 @@ function MetaAds() {
                 "Robust execution methodology",
                 "Detailed insight & reporting",
               ].map((detail, index) => (
-                <li key={index} className="flex text-lg w-[88%] leading-6 ml-5">
+                <li key={index} className="flex text-lg w-[88%]  leading-6 ml-5 max-md:ml-1">
                   <span className="text-orange-500 text-2xl mr-2">↗</span>
                   {detail}
                 </li>
@@ -216,7 +221,7 @@ function MetaAds() {
 
       {/* Cards Section Start Here */}
 
-      <section className="cards-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 p-10 mb-8">
+      <section className="cards-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 p-10 max-md:p-4 mb-8">
         {cards.map((card, index) => (
           <div
             key={index}
@@ -237,13 +242,13 @@ function MetaAds() {
 
       {/* Commitment Section Start Here */}
 
-      <section className="commitment flex flex-col lg:flex-row justify-between items-start bg-black text-white px-10 py-12 my-8">
+      <section className="commitment flex flex-col lg:flex-row justify-between items-start bg-black text-white px-10 max-md:px-4 py-12 my-8">
         {/* Left Section */}
         <div className="left-section flex-1 lg:pr-10">
           <h4 className="text-[#fd9e1c] font-semibold text-2xl uppercase mb-3 mt-5">
             Why Choose Us
           </h4>
-          <h1 className="text-5xl maxlg:text-5xl font-semibold mb-7 leading-tight">
+          <h1 className="text-5xl max-lg:text-4xl font-semibold mb-7 leading-tight">
             Commitment, Quality, & Results
           </h1>
           <p className="text-xl font-semibold mb-4">
@@ -307,8 +312,8 @@ function MetaAds() {
 
       {/* dedicated section start here */}
 
-      <section className="dedicated-team flex flex-col items-center justify-around p-5 gap-8 max-w-7xl mx-auto mb-12 w-[80%] max-lg:w-[100%] max-lg:p-5">
-        <h1 className="text-5xl font-semibold text-center mb-6">
+      <section className="dedicated-team flex flex-col items-center justify-around p-5 gap-8 max-md:gap-4 max-w-7xl mx-auto mb-12 w-[80%] max-lg:w-[100%] max-lg:p-5">
+        <h1 className="text-5xl max-md:text-4xl font-semibold text-center mb-6">
           Hire us as your dedicated team
         </h1>
         <div className="whole-content flex flex-col md:flex-row items-center max-lg:block max-lg:m-auto">
@@ -349,8 +354,8 @@ function MetaAds() {
 
       {/* services section start here */}
 
-      <section className="services text-center p-10 bg-black text-white mb-10">
-        <h1 className="text-[2.8rem] font-semibold mb-5">
+      <section className="services text-center p-10 max-md:px-5 bg-black text-white mb-10">
+        <h1 className="text-[2.8rem] max-md:text-[2rem] font-semibold mb-5">
           Our Meta Ads Services
         </h1>
         <p className="text-lg text-gray-300 mb-10">
@@ -453,9 +458,9 @@ function MetaAds() {
               Contact Us
             </button>
           </Link>
-          <button className="audit-btn bg-teal-500 text-white py-2 px-6 rounded-md text-lg hover:opacity-90 transition">
+          {/* <button className="audit-btn bg-teal-500 text-white py-2 px-6 rounded-md text-lg hover:opacity-90 transition">
             Get a Free Audit
-          </button>
+          </button> */}
         </div>
       </section>
 
@@ -463,8 +468,8 @@ function MetaAds() {
 
       {/* three-boxes section start here */}
 
-      <section className="pt-10 pb-16 ">
-        <div className="grid w-[70%] grid-cols-3 m-auto gap-4 max-lg:grid-cols-1">
+      <section className="pt-10 max-md:pt-4 pb-16 ">
+        <div className="grid w-[70%] max-md:w-[90%] grid-cols-3 m-auto gap-4 max-lg:grid-cols-1">
           <div className="border h-[310px] rounded-xl bg-[#0073bf] transition-transform duration-300 ease-linear hover:scale-105">
             <img src={arrow} alt="" className="w-40 h-40 mx-auto mb-2 mt-4" />
             <p className="px-7 flex text-center text-[18px] text-white max-xl:text-[16px] ">

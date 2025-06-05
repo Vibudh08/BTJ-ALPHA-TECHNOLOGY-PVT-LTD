@@ -158,7 +158,7 @@ const cities = [
 
 const service = [
   {
-    img: "/services-icons/Hyperlocal-SEO-Automation.webp",
+    img: "/services-icons/Hyperlocal.webp",
     title: "Hyperlocal SEO Automation & Optimization",
     description1:
       "Streamline your local SEO efforts by automating repetitive tasks like keyword research, citation management, and page creation.",
@@ -166,7 +166,7 @@ const service = [
       "Improve your SERP rankings for local and 'near-me' searches to see a spike in your organic traffic.",
   },
   {
-    img: "/services-icons/Customized-Store-Microsites.webp",
+    img: "/services-icons/Customized.webp",
     title: "Customized Store Microsites & Geo-Targeted Ads",
     description1:
       "Create unique, localized store microsites to cater to specific regions or demographics, improving customer experience and search engine visibility.",
@@ -174,13 +174,13 @@ const service = [
       "Reach customers precisely where they are located with geo-targeted ads.",
   },
   {
-    img: "/services-icons/Enterprise-Hyperlocal-Marketing.webp",
+    img: "/services-icons/Enterprise.webp",
     title: "Enterprise Hyperlocal Marketing",
     description1:
       "We connect large businesses with customers at a local level, helping them increase their brand visibility, reach specific communities, and more.",
   },
   {
-    img: "/services-icons/Google-My-Business-Optimization.webp",
+    img: "/services-icons/Google.webp",
     title: "Google My Business (GMB) Optimization",
     description1:
       "Improve your local visibility and trustworthiness in order to attract potential customers.",
@@ -198,13 +198,13 @@ const service = [
       "Manage and optimize your business listings across multiple platforms, track performance, and gain insights about customer behavior.",
   },
   {
-    img: "/services-icons/Adjustable-Product-Cataloging.webp",
+    img: "/services-icons/Adjustable.webp",
     title: "Adjustable Product Cataloging",
     description1:
       "Easily manage and update your product catalog, including images, descriptions, and pricing, to ensure accuracy and consistency.",
   },
   {
-    img: "/services-icons/Lead-Flow-Management-Reporting.webp",
+    img: "/services-icons/Lead.webp",
     title: "Lead Flow Management & Reporting",
     description1:
       "Efficiently capture, manage, and nurture leads generated from your online and offline channels.",
@@ -212,7 +212,7 @@ const service = [
       "Provide detailed reporting on lead conversion rates and performance.",
   },
   {
-    img: "/services-icons/Duplicate-Listing-Suppression.webp",
+    img: "/services-icons/Duplicate.webp",
     title: "Duplicate Listing Suppression",
     description1:
       "Identify and remove duplicate listings across online directories to maintain consistency and improve search engine rankings.",

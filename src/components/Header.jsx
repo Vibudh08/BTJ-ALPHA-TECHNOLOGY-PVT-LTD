@@ -1,115 +1,268 @@
 import { useState } from "react";
-import logo from "../assets/images/logo.jpg";
-import { FaAlignJustify } from "react-icons/fa6";
-import { FiArrowRightCircle } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import { IoClose } from "react-icons/io5";
+import { FiArrowRightCircle } from "react-icons/fi";
 import { IoIosArrowDown } from "react-icons/io";
 
-function Header() {
-  const [show, setShow] = useState("show");
-  const handleClick = () => {
-    setShow((e) => (e === "show" ? "hidden" : "show"));
-  };
+const Header = () => {
+  const [show, setShow] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const handleClick = () => setShow(!show);
+
+  const menuItems = (
+    <ul className=" flex-col gap-6  flex text-lg font-semibold md:flex-row md:items-center md:gap-8">
+      <Link to="/">
+        <li
+          onClick={() => setShow(false)}
+          className="hover:underline hover:underline-offset-8 hover:decoration-2 hover:decoration-[#fb9c24]"
+        >
+          Home
+        </li>
+      </Link>
+      <Link to="/about">
+        <li
+          onClick={() => setShow(false)}
+          className="hover:underline hover:underline-offset-8 hover:decoration-2 hover:decoration-[#fb9c24]"
+        >
+          About Us
+        </li>
+      </Link>
+
+      <div className="relative">
+        {/* Main Menu Item */}
+        <div className="flex items-center justify-between cursor-pointer  max-lg:w-[85px]  max-lg:mb-4 max-md:mb-0">
+          <span
+            className="flex items-center gap-1 hover:underline hover:underline-offset-8 hover:decoration-2 hover:decoration-[#fb9c24]"
+            onMouseEnter={() => setServicesOpen(true)}
+            onMouseLeave={() => setServicesOpen(false)}
+          >
+            Services
+            <IoIosArrowDown className="hidden md:inline" />
+          </span>
+
+          {/* Mobile Toggle Button */}
+          <button
+            className="md:hidden text-xl"
+            onClick={() => setServicesOpen(!servicesOpen)}
+          >
+            {servicesOpen ? "-" : "+"}
+          </button>
+        </div>
+
+        {/* Dropdown for Desktop */}
+        <ul
+          className={`absolute left-0 bg-white shadow-lg w-[280px] rounded-[12px] z-50 transition-all duration-300 ease-in-out hidden md:block ${
+            servicesOpen ? "opacity-100 translate-y-2" : "opacity-0 invisible"
+          }`}
+          onMouseEnter={() => setServicesOpen(true)}
+          onMouseLeave={() => setServicesOpen(false)}
+        >
+          <Link to="/website-designing">
+            <li className="px-4 py-4 hover:bg-gray-100 border rounded-t-[12px]">
+              Website Designing
+            </li>
+          </Link>
+          <Link to="/website-development">
+            <li className="px-4 py-4 hover:bg-gray-100 border">
+              Website Development
+            </li>
+          </Link>
+          <Link to="/mobile-app-development">
+            <li className="px-4 py-4 hover:bg-gray-100 border">
+              Mobile App Development
+            </li>
+          </Link>
+          <Link to="/search-engine-optimization">
+            <li className="px-4 py-4 hover:bg-gray-100 border">
+              Search Engine Optimization
+            </li>
+          </Link>
+          <Link to="/social-media-marketing">
+            <li className="px-4 py-4 hover:bg-gray-100 border">
+              Social Media Marketing
+            </li>
+          </Link>
+          <Link to="/meta-ads">
+            <li className="px-4 py-4 hover:bg-gray-100 border">Facebook Ads</li>
+          </Link>
+          <Link to="/google-ads">
+            <li className="px-4 py-4 hover:bg-gray-100 border rounded-b-[12px]">
+              Google Ads
+            </li>
+          </Link>
+        </ul>
+
+        {/* Dropdown for Mobile */}
+        {servicesOpen && (
+          <div className="md:hidden mt-2 pl-4">
+            <Link to="/website-designing">
+              <div
+                onClick={() => setShow(false)}
+                className="py-2 border-b hover:text-[#fb9c24]"
+              >
+                Website Designing
+              </div>
+            </Link>
+            <Link to="/website-development">
+              <div
+                onClick={() => setShow(false)}
+                className="py-2 border-b hover:text-[#fb9c24]"
+              >
+                Website Development
+              </div>
+            </Link>
+            <Link to="/mobile-app-development">
+              <div
+                onClick={() => setShow(false)}
+                className="py-2 border-b hover:text-[#fb9c24]"
+              >
+                Mobile App Development
+              </div>
+            </Link>
+            <Link to="/search-engine-optimization">
+              <div
+                onClick={() => setShow(false)}
+                className="py-2 border-b hover:text-[#fb9c24]"
+              >
+                Search Engine Optimization
+              </div>
+            </Link>
+            <Link to="/social-media-marketing">
+              <div
+                onClick={() => setShow(false)}
+                className="py-2 border-b hover:text-[#fb9c24]"
+              >
+                Social Media Marketing
+              </div>
+            </Link>
+            <Link to="/meta-ads">
+              <div
+                onClick={() => setShow(false)}
+                className="py-2 border-b hover:text-[#fb9c24]"
+              >
+                Facebook Ads
+              </div>
+            </Link>
+            <Link to="/google-ads">
+              <div
+                onClick={() => setShow(false)}
+                className="py-2 hover:text-[#fb9c24]"
+              >
+                Google Ads
+              </div>
+            </Link>
+          </div>
+        )}
+      </div>
+
+      <Link to="/bulk-sms">
+        <li
+          onClick={() => setShow(false)}
+          className="hover:underline hover:underline-offset-8 hover:decoration-2 hover:decoration-[#fb9c24]"
+        >
+          Bulk SMS
+        </li>
+      </Link>
+      {/* <li className="hover:underline hover:underline-offset-8 hover:decoration-2 hover:decoration-[#fb9c24]">
+        Blog
+      </li> */}
+      <Link to="/portfolio">
+        <li
+          onClick={() => setShow(false)}
+          className="hover:underline hover:underline-offset-8 hover:decoration-2 hover:decoration-[#fb9c24]"
+        >
+          Portfolio
+        </li>
+      </Link>
+      <Link to="/contact">
+        <li
+          onClick={() => setShow(false)}
+          className="hover:underline hover:underline-offset-8 hover:decoration-2 hover:decoration-[#fb9c24]"
+        >
+          Contact
+        </li>
+      </Link>
+    </ul>
+  );
+
   return (
     <>
-      <main className=" w-full fixed top-0 left-0 z-50 bg-white shadow-md">
-        <div className="flex justify-between mb-2 mt-2 ">
+      {/* Overlay */}
+      {show && (
+        <div
+          className="fixed inset-0 bg-black opacity-50 z-[900]"
+          onClick={() => setShow(false)}
+        />
+      )}
+
+      {/* Mobile Side Drawer */}
+      <div
+        className={`fixed top-0 left-0 z-[1000] bg-white h-full w-[310px] px-[30px] py-[40px] flex-col transition-all duration-500 ease-in-out border border-white transform ${
+          show ? "translate-x-0 opacity-100" : "-translate-x-full opacity-0"
+        } md:hidden`}
+      >
+        <IoClose
+          className="text-2xl absolute right-3 top-5 cursor-pointer"
+          onClick={() => setShow(false)}
+        />
+        <div className="flex justify-center mb-5">
           <img
-            src={logo}
-            className="w-[200px] object-cover ml-5 mt-1 max-lg:ml-0 max-lg:mt-0"
-            alt=""
+            src="/logo.jpg"
+            className="w-[80px] object-cover"
+            alt="Admirer Logo"
           />
-          <div className="max-lg:relative max-lg:bg-black">
+        </div>
+        {menuItems}
+      </div>
+
+      {/* Header */}
+      <main className=" fixed top-0 left-0 z-50 w-full pb-[1px] pt-[1px] bg-white shadow-md ">
+        <div className="w-[95%] max-md:w-full px-4 flex justify-between items-center">
+          {/* Mobile Menu Icon */}
+
+          {/* Logo */}
+          <Link to="/">
+            <img
+              src="/logo.jpg"
+              className="w-[70px] ml-8 max-md:ml-0  object-cover"
+              alt="Admirer Logo"
+            />
+          </Link>
+
+          <div className="md:hidden flex items-center">
             <div
-              className={`${show} w-full flex max-lg:flex-col max-lg:absolute max-lg:mt-[375px] max-lg:top-1/2 max-lg:left-1/2 max-lg:transform max-lg:-translate-x-1/2 max-lg:-translate-y-1/2 max-lg:w-[250px] max-lg:bg-white max-lg:text-black z-50 max-lg:pb-10 max-lg:pl-5 max-lg:rounded-[12px] transition-all duration-300 ease-in delay-300`}
+              className="w-5 h-[14px] flex flex-col justify-between cursor-pointer"
+              onClick={handleClick}
             >
-              <ul className="flex mt-5 mr-40 text-lg gap-8 font-semibold max-lg:block transition-all duration-300 ease-in delay-300">
-                <Link to="/">
-                  <li className="max-lg:text-xl max-lg:w-40 max-lg:text-[30px] max-lg:p-4 max-lg:mb-4 hover:underline hover:underline-offset-8 hover:decoration-2 hover:decoration-[#fb9c24]">
-                    Home
-                  </li>
-                </Link>
-                <Link to="about">
-                  <li className="max-lg:text-xl max-lg:w-40 max-lg:text-[30px] max-lg:p-4 max-lg:mb-4 hover:underline hover:underline-offset-8 hover:decoration-2 hover:decoration-[#fb9c24]">
-                    About Us
-                  </li>
-                </Link>
-                <div className="relative group">
-                  <Link to="services">
-                    <li className="relative group max-lg:text-xl max-lg:w-40 max-lg:text-[30px] max-lg:p-4 max-lg:mb-4 hover:underline hover:underline-offset-8 hover:decoration-2 hover:decoration-[#fb9c24] cursor-pointer mr-1 max-md:mb-0">
-                      Services
-                      <span className="absolute mt-2 text-md transition-transform duration-500 group-hover:rotate-180 ">
-                        <IoIosArrowDown />
-                      </span>
-                    </li>
-                  </Link>
-
-                  <ul className="absolute hidden group-hover:block bg-white shadow-lg mt-2 max-md:mt-0 w-[280px] rounded-[12px] opacity-0 hover:translate-y-4 transition-all duration-700 ease-in-out group-hover:opacity-100 group-hover:translate-y-4 z-50">
-                    <Link to="website-designing">
-                      <li className="px-4 py-4 hover:bg-gray-100 border rounded-t-[12px]">
-                        Website Designing
-                      </li>
-                    </Link>
-                    <li className="px-4 py-4 hover:bg-gray-100 border">
-                      Website Development
-                    </li>
-                    <li className="px-4 py-4 hover:bg-gray-100 border">
-                      Mobile App Development
-                    </li>
-                    <Link to="search-engine-optimization">
-                      <li className="px-4 py-4 hover:bg-gray-100 border">
-                        Search Engine Optimization
-                      </li>
-                    </Link>
-                    <li className="px-4 py-4 hover:bg-gray-100 border">
-                      Social Media Marketing
-                    </li>
-                    <Link to="meta-ads">
-                      <li className="px-4 py-4 hover:bg-gray-100 border">
-                        Facebook Ads
-                      </li>
-                    </Link>
-                    <Link to="google-ads">
-                      <li className="px-4 py-4 hover:bg-gray-100 border rounded-b-[12px]">
-                        Google Ads
-                      </li>
-                    </Link>
-                  </ul>
-                </div>
-
-                <li className="max-lg:text-xl max-lg:w-40 max-lg:text-[30px] max-lg:p-4 max-lg:mb-4 hover:underline hover:underline-offset-8 hover:decoration-2 hover:decoration-[#fb9c24]">
-                  Bulk SMS
-                </li>
-                <li className="max-lg:text-xl max-lg:w-40 max-lg:text-[30px] max-lg:p-4 max-lg:mb-4 hover:underline hover:underline-offset-8 hover:decoration-2 hover:decoration-[#fb9c24]">
-                  Blog
-                </li>
-                <Link to="portfolio">
-                  <li className="max-lg:text-xl max-lg:w-40 max-lg:text-[30px] max-lg:p-4 max-lg:mb-4 hover:underline hover:underline-offset-8 hover:decoration-2 hover:decoration-[#fb9c24]">
-                    Portfolio
-                  </li>
-                </Link>
-                <Link to="contact">
-                  <li className="max-lg:text-xl max-lg:w-40 max-lg:text-[30px] max-lg:p-4 max-lg:mb-4 hover:underline hover:underline-offset-8 hover:decoration-2 hover:decoration-[#fb9c24]">
-                    Contact
-                  </li>
-                </Link>
-              </ul>
-              <Link to="contact">
-                <button className="w-[170px] mr-7 mb-2 font-bold mt-2 border-solid border-orange-500 border pl-5 pr-9 h-14 rounded-2xl text-1xl">
-                  Get In Touch
-                  <span className="absolute mt-1 ml-2 text-xl z-0">
-                    <FiArrowRightCircle />
-                  </span>
-                </button>
-              </Link>
+              <span className="w-full h-[2px] bg-black block"></span>
+              <span
+                className={` h-[2px] bg-black block self-end ${
+                  show ? "w-full" : "w-1/2"
+                }`}
+              ></span>
+              <span className="w-full h-[2px] bg-black block"></span>
             </div>
           </div>
-          <span className="lg:hidden text-3xl mr-5 mt-5 z-[1000] ">
-            <FaAlignJustify onClick={handleClick} />
-          </span>
+
+          {/* Desktop Navigation */}
+
+          {/* <div className="hidden md:flex items-center gap-2"> */}
+          <div className="hidden md:flex">{menuItems}</div>
+          <div className="hidden md:flex">
+            <Link to="/contact">
+              <button className="w-[170px] flex font-bold border  border-orange-500 pl-4 pr-4 h-12 rounded-2xl text-lg  items-center ">
+                Get In Touch
+                <span className="text-xl ml-2">
+                  <FiArrowRightCircle />
+                </span>
+              </button>
+            </Link>
+          </div>
+          {/* </div> */}
         </div>
       </main>
     </>
   );
-}
+};
+
 export default Header;

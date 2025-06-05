@@ -20,8 +20,12 @@ import programming from "../assets/images/Home-page/programming.webp";
 import { Link } from "react-router-dom";
 import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import { useState } from "react";
-import {items} from "../components/HomePageData";
-import {technologies} from "../components/HomePageData";
+import { items } from "../components/HomePageData";
+import { technologies } from "../components/HomePageData";
+import { RiArrowRightSLine } from "react-icons/ri";
+import { useEffect } from "react";
+
+
 
 function Home() {
   const [hoveredId, setHoveredId] = useState(null);
@@ -33,22 +37,32 @@ function Home() {
   const handleMouseOut = () => {
     setHoveredId(null);
   };
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
 
   const [activeTab, setActiveTab] = useState("SEO");
-
+  const [selected, setSelected] = useState("");
   const handleTabClick = (service) => {
     setActiveTab(service);
   };
 
   return (
     <>
-      <main className=" w-[100%]  mt-[86px]">
+      <main className=" w-[100%]  mt-[75px]">
         {/* Banner Section Start here */}
 
-        <div className="relative h-[715px] bg-cover bg-center overflow-hidden max-md:pt-[1000px] max-md:pb-[10px]">
+        <div className="relative h-full bg-cover bg-center overflow-hidden  max-md:pb-[10px]">
           {/* Background Video */}
           <div className="absolute inset-0">
-            <video autoPlay loop muted className="w-full h-full object-cover">
+            <video
+              autoPlay
+              loop
+              muted
+              preload="auto"
+              poster="/fallback_img.png"
+              className="w-full h-full object-cover"
+            >
               <source src={video} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
@@ -57,7 +71,7 @@ function Home() {
           </div>
 
           {/* Content */}
-          <div className="relative flex flex-col md:flex-row items-center justify-center h-full text-white">
+          <div className="relative flex flex-col md:flex-row py-[80px] items-center justify-center h-full text-white">
             <div className="text-white p-8 md:w-1/2">
               <h2 className="text-[#fb9c24] text-lg font-semibold ">
                 GET STARTED WITH US
@@ -78,9 +92,9 @@ function Home() {
             </div>
             <div className="bg-white p-8 rounded-[20px] shadow-lg md:w-1/3 w-full mt-8 md:mt-0">
               <h2 className="text-2xl font-semibold mb-6 text-black flex justify-center text-center">
-                Get A Free Consultation With Marketing Our Expert
+                Get A Free Consultation With Our Marketing Expert
               </h2>
-              <form className="space-y-4 max-md:mb-[800px]">
+              <form className="space-y-4">
                 <div className="flex space-x-4 text-black">
                   <input
                     type="text"
@@ -97,21 +111,27 @@ function Home() {
                   <input
                     type="text"
                     placeholder="Enter 10-digit number"
-                    className="w-1/2 p-3 border rounded-lg"
+                    className="w-1/2 p-3 border rounded-lg text-black"
                   />
-                  <select className="w-1/2 p-3 border rounded-lg text-gray-400">
-                    <option>Select Service</option>
-                    <option>Web Designing</option>
-                    <option>Web Development</option>
-                    <option>App Development</option>
-                    <option>Digital Marketing</option>
-                    <option>Bulk SMS</option>
-                    <option>Bulk Database</option>
+                  <select
+                    value={selected}
+                    onChange={(e) => setSelected(e.target.value)}
+                    className={`w-1/2 p-2 border rounded-lg 
+                      ${selected === "" ? "text-gray-500" : "text-black"} 
+                      bg-white focus:outline-none`}
+                  >
+                    <option value="">Select Service</option>
+                    <option value="design">Web Designing</option>
+                    <option value="development">Web Development</option>
+                    <option value="app">App Development</option>
+                    <option value="marketing">Digital Marketing</option>
+                    <option value="sms">Bulk SMS</option>
+                    <option value="database">Bulk Database</option>
                   </select>
                 </div>
                 <textarea
                   placeholder="Message"
-                  className="w-full p-3 border rounded-lg h-32"
+                  className="w-full p-3 border rounded-lg h-32 text-black"
                 ></textarea>
                 <button
                   type="submit"
@@ -131,28 +151,28 @@ function Home() {
         <div className="p-5 flex mt-16 ml-4 mb-10 max-lg:block max-lg:ml-0 max-lg:p-0 max-lg:justify-center">
           <div className=" w-[50%] mr-20 max-lg:w-auto max-lg:mb-[30px] max-lg:pl-3 max-lg:flex max-lg:justify-center max-lg:mr-6">
             <img
-              src={team}
+              src="/aboutpage-team.jpeg"
               alt=""
               className="w-[100%] mt-5 ml-4 rounded-[20px] z-0 max-lg:mt-9"
             />
           </div>
           <div className="w-[50%] ml-6 max-lg:w-[100%] max-lg:ml-0 max-lg:p-3">
             <div>
-              <h3 className="text-[22px] text-[#ffc422] font-semibold">
+              <h3 className="text-[20px] text-[#ffc422] font-semibold">
                 WHO WE ARE?
               </h3>
-              <h1 className="text-[50px] font-semibold mb-4 mt-2 leading-[4rem] max-lg:text-[40px] max-lg:leading-[3rem]">
+              <h1 className="text-[42px] font-semibold mb-4 mt-0 leading-[4rem] max-lg:text-[36px] max-lg:leading-[3rem]">
                 Hey, We're A Team Of Creators
               </h1>
-              <p className="leading-8 w-[95%] text-[18px] max-lg:w-[100%] max-lg:text-[16px]">
-                At T SOFT TECH Company, we’re a dynamic team of creators who
-                breathe life into technology. Passionate about innovation, we
-                design and develop tailored software and digital solutions that
-                empower businesses to flourish in the ever-evolving digital
-                landscape. With a focus on collaboration and creativity, we
-                transform ideas into impactful realities, ensuring that our
-                clients not only keep up but stand out. Let’s build something
-                extraordinary together!{" "}
+              <p className="leading-8 w-[95%] text-[17px] max-lg:w-[100%] max-lg:text-[14px]">
+                At BTJ ALPHA TECHNOLOGY PVT LTD, we’re a dynamic team of
+                creators who breathe life into technology. Passionate about
+                innovation, we design and develop tailored software and digital
+                solutions that empower businesses to flourish in the
+                ever-evolving digital landscape. With a focus on collaboration
+                and creativity, we transform ideas into impactful realities,
+                ensuring that our clients not only keep up but stand out. Let’s
+                build something extraordinary together!{" "}
                 <Link to="about">
                   <span className="font-bold">Read More</span>
                 </Link>
@@ -160,19 +180,19 @@ function Home() {
             </div>
             <div className="flex gap-10 mt-5 justify-between w-[95%] max-lg:w-[100%]">
               <div>
-                <h1 className="text-[40px] font-semibold max-md:text-[40px]">
+                <h1 className="text-[38px] font-semibold max-md:text-[40px]">
                   50+
                 </h1>
                 <p className="text-[18px]">Employees</p>
               </div>
               <div>
-                <h1 className="text-[40px] font-semibold max-md:text-[40px]">
+                <h1 className="text-[38px] font-semibold max-md:text-[40px]">
                   378+
                 </h1>
                 <p className="text-[18px]">Completed Projects</p>
               </div>
               <div>
-                <h1 className="text-[40px] font-semibold max-md:text-[40px]">
+                <h1 className="text-[38px] font-semibold max-md:text-[40px]">
                   326+
                 </h1>
                 <p className="text-[18px]">Trusted Customers</p>
@@ -197,12 +217,13 @@ function Home() {
             - An Extended Team
           </p>
           <p className="p-3 w-[77%] m-auto text-[1.1rem] max-md:w-[100%]">
-            T SOFT TECH is a professionally managed full service web design &
-            development company in Mumbai, India. Since 2005, we have been
-            helping businesses in India, UK, Canada, Australia, and all over the
-            world to adapt and grow in an ever-changing online world by offering
-            fully functional mobile-friendly responsive, cheap Website
-            Designing, Web Development.
+            BTJ ALPHA TECHNOLOGY PVT LTD is a professionally managed full
+            service web design & development company in Mumbai, India. Since
+            2005, we have been helping businesses in India, UK, Canada,
+            Australia, and all over the world to adapt and grow in an
+            ever-changing online world by offering fully functional
+            mobile-friendly responsive, cheap Website Designing, Web
+            Development.
           </p>
           <div className="m-10 grid grid-cols-3 gap-0 relative max-md:grid-cols-1 max-md:m-2">
             <div className="absolute inset-0">
@@ -260,10 +281,10 @@ function Home() {
                   What We Do Is
                 </h1>
                 <p className="text-[18px] mb-6">
-                  T SOFT TECH is a professionally managed full service web
-                  design & development company in Mumbai, India. Since 2005 we
-                  have been helping business in India, UK, Canada, Australia and
-                  worldwide.
+                  BTJ ALPHA TECHNOLOGY PVT LTD is a professionally managed full
+                  service web design & development company in Mumbai, India.
+                  Since 2005 we have been helping business in India, UK, Canada,
+                  Australia and worldwide.
                 </p>
                 <div>
                   <div className="flex border p-5 rounded-xl bg-white mb-5">
@@ -322,7 +343,7 @@ function Home() {
         <div className="m-16 max-lg:m-2 ">
           <div className="flex justify-between items-center max-lg:block ">
             <div className="w-[70%] max-lg:w-[100%]">
-              <h1 className="text-[3rem] font-semibold mb-4 max-md:text-[2.8rem]">
+              <h1 className="text-[2.5rem] font-semibold mb-4 max-md:text-[2.8rem]">
                 Digital Marketing Services
               </h1>
               <p className="text-[1.1rem] mb-6">
@@ -331,24 +352,40 @@ function Home() {
                 solution. We do Your business in your way.
               </p>
             </div>
-            <button className="w-[160px] h-[60px] bg-red-600 text-white max-lg:mb-5">
+            {/* <button className="w-[160px] h-[60px] bg-red-600 text-white max-lg:mb-5">
               GET A QUOTE
-            </button>
+            </button> */}
           </div>
           <hr className="h-[1.5px] bg-black" />
           <div className="mt-10 flex max-lg:block ">
             <div className="leading-10 ml-6 text-[18px] w-[25%] font-semibold max-lg:w-[100%] max-lg:ml-2 flex flex-col justify-start items-start mb-5  ">
-              <button onClick={() => handleTabClick("SEO")}>
+              <button 
+                className="flex items-center "
+                onClick={() => handleTabClick("SEO")}
+              >
                 Search Engine Optimization
+                <RiArrowRightSLine className="text-xl mt-1" />
               </button>
-              <button onClick={() => handleTabClick("SMO")}>
+              <button
+                className="flex items-center "
+                onClick={() => handleTabClick("SMO")}
+              >
                 Social Media Optimization
+                <RiArrowRightSLine className="text-xl mt-1" />
               </button>
-              <button onClick={() => handleTabClick("CM")}>
+              <button
+                className="flex items-center "
+                onClick={() => handleTabClick("CM")}
+              >
                 Content Marketing
+                <RiArrowRightSLine className="text-xl mt-1" />
               </button>
-              <button onClick={() => handleTabClick("PPC")}>
+              <button
+                className="flex items-center "
+                onClick={() => handleTabClick("PPC")}
+              >
                 PPC Management Services
+                <RiArrowRightSLine className="text-xl mt-1" />
               </button>
             </div>
 
@@ -365,8 +402,8 @@ function Home() {
                       Search Engine Optimization
                     </h2>
                     <h4 className="text-[1.2rem] font-semibold mb-3">
-                      T SOFT TECH SEO Services In India - Trusted By Over 1000+
-                      Companies
+                      BTJ ALPHA TECHNOLOGY PVT LTD SEO Services In India -
+                      Trusted By Over 1000+ Companies
                     </h4>
                     <p className="mb-3 text text-[1.0rem] leading-6">
                       SEO is the most efficient and effective method increase
@@ -475,21 +512,23 @@ function Home() {
                       PPC Management Services
                     </h2>
                     <h4 className="text-[1.2rem] font-semibold mb-3">
-                      T SOFT TECH is an innovative PPC management company
+                      BTJ ALPHA TECHNOLOGY PVT LTD is an innovative PPC
+                      management company
                     </h4>
                     <p className="mb-3 text text-[1.0rem] leading-6">
-                      T SOFT TECH is an innovative digital marketing, AdWords
-                      management, remarketing and PPC management company with
-                      proven track record to take your PPC campaigns to the next
-                      level and provide you with integrated, adverting and
-                      marketing solution. Pay-per-click(PPC) advertising allows
-                      you to reach your target customers searching for your
-                      products and services online by using target keywords. Pay
-                      per click represent a model of internet marketing where an
-                      advertiser run an ad and he will get charged if there will
-                      be a click on his ad. Advertiser pay a fees every time on
-                      his ad whenever he will get clicked. The most popular type
-                      of pay per click ad is search engine advertisement.
+                      BTJ ALPHA TECHNOLOGY PVT LTD is an innovative digital
+                      marketing, AdWords management, remarketing and PPC
+                      management company with proven track record to take your
+                      PPC campaigns to the next level and provide you with
+                      integrated, adverting and marketing solution.
+                      Pay-per-click(PPC) advertising allows you to reach your
+                      target customers searching for your products and services
+                      online by using target keywords. Pay per click represent a
+                      model of internet marketing where an advertiser run an ad
+                      and he will get charged if there will be a click on his
+                      ad. Advertiser pay a fees every time on his ad whenever he
+                      will get clicked. The most popular type of pay per click
+                      ad is search engine advertisement.
                     </p>
                     <Link to={"about"}>
                       <p className="w-[300px] inline-flex items-center text-[1.4rem] text-red-500">
@@ -615,12 +654,10 @@ function Home() {
                   />
                 </div>
                 <h3 className="text-lg font-bold text-gray-800">
-                  Bulk Database
+                  Social Media Marketing (SMM)
                 </h3>
                 <p className="text-gray-600 mt-2">
-                  A bulk database refers to a large collection of organized
-                  data, often used for mass outreach activities like email
-                  marketing, SMS campaigns, or telemarketing.
+                Boost your brand visibility and engagement across platforms like Instagram, Facebook, and LinkedIn. Reach your target audience with tailored content and paid campaigns.
                 </p>
               </div>
             </div>

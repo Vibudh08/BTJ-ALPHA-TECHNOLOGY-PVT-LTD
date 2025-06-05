@@ -17,9 +17,14 @@ import laptop from "../../assets/images/google-ads/laptop.webp";
 import laptop2 from "../../assets/images/google-ads/laptop2.webp";
 import google from "../../assets/images/google-ads/google.webp";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+
 
 function GoogleAds() {
   const [activeIndex, setActiveIndex] = useState(null);
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
 
   const toggleAccordion = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
@@ -47,10 +52,10 @@ function GoogleAds() {
     <main className="bg-gradient-to-b from-[#f7f0ff] to-[#ffffff]">
       {/* agency section start here */}
 
-      <section className="flex flex-col lg:flex-row justify-between items-center px-4 lg:px-16 py-12 max-w-screen-xl mx-auto pt-44 pb-20 ">
+      <section className="flex flex-col lg:flex-row justify-between items-center px-4 lg:px-16 py-12 max-w-screen-xl mx-auto pt-36 pb-20 ">
         {/* Content Section */}
         <div className="max-w-full  text-center lg:text-left w-[40%] max-lg:w-[90%] ">
-          <h1 className="text-5xl max-lg:text-5xl font-bold leading-[3.6rem] mb-8 text-black ">
+          <h1 className="text-5xl max-lg:text-4xl font-bold leading-[3.6rem] mb-8 text-black ">
             The Google Ads Agency for{" "}
             <span className="text-purple-600">Predictable ROIs.</span>
           </h1>
@@ -164,7 +169,7 @@ function GoogleAds() {
 
       {/* management section start here */}
 
-      <section className="flex items-center justify-between p-10 bg-gradient-to-r from-blue-900 to-blue-600 text-white  max-lg:flex-col  max-lg:m-auto">
+      <section className="flex items-center justify-between p-10 max-md:px-4 bg-gradient-to-r from-blue-900 to-blue-600 text-white  max-lg:flex-col  max-lg:m-auto">
         {/* Left Image Column */}
         <div className="flex-1 text-center  ">
           <img
@@ -202,7 +207,7 @@ function GoogleAds() {
 
       {/* accordion section start here */}
 
-      <section className="flex flex-wrap items-center justify-center gap-8 p-6 py-20">
+      <section className="flex flex-wrap items-center justify-center gap-8 p-6 py-20 max-md:py-12">
         {/* Left Content */}
         <div className="flex-1 min-w-[300px] max-w-[600px]">
           <h2 className="text-5xl max-lg:text-3xl font-[650] text-gray-800 mb-8 leading-snug">
@@ -252,14 +257,14 @@ function GoogleAds() {
 
       {/* industries section start here */}
 
-      <section className="max-w-screen-xl mx-auto px-4 py-10 text-center mb-10">
+      <section className="max-w-screen-xl mx-auto px-4 py-10 max-md:pt-2 text-center mb-10 max-md:mb-2">
         {/* Heading */}
-        <h2 className="text-3xl lg:text-5xl font-semibold text-gray-800 mb-12">
+        <h2 className="text-3xl lg:text-5xl font-semibold text-gray-800 mb-12 max-md:mb-8">
           Industries We Serve
         </h2>
 
         {/* Industries Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 mb-12 ">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 max-md:gap-4 mb-12 ">
           {[
             {
               img: real,
@@ -311,7 +316,7 @@ function GoogleAds() {
         </div>
 
         {/* Call-to-Action Section */}
-        <div className="bg-blue-600 text-white p-6 rounded-lg flex flex-col lg:flex-row  items-center gap-4 mx-8">
+        <div className="bg-blue-600 text-white p-6 rounded-lg flex flex-col lg:flex-row  items-center gap-4 mx-8 max-md:mx-0">
           <p className="text-lg lg:text-xl font-semibold flex-grow flex">
             Ads That Propel Your Growth to New Heights
           </p>
@@ -328,7 +333,7 @@ function GoogleAds() {
       {/* industries section end here */}
 
       <section className="business bg-black text-white p-5 border border-black">
-        <h1 className="title text-center text-4xl mb-14 mt-6 font-semibold">
+        <h1 className="title text-center text-4xl max-md:text-[3xl] mb-14 mt-6 font-semibold">
           Where Does Your Business Stand Right Now?
         </h1>
         <div className="cards flex justify-center gap-5 flex-wrap mb-10">
@@ -393,7 +398,7 @@ function GoogleAds() {
             />
           </div>
           {/* Content Section */}
-          <div className="content-section flex-1 p-5">
+          <div className="content-section flex-1 p-5 max-md:p-0">
             <ul className="list-none m-0 p-0">
               <li className="flex items-center mb-4 p-3 border border-cyan-500 rounded-full bg-white/10">
                 <span className="text-cyan-500 mr-2">▶</span>
@@ -438,16 +443,16 @@ function GoogleAds() {
 
       <section className="max-w-screen-xl mx-auto px-4 mb-8 py-8">
         {/* Heading */}
-        <h1 className="text-3xl lg:text-4xl font-bold text-center mt-10">
+        <h1 className="text-3xl lg:text-4xl font-bold text-center mt-10 max-md:mt-4">
           The Numbers Speak: Our Success Story
         </h1>
-        <div className="text-center text-gray-600 mt-2 mb-10">
+        <div className="text-center text-gray-600 mt-2 mb-10 max-md:mb-4">
           A glimpse into our experience, clientele, and performance metrics.
         </div>
         <div className="w-12 h-1 bg-blue-500 mx-auto mb-8"></div>
 
         {/* Grid Section */}
-        <div className="grid grid-cols-3 gap-6 max-sm:grid-cols-2">
+        <div className="grid grid-cols-3 gap-6 max-md:gap-4 max-sm:grid-cols-2">
           {/* Card 1 */}
           <div className="bg-white rounded-lg shadow-md overflow-hidden">
             <img
