@@ -43,16 +43,19 @@ const Footer = () => {
                 <Link to="/about" className="hover:text-white transition-all duration-200">About</Link>
               </li>
               <li>
-                <Link to="/bulk-sms" className="hover:text-white transition-all duration-200">Portfolio</Link>
+                <Link to="/portfolio  " className="hover:text-white transition-all duration-200">Portfolio</Link>
               </li>
               <li>
-                <Link to="/team" className="hover:text-white transition-all duration-200">Bulk SMS</Link>
+                <Link to="/bulk-sms" className="hover:text-white transition-all duration-200">Bulk SMS</Link>
               </li>
               <li>
-                <Link to="/team" className="hover:text-white transition-all duration-200">Privacy Policy</Link>
+                <Link to="/privacy-policy" className="hover:text-white transition-all duration-200">Privacy Policy</Link>
               </li>
               <li>
-                <Link to="/team" className="hover:text-white transition-all duration-200">Terms & Conditions</Link>
+                <Link to="/terms-condition" className="hover:text-white transition-all duration-200">Terms & Conditions</Link>
+              </li>
+              <li>
+                <Link to="/contact" className="hover:text-white transition-all duration-200">Contact</Link>
               </li>
             </ul>
           </div>
@@ -130,7 +133,7 @@ const Footer = () => {
                 201301, India
               </li>
               <li>info@btjalphatechnology.com</li>
-              <li>01204525483</li>
+              <li>0120-4525483</li>
             </ul>
           </div>
         </div>
@@ -179,7 +182,7 @@ const Footer = () => {
       </div>
 
       {/* Floating WhatsApp and Call Buttons */}
-      <div className="fixed bottom-6 right-6 flex flex-col gap-4 z-50">
+      {/* <div className="fixed bottom-6 right-6 flex flex-col gap-4 z-50">
         <a
           href="https://wa.me/918920589117"
           target="_blank"
@@ -194,9 +197,8 @@ const Footer = () => {
         >
           <FaPhoneAlt />
         </a>
-      </div>
+      </div> */}
     </footer>
   );
 };
-
 export default Footer;

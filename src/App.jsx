@@ -37,8 +37,12 @@ function App() {
           <Route path="website-designing" element={<WebsiteDesigning/>}/>
           <Route path="privacy-policy" element={<PrivacyPolicy/>}/>
           <Route path="terms-condition" element={<TermsAndConditions/>}/>
+          <Route path="/*" element={<Home />}/>
         </Routes>
         <Footer/>
+        <Routes>
+
+        </Routes>
       </BrowserRouter>
     </>
   );

@@ -1,5 +1,6 @@
 import { MapPin, PhoneCall, Mail } from "lucide-react";
 import React, { useState, useEffect } from "react";
+import UserForm from "../components/UserForm";
 
 // FAQ Data
 const faqData = [
@@ -77,15 +78,7 @@ const faqData = [
 
 const Contact = () => {
   const [openIndexes, setOpenIndexes] = useState({});
-  const [formData, setFormData] = useState({
-    company_name: "",
-    name: "",
-    phone: "",
-    email: "",
-    service: "",
-    message: "",
-  });
-
+  
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
@@ -100,17 +93,6 @@ const Contact = () => {
       const isAlreadyOpen = prev[key];
       return { [key]: !isAlreadyOpen };
     });
-  };
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Add API submission logic here
   };
 
   return (
@@ -211,46 +193,7 @@ const Contact = () => {
               <p className="mb-6 text-gray-600 max-md:text-center">
                 Our team would love to hear from you. Write your message to us!
               </p>
-              <form className="space-y-4 ">
-                <div className="flex space-x-4 text-black">
-                  <input
-                    type="text"
-                    placeholder="Name*"
-                    className="w-1/2 p-3 border rounded-lg"
-                  />
-                  <input
-                    type="email"
-                    placeholder="Email Address*"
-                    className="w-1/2 p-3 border rounded-lg"
-                  />
-                </div>
-                <div className="flex space-x-4">
-                  <input
-                    type="text"
-                    placeholder="Enter 10-digit number"
-                    className="w-1/2 p-3 border rounded-lg"
-                  />
-                  <select className="w-1/2 p-3 border rounded-lg text-gray-400">
-                    <option>Select Service</option>
-                    <option>Web Designing</option>
-                    <option>Web Development</option>
-                    <option>App Development</option>
-                    <option>Digital Marketing</option>
-                    <option>Bulk SMS</option>
-                    <option>Bulk Database</option>
-                  </select>
-                </div>
-                <textarea
-                  placeholder="Message"
-                  className="w-full p-3 border rounded-lg h-32"
-                ></textarea>
-                <button
-                  type="submit"
-                  className="w-full bg-[#fb9c24] text-black p-3 rounded-lg font-semibold flex items-center justify-center"
-                >
-                  Submit <i className="fas fa-arrow-right ml-2"></i>
-                </button>
-              </form>
+              <UserForm/>
             </div>
           </div>
         </div>
@@ -260,7 +203,7 @@ const Contact = () => {
         <h3 className="text-3xl max-md:text-lg text-center font-semibold mb-12 max-md:mb-8">
           Frequently Asked Questions (FAQs)
         </h3>
-        <div className="w-[90%] max-md:w-full mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="w-[90%] max-md:w-full mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8 max-md:gap-1">
           {/* Left column */}
           <div>
             {faqData[0].items

@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
-
+import { Link } from "react-router-dom";
 
 const industial_cards = [
   {
@@ -166,12 +166,12 @@ const MobileAppDevelopment = () => {
             solutions. With years of experience, we create user-friendly,
             high-performance apps that drive success.
           </p>
-          <a
-            href="contact-us.php"
+          <Link
+            to="/contact"
             className="inline-block bg-[#2f3d8f] text-white font-bold rounded-[15px] px-6 py-3 mb-8 w-[180px] text-center hover:bg-[#2f3d8f]"
           >
             Let's Connect →
-          </a>
+          </Link>
 
           <div className="grid grid-cols-4 max-md:grid-cols-2 gap-8 mt-4 ">
             <div className="text-justify">
@@ -334,12 +334,12 @@ const MobileAppDevelopment = () => {
               development solutions by leveraging the experience of a top
               development company.
             </p>
-            <a
-              href="contact-us.php"
+            <Link
+              to="/contact"
               className="inline-block bg-[#2b4eff] hover:bg-[#1a34cc] text-white font-bold py-2 px-4 rounded"
             >
               Hire Developers
-            </a>
+            </Link>
           </div>
         </div>
       </section>

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import React from "react";
 import { useEffect } from "react";
+import UserForm from "../../components/UserForm";
 
 
 const techStacks = [
@@ -280,41 +281,7 @@ function WebsiteDevelopment() {
             Connect With Our Professional Website Developers And Build Your
             Dream Website Today!
           </h2>
-          <form className="space-y-4">
-            <input
-              type="text"
-              placeholder="Enter Your Name"
-              className="w-full px-4 py-2 rounded-md text-black focus:outline-none"
-            />
-            <input
-              type="email"
-              placeholder="Enter Your Email Id"
-              className="w-full px-4 py-2 rounded-md text-black focus:outline-none"
-            />
-            <input
-              type="text"
-              placeholder="Enter Your Mobile No."
-              className="w-full px-4 py-2 rounded-md text-black focus:outline-none"
-            />
-            <select className="w-full px-4 py-2 rounded-md text-black focus:outline-none">
-              <option>--Choose Services--</option>
-              <option>Website Development</option>
-              <option>UI/UX Design</option>
-              <option>CMS Integration</option>
-              <option>E-Commerce Solutions</option>
-            </select>
-            <textarea
-              placeholder="Describe your requirements"
-              rows="4"
-              className="w-full px-4 py-2 rounded-md text-black focus:outline-none"
-            />
-            <button
-              type="submit"
-              className="w-full bg-black text-white py-2 rounded-md font-semibold hover:bg-gray-800 transition"
-            >
-              Enquire Now !
-            </button>
-          </form>
+          <UserForm/>
         </div>
       </div>
 

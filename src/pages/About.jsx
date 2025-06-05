@@ -133,9 +133,9 @@ function About() {
                 transform ideas into impactful realities, ensuring that our
                 clients not only keep up but stand out. Let’s build something
                 extraordinary together!{" "}
-                <Link to="about">
+                {/* <Link to="about">
                   <span className="font-bold">Read More</span>
-                </Link>
+                </Link> */}
               </p>
             </div>
             <div className="flex gap-10 mt-5 justify-between w-[95%] max-lg:w-[100%]">
@@ -264,7 +264,7 @@ function About() {
             Discover how BTJ ALPHA TECHNOLOGY PVT LTD has empowered businesses across India with
             innovative, customized digital solutions.
           </p>
-          <Link to="contact ">
+          <Link to="/contact">
             <button className="mt-8 bg-[#fb9c24] text-black px-6 py-3 rounded-lg font-semibold flex items-center mb-12">
               Get Started <FaRegArrowAltCircleRight className="ml-2 text-lg" />
             </button>

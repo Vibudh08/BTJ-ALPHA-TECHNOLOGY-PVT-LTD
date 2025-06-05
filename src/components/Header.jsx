@@ -216,15 +216,15 @@ const Header = () => {
       </div>
 
       {/* Header */}
-      <main className=" fixed top-0 left-0 z-50 w-full pb-[1px] pt-[1px] bg-white shadow-md ">
+      <main className=" fixed top-0 left-0 z-50 w-full pb-[1px] pt-[1px] bg-white max-md:bg-transparent shadow-md ">
         <div className="w-[95%] max-md:w-full px-4 flex justify-between items-center">
           {/* Mobile Menu Icon */}
 
           {/* Logo */}
           <Link to="/">
             <img
-              src="/logo.jpg"
-              className="w-[70px] ml-8 max-md:ml-0  object-cover"
+              src="/btlogo.png"
+              className="w-[70px] max-md:[60px] ml-8 max-md:ml-0  object-cover"
               alt="Admirer Logo"
             />
           </Link>

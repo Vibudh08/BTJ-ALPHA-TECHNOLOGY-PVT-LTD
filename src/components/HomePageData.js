@@ -39,31 +39,37 @@ const items = [
     heading: "Website Designing",
     content:
       "Your website is your home on the internet. The Website Design is the first and foremost area to focus on as it represents the virtual face of a company.",
+      url: "/website-designing"
   },
   {
     heading: "Mobile App Development",
     content:
       "Create user-friendly and efficient mobile apps tailored to meet your business needs with our expert development services.",
+      url: "/mobile-app-development"
   },
   {
     heading: "Social Media Marketing (SMM)",
     content:
       "Boost your brand visibility and engagement across platforms like Instagram, Facebook, and LinkedIn. Reach your target audience with tailored content and paid campaigns.",
+      url: "/social-media-marketing"
   },
   {
     heading: "Search Engine Optimization (SEO)",
     content:
       "Boost your online visibility and attract organic traffic with our tailored SEO strategies.",
+      url: "/search-engine-optimization"
   },
   {
     heading: "Website Development",
     content:
       "Build robust and scalable websites that deliver seamless performance and exceptional user experience.",
+      url: "/website-development"
   },
   {
     heading: "Bulk SMS",
     content:
       "Bulk SMS is a service to send large volumes of messages simultaneously for marketing, alerts, or notifications.",
+      url: "/bulk-sms"
   },
 ];
 

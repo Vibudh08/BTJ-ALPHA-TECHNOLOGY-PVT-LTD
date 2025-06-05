@@ -3,6 +3,7 @@ import { FaCode, FaBullhorn, FaChartBar } from "react-icons/fa";
 import { MdEdit } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import UserForm from "../../components/UserForm";
 
 
 function SocialMediaMarketing() {
@@ -219,10 +220,10 @@ function SocialMediaMarketing() {
             </div>
           </div>
           <a
-            href="tel:01245206456"
+            href="tel:01204525483"
             className="call-button inline-block bg-[#0000ff] text-white py-3 px-5 rounded-3xl font-bold text-lg hover:bg-blue-800"
           >
-            Call 01245 206456
+            Call 0120 4525483
           </a>
         </div>
 
@@ -231,46 +232,7 @@ function SocialMediaMarketing() {
           <h2 className="text-2xl font-bold text-[#0000ff] mb-6">
             Get A Free Action Plan
           </h2>
-          <form className="space-y-4">
-            <input
-              type="text"
-              name="name"
-              placeholder="Name"
-              required
-              className="w-full p-3 border border-gray-300 rounded-md"
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Email Address"
-              required
-              className="w-full p-3 border border-gray-300 rounded-md"
-            />
-            <input
-              type="text"
-              name="phone"
-              placeholder="Phone Number"
-              className="w-full p-3 border border-gray-300 rounded-md"
-            />
-            <input
-              type="url"
-              name="website"
-              placeholder="Website"
-              className="w-full p-3 border border-gray-300 rounded-md"
-            />
-            <textarea
-              name="message"
-              placeholder="What can we help you with?"
-              required
-              className="w-full p-3 border border-gray-300 rounded-md resize-none h-32"
-            ></textarea>
-            <button
-              type="submit"
-              className="w-full py-3 bg-orange-500 text-white font-bold text-lg rounded-md hover:bg-orange-600"
-            >
-              Submit
-            </button>
-          </form>
+          <UserForm/>
         </div>
       </section>
 
@@ -374,9 +336,11 @@ function SocialMediaMarketing() {
           Our team of ninjas is ready to hear from you. Get in touch with us!
         </p>
 
+<Link to="/contact">
         <button className="bg-orange-500 text-white font-semibold px-6 py-3 rounded-full hover:bg-[#0000ff] transition">
           GET A QUOTE
         </button>
+        </Link>
       </div>
 
       <div className="py-16 px-6 bg-white text-center">

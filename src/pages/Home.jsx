@@ -1,5 +1,4 @@
 import video from "../assets/video/banner-video.mp4";
-import team from "../assets/images/Home-page/team.jpeg";
 import about from "../assets/images/Home-page/about.jpg";
 import SEO from "../assets/images/Home-page/SEO.jpg";
 import SMO from "../assets/images/Home-page/SMO.jpg";
@@ -24,6 +23,7 @@ import { items } from "../components/HomePageData";
 import { technologies } from "../components/HomePageData";
 import { RiArrowRightSLine } from "react-icons/ri";
 import { useEffect } from "react";
+import UserForm from "../components/UserForm";
 
 
 
@@ -42,14 +42,13 @@ function Home() {
   }, []);
 
   const [activeTab, setActiveTab] = useState("SEO");
-  const [selected, setSelected] = useState("");
   const handleTabClick = (service) => {
     setActiveTab(service);
   };
 
   return (
     <>
-      <main className=" w-[100%]  mt-[75px]">
+      <main className=" w-[100%]  mt-[65px]">
         {/* Banner Section Start here */}
 
         <div className="relative h-full bg-cover bg-center overflow-hidden  max-md:pb-[10px]">
@@ -94,52 +93,7 @@ function Home() {
               <h2 className="text-2xl font-semibold mb-6 text-black flex justify-center text-center">
                 Get A Free Consultation With Our Marketing Expert
               </h2>
-              <form className="space-y-4">
-                <div className="flex space-x-4 text-black">
-                  <input
-                    type="text"
-                    placeholder="Name*"
-                    className="w-1/2 p-3 border rounded-lg"
-                  />
-                  <input
-                    type="email"
-                    placeholder="Email Address*"
-                    className="w-1/2 p-3 border rounded-lg"
-                  />
-                </div>
-                <div className="flex space-x-4">
-                  <input
-                    type="text"
-                    placeholder="Enter 10-digit number"
-                    className="w-1/2 p-3 border rounded-lg text-black"
-                  />
-                  <select
-                    value={selected}
-                    onChange={(e) => setSelected(e.target.value)}
-                    className={`w-1/2 p-2 border rounded-lg 
-                      ${selected === "" ? "text-gray-500" : "text-black"} 
-                      bg-white focus:outline-none`}
-                  >
-                    <option value="">Select Service</option>
-                    <option value="design">Web Designing</option>
-                    <option value="development">Web Development</option>
-                    <option value="app">App Development</option>
-                    <option value="marketing">Digital Marketing</option>
-                    <option value="sms">Bulk SMS</option>
-                    <option value="database">Bulk Database</option>
-                  </select>
-                </div>
-                <textarea
-                  placeholder="Message"
-                  className="w-full p-3 border rounded-lg h-32 text-black"
-                ></textarea>
-                <button
-                  type="submit"
-                  className="w-full bg-[#fb9c24] text-black p-3 rounded-lg font-semibold flex items-center justify-center"
-                >
-                  Submit <i className="fas fa-arrow-right ml-2"></i>
-                </button>
-              </form>
+              <UserForm/>
             </div>
           </div>
         </div>
@@ -247,9 +201,11 @@ function Home() {
                 {hoveredId === index && (
                   <>
                     <p className="ml-5 mr-5 text-[1rem]">{item.content}</p>
+                    <Link to={item.url}>
                     <button className="border w-[150px] h-[50px] self-center mt-4 text-[1.2rem] bg-white text-black hover:bg-[#3979f8] hover:text-white">
                       Learn More
                     </button>
+                    </Link>
                   </>
                 )}
               </div>
@@ -414,7 +370,7 @@ function Home() {
                       experience using white hat SEO practices and bringing an
                       increase in organic search engine ranking.
                     </p>
-                    <Link to={"about"}>
+                    <Link to={"/search-engine-optimization"}>
                       <p className="w-[300px] inline-flex items-center text-[1.4rem] text-red-500">
                         {" "}
                         Learn More <GoArrowRight className="ml-1" />
@@ -452,7 +408,7 @@ function Home() {
                       and service industries due to their timely research
                       process/large-volume sales.
                     </p>
-                    <Link to={"about"}>
+                    <Link to={"/social-media-marketing"}>
                       <p className="w-[300px] inline-flex items-center text-[1.4rem] text-red-500">
                         {" "}
                         Learn More <GoArrowRight className="ml-1" />
@@ -491,7 +447,7 @@ function Home() {
                       and service industries due to their timely research
                       process/large-volume sales.
                     </p>
-                    <Link to={"about"}>
+                    <Link to={"/meta-ads"}>
                       <p className="w-[300px] inline-flex items-center text-[1.4rem] text-red-500">
                         {" "}
                         Learn More <GoArrowRight className="ml-1" />
@@ -530,7 +486,7 @@ function Home() {
                       will get clicked. The most popular type of pay per click
                       ad is search engine advertisement.
                     </p>
-                    <Link to={"about"}>
+                    <Link to={"/google-ads"}>
                       <p className="w-[300px] inline-flex items-center text-[1.4rem] text-red-500">
                         {" "}
                         Learn More <GoArrowRight className="ml-1" />

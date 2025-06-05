@@ -18,6 +18,7 @@ import laptop2 from "../../assets/images/google-ads/laptop2.webp";
 import google from "../../assets/images/google-ads/google.webp";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import UserForm from "../../components/UserForm";
 
 
 function GoogleAds() {
@@ -64,9 +65,11 @@ function GoogleAds() {
             craft strategies that outperform the competition and drive
             sustainable growth and scale💸
           </p>
+          <Link to="/contact">
           <button className="px-6 py-3 text-lg font-medium bg-gray-200 text-purple-600 rounded-md hover:bg-blue-500 hover:text-white transition-transform duration-300 transform hover:-translate-y-1">
             See How We Run Ads
           </button>
+          </Link>
         </div>
 
         {/* Form Section */}
@@ -74,37 +77,7 @@ function GoogleAds() {
           <h2 className="text-white text-4xl max-lg:text-4xl font-semibold mb-8 leading-[3.6rem]">
             Your Google Ads Success Starts Here
           </h2>
-          <form className="flex flex-col mb-8">
-            <input
-              type="email"
-              placeholder="Work Email"
-              required
-              className="mb-4 px-4 py-3 rounded-md border border-white text-black focus:outline-none "
-            />
-            <input
-              type="text"
-              placeholder="Name"
-              required
-              className="mb-4 px-4 py-3 rounded-md border border-white text-black focus:outline-none"
-            />
-            <select
-              required
-              className="mb-4 px-4 py-3 rounded-md border border-white text-gray-500 focus:outline-none"
-            >
-              <option value="" disabled selected>
-                Pick your PPC challenge here
-              </option>
-              <option value="low-roi">Low ROI</option>
-              <option value="high-cost">High Cost per Click</option>
-              <option value="other">Other</option>
-            </select>
-            <button
-              type="submit"
-              className="bg-black text-white border border-white px-6 py-3 rounded-md font-medium text-lg hover:bg-purple-700 transition duration-300  mt-8"
-            >
-              SUBMIT
-            </button>
-          </form>
+          <UserForm/>
         </div>
       </section>
 
@@ -155,12 +128,12 @@ function GoogleAds() {
               in front of people who are actively searching Google for products
               or services you offer.
             </p>
-            <a
+            {/* <a
               href="#"
               className="inline-block bg-blue-500 text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-blue-600 transition duration-300"
             >
               Explore Search Ads
-            </a>
+            </a> */}
           </div>
         </div>
       </section>
@@ -321,7 +294,7 @@ function GoogleAds() {
             Ads That Propel Your Growth to New Heights
           </p>
           <div className="flex gap-4">
-            <Link to="contact">
+            <Link to="/contact">
               <button className="bg-white text-blue-600 font-semibold px-6 py-2 rounded-md hover:bg-gray-200 transition">
                 Connect With Us
               </button>

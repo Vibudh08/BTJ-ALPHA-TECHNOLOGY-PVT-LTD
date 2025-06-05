@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useEffect } from "react";
-
+import UserForm from "../../components/UserForm";
 
 function WebsiteDesigning() {
   useEffect(() => {
@@ -211,7 +211,7 @@ function WebsiteDesigning() {
             <h2 className="text-xl max-md:text-lg text-[#ffc422] font-semibold tracking-widest mb-2">
               HOW DO WE WORK
             </h2>
-            <h1 className="text-5xl font-semibold max-md:text-4xl">Our Work Process</h1>
+            <h1 className="text-4xl font-semibold max-md:text-3xl">Our Work Process</h1>
           </div>
           <div className="text-lg w-[40%] mt-2 max-md:mt-4 max-md:w-[100%] ">
             Discover BTJ ALPHA TECHNOLOGY PVT LTD’s strategic approach to digital marketing and
@@ -236,7 +236,7 @@ function WebsiteDesigning() {
                   alt=""
                 />
               </div>
-              <h1 className="text-4xl font-[500] mb-5">Briefing</h1>
+              <h1 className="text-3xl font-[500] mb-5">Briefing</h1>
               <p className="px-5 text-lg text-gray-600">
                 We start by understanding your goals and vision through a
                 detailed briefing session. This step ensures that every solution
@@ -251,7 +251,7 @@ function WebsiteDesigning() {
                   alt=""
                 />
               </div>
-              <h1 className="text-4xl font-[500] mb-5">Idea Generation</h1>
+              <h1 className="text-3xl font-[500] mb-5">Idea Generation</h1>
               <p className="px-3 text-lg text-gray-600">
                 Our team brainstorms innovative concepts aligned with current
                 trends, transforming ideas into actionable strategies for
@@ -266,7 +266,7 @@ function WebsiteDesigning() {
                   alt=""
                 />
               </div>
-              <h1 className="text-4xl font-[500] mb-5">Processing</h1>
+              <h1 className="text-3xl font-[500] mb-5">Processing</h1>
               <p className="px-5 text-lg text-gray-600">
                 We bring your project to life through precise development and
                 design, ensuring each element is crafted for optimal performance
@@ -281,7 +281,7 @@ function WebsiteDesigning() {
                   alt=""
                 />
               </div>
-              <h1 className="text-4xl font-[500] mb-5">Finishing</h1>
+              <h1 className="text-3xl font-[500] mb-5">Finishing</h1>
               <p className="px-5 text-lg text-gray-600">
                 After meticulous testing and final touches, we deliver a
                 polished, high-quality product that positions your brand
@@ -331,7 +331,7 @@ function WebsiteDesigning() {
               />
             </div>
             <div className="flex flex-col justify-start text-left p-8 max-md:p-0 w-[55%] max-lg:w-[100%]">
-              <h2 className="text-[45px] max-md:text-[40px] font-bold mb-4 mt-24 max-lg:mt-2">
+              <h2 className="text-[40px] max-md:text-[30px] font-bold mb-4 mt-24 max-lg:mt-2">
                 {card.title}
               </h2>
               <p className="text-lg text-gray-600 mb-6">{card.description}</p>
@@ -358,83 +358,7 @@ function WebsiteDesigning() {
               <h3 className="text-3xl font-semibold mb-4 text-center">
                 Get a free consultation with our expert
               </h3>
-              <form action="mailer.php" method="POST" className="space-y-4">
-                <div className="grid grid-cols-2 gap-4">
-                  <input
-                    type="text"
-                    name="first_name"
-                    placeholder="First Name*"
-                    className="border rounded-lg px-3 py-2 w-full"
-                  />
-                  <input
-                    type="text"
-                    name="last_name"
-                    placeholder="Last Name*"
-                    className="border rounded-lg px-3 py-2 w-full"
-                  />
-                </div>
-                <div className="grid grid-cols-2 gap-4">
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Email Address*"
-                    className="border rounded-lg px-3 py-2 w-full"
-                  />
-                  <input
-                    type="tel"
-                    name="phone"
-                    placeholder="Enter 10-digit number*"
-                    maxLength="10"
-                    className="border rounded-lg px-3 py-2 w-full"
-                  />
-                </div>
-                <div className="grid grid-cols-2 gap-4">
-                  <select
-                    name="industry"
-                    className="border rounded-lg px-3 py-2 w-full focus:max-h-40 focus:overflow-y-auto text-gray-400"
-                  >
-                    <option value="" className="bg-gray-300" disabled selected>
-                      Industry Type*
-                    </option>
-                    <option value="shopping">Shopping & Retail</option>
-                    <option value="travel">Tour & Travels</option>
-                    <option value="real_estate">Education</option>
-                    <option value="restaurant">Restaurant & Foods</option>
-                    <option value="entertainment">Entertainment</option>
-                    <option value="technology">Technology</option>
-                    <option value="health">Health</option>
-                    <option value="finance">Finance</option>
-                    <option value="other">Other</option>
-                  </select>
-
-                  <select
-                    name="industry"
-                    className="border rounded-lg px-3 py-2 w-full text-gray-400"
-                  >
-                    <option value="" disabled selected>
-                      Business Purpose*
-                    </option>
-                    <option value="sms">Bulk SMS</option>
-                    <option value="database">Bulk Database</option>
-                    <option value="web">Web Development</option>
-                    <option value="designing">Web Designing</option>
-                    <option value="app">App Development</option>
-                    <option value="digital">Digital Marketing</option>
-                    {/* Add other options */}
-                  </select>
-                </div>
-                <textarea
-                  name="message"
-                  placeholder="Message*"
-                  className="border rounded-lg px-3 py-2 w-full h-24"
-                />
-                <button
-                  type="submit"
-                  className="bg-black text-white px-6 py-2 rounded-full w-full hover:bg-yellow-500 transition"
-                >
-                  Submit
-                </button>
-              </form>
+              <UserForm/>
             </div>
           </div>
         )}
@@ -446,11 +370,11 @@ function WebsiteDesigning() {
             <h2 className="border w-[180px] p-2 pl-3 text-[20px] rounded-[12px] tracking-widest leading-7 bg-[#ecf1f1] text-[#191970] font-semibold mb-5">
               OUR SERVICES
             </h2>
-            <h1 className="text-[55px] max-md:text-[25px] font-semibold leading-[4rem] max-md:leading-[2.5rem]">
+            <h1 className="text-[35px] max-md:text-[25px] font-semibold leading-[4rem] max-md:leading-[2rem]">
               Why Choose BTJ ALPHA TECHNOLOGY PVT LTD for Website Design
             </h1>
           </div>
-          <div className="text-lg w-[40%] max-lg:w-[100%] mt-36 max-lg:mt-6 max-md:w-[100%] max-md:mt-4">
+          <div className="text-lg w-[40%] max-lg:w-[100%] mt-24 max-lg:mt-6 max-md:w-[100%] max-md:mt-4">
             Join us on a journey where every pixel is purposeful, every click is
             intentional, and every visit is a step toward digital success.
           </div>

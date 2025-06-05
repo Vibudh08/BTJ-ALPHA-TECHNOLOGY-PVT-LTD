@@ -17,6 +17,7 @@ import {
 } from "../../components/SeoData";
 import { useState } from "react";
 import { useEffect } from "react";
+import UserForm from "../../components/UserForm";
 
 
 function SEO() {
@@ -52,55 +53,7 @@ function SEO() {
           <h2 className="text-3xl font-semibold mb-8">
             Get a Free Website Audit From Our SEO Specialists
           </h2>
-          <form action="submit_audit.php" method="post" className="space-y-4">
-            <input
-              type="text"
-              name="name"
-              placeholder="Name*"
-              required
-              className="w-4/5 max-md:w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Email*"
-              required
-              className="w-4/5 max-md:w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
-            />
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Phone*"
-              required
-              pattern="^[0-9]{10}$"
-              maxLength="10"
-              title="Please enter a valid 10-digit phone number."
-              onInput={(e) =>
-                (e.target.value = e.target.value.replace(/[^0-9]/g, ""))
-              }
-              className="w-4/5 max-md:w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
-            />
-            <input
-              type="url"
-              name="website_url"
-              placeholder="Enter Your Website URL"
-              required
-              className="w-4/5 max-md:w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
-            />
-            <textarea
-              name="needs"
-              placeholder="Describe Your Needs"
-              rows="3"
-              required
-              className="w-4/5 max-md:w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-500"
-            ></textarea>
-            <button
-              type="submit"
-              className="w-4/5 max-md:w-full h-12 bg-orange-500 text-white font-bold py-2 rounded-md hover:bg-orange-600 transition duration-300"
-            >
-              Free Website Audit
-            </button>
-          </form>
+          <UserForm/>
         </div>
       </section>
 
