@@ -92,7 +92,7 @@ const PrivacyPolicy = () => {
           <h3 className="mt-6 text-xl font-semibold">9. Contact Us</h3>
           <p className="mt-2">If you have questions about this policy, contact us at:</p>
           <p className="mt-2 font-medium">BTJ Alpha Technology Private Limited</p>
-          <p className="mt-1">B-26, Sector-2, Noida, UP, 201301</p>
+          <p className="mt-1">Sector-2, Noida, UP, 201301</p>
           <p className="mt-1">info@btjalphatechnology.com</p>
           <p className="mt-1">0120-4525483</p>
         </div>

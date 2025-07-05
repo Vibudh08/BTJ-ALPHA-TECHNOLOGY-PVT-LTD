@@ -72,22 +72,22 @@ function About() {
   const handlePrev2 = () => {
     sliderRef2.current.slickPrev(); // Move to the previous slide
   };
-  const teamMembers = [
-    {
-      name: "MOHD ZAID",
-      role: "Android Developer",
-      image: "/team-members/zaid.webp",
-    },
-    {
-      name: "Vibudh Rathore",
-      role: "Front End Developer",
-      image: "/team-members/vibudh.webp",
-    },
-    {
-      name: "Rohan",
-      role: "Back  End Developer",
-      image: "/team-members/rohan.webp",
-    },
+  // const teamMembers = [
+  //   {
+  //     name: "MOHD ZAID",
+  //     role: "Android Developer",
+  //     image: "/team-members/zaid.webp",
+  //   },
+  //   {
+  //     name: "Vibudh Rathore",
+  //     role: "Front End Developer",
+  //     image: "/team-members/vibudh.webp",
+  //   },
+  //   {
+  //     name: "Rohan",
+  //     role: "Back  End Developer",
+  //     image: "/team-members/rohan.webp",
+  //   },
     // {
     //   name: "Anshu Shyanda",
     //   role: "Graphic Designer",
@@ -103,7 +103,7 @@ function About() {
     //   role: "Digital Marketer",
     //   image: "/team-members/nishant.webp",
     // },
-  ];
+  // ];
   return (
     <main>
       {/* Who-we-are Section Start here */}
@@ -254,10 +254,10 @@ function About() {
 
       <section className="p-10 flex max-lg:block max-md:p-4">
         <div className="w-1/2 max-lg:w-full">
-          <h3 className="text-[22px] tracking-widest text-[#ffc422] font-semibold ">
+          <h3 className="text-[22px] max-md:text-[20px] tracking-widest text-[#ffc422] font-semibold ">
             CLIENT TESTIMONIALS
           </h3>
-          <h1 className="text-[45px] max-md:text-[30px] font-semibold w-[80%] max-md:w-full mb-5">
+          <h1 className="text-[35px] max-md:text-[25px] font-semibold w-[80%] max-md:mt-3 max-md:w-full mb-5">
             What Our Clients Say About BTJ ALPHA TECHNOLOGY PVT LTD
           </h1>
           <p className="text-[18px]">

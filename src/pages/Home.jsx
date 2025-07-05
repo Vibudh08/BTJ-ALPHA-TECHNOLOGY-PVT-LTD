@@ -173,12 +173,11 @@ function Home() {
           </p>
           <p className="p-3 max-md:px-1 w-[77%] m-auto text-[1.1rem] max-md:w-[100%]">
             BTJ ALPHA TECHNOLOGY PVT LTD is a professionally managed full
-            service web design & development company in Mumbai, India. Since
-            2005, we have been helping businesses in India, UK, Canada,
-            Australia, and all over the world to adapt and grow in an
-            ever-changing online world by offering fully functional
+            service web design & development company in Noida, India. We 
+            have been helping businesses to adapt and grow in an ever-changing 
+            online world by offering fully functional
             mobile-friendly responsive, cheap Website Designing, Web
-            Development.
+            Development, App Development, SEO Services, SMM Services etc.
           </p>
           <div className="m-10 grid grid-cols-3 gap-0 relative max-md:grid-cols-1 max-md:m-2">
             <div className="absolute inset-0">
@@ -239,9 +238,10 @@ function Home() {
                 </h1>
                 <p className="text-[18px] mb-6">
                   BTJ ALPHA TECHNOLOGY PVT LTD is a professionally managed full
-                  service web design & development company in Mumbai, India.
-                  Since 2005 we have been helping business in India, UK, Canada,
-                  Australia and worldwide.
+                  service web design & development company in Noida, India.
+                  We 
+            have been helping businesses to adapt and grow in an ever-changing 
+            online world.
                 </p>
                 <div>
                   <div className="flex border p-5 rounded-xl bg-white mb-5">

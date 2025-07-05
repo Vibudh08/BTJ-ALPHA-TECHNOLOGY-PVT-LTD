@@ -186,7 +186,7 @@ const Footer = () => {
             <h3 className="text-2xl font-semibold mb-4">Contact Info</h3>
             <ul className="space-y-2 text-white/80 text-base">
               <li>
-                B-26, Sector-2, Noida <br />
+                Sector-2, Noida <br />
                 Gautam Buddha Nagar, UP <br />
                 201301, India
               </li>
@@ -208,7 +208,7 @@ const Footer = () => {
               <h4 className="text-xl font-semibold mb-4">
                 Registered Office Address:
               </h4>
-              <p>B-26, Sector-2, Noida</p>
+              <p>Sector-2, Noida</p>
               <p>Gautam Buddha Nagar</p>
               <p>Uttar Pradesh, 201301</p>
               <p>India</p>

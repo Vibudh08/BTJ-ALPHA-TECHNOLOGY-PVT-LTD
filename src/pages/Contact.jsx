@@ -97,20 +97,20 @@ const Contact = () => {
 
   return (
     <>
-      <div className="text-center px-4 py-10 pt-28 max-md:pt-20 bg-white">
-        <h2 className="text-4xl max-md:text-2xl mt-5 mb-5 font-bold">
+      <div className="text-center px-4 py-10 pt-24 max-md:pt-20 bg-white">
+        <h2 className="text-3xl max-md:text-2xl mt-3 mb-6 font-semibold">
           Help & Contact
         </h2>
 
-        <div className="bg-[#fcfcfc] mt-8 max-md:mt-3 py-10 rounded-lg shadow-sm max-w-5xl mx-auto">
-          <h3 className="text-xl max-md:text-lg font-semibold mb-12 max-md:mb-8">
+        <div className="bg-[#fcfcfc] mt-4 max-md:mt-3 py-10 rounded-lg shadow-sm max-w-5xl mx-auto">
+          {/* <h3 className="text-xl max-md:text-lg font-semibold mb-12 max-md:mb-8">
             Have A Question
-          </h3>
+          </h3> */}
 
           <div className="flex max-md:block gap-8  !max-md:gap-8 w-[75%] max-md:w-[100%] m-auto justify-around px-4 max-md:px-2">
             {/* Chat with Us */}
             <a
-              href="https://www.google.com/maps?q=B-26,+Sector+2,+Noida,+UP,+201301"
+              href="https://www.google.com/maps?q=Sector+2,+Noida,+UP,+201301"
               target="_blank"
               rel="noopener noreferrer"
               className="flex flex-col items-center gap-2 self-center max-md:mb-8  hover:opacity-90 transition"
@@ -123,7 +123,7 @@ const Contact = () => {
                 Visit Us
               </p>
               <p className="text-base text-gray-700 text-center">
-                B-26, Sector 2, Noida, UP, 201301
+                Sector 2, Noida, UP, 201301
               </p>
             </a>
 
@@ -171,12 +171,12 @@ const Contact = () => {
       </div>
 
       <section className="py-8 max-md:py-2 bg-white w-[85%] max-md:w-full m-auto">
-        <div className="container mx-auto px-4">
+        <div className="mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div className="">
-              <div className="rounded-xl overflow-hidden shadow-md ml-5">
+              <div className="rounded-xl overflow-hidden shadow-md ml-5 max-md:ml-0">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.4413487311463!2d77.31301771110925!3d28.586533686066467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce458a95dc981%3A0x79dcd015356fde99!2sB-26%2C%20Sector%202%2C%20Noida%2C%20Uttar%20Pradesh%20201301!5e0!3m2!1sen!2sin!4v1739595167478!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.430891875109!2d77.3130094!3d28.5868475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce4589e66cd21%3A0x74986f30f963e27!2sSector%202%2C%20Noida%2C%20Uttar%20Pradesh%20201301!5e0!3m2!1sen!2sin!4v1720000000000!5m2!1sen!2sin"
                   width="100%"
                   height="450"
                   allowFullScreen=""
