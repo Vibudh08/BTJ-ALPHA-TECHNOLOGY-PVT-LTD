@@ -16,6 +16,8 @@ import TermsAndConditions from "./pages/TermsConditions";
 import MobileAppDevelopment from "./pages/services_pages/MobileAppDevelopment";
 import SocialMediaMarketing from "./pages/services_pages/SMM";
 import WebsiteDevelopment from "./pages/services_pages/WebsiteDevelopment";
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
@@ -40,10 +42,8 @@ function App() {
           <Route path="/*" element={<Home />}/>
         </Routes>
         <Footer/>
-        <Routes>
-
-        </Routes>
       </BrowserRouter>
+      <ToastContainer position="top-center" autoClose={2500} />
     </>
   );
 }
