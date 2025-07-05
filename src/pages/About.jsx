@@ -10,8 +10,6 @@ import { FaRegArrowAltCircleRight } from "react-icons/fa";
 import { FaStar } from "react-icons/fa6";
 import { useEffect } from "react";
 
-
-
 function About() {
   const sliderRef = useRef(null);
   const sliderRef2 = useRef(null);
@@ -21,6 +19,7 @@ function About() {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
+    arrows: false,
     autoplay: true,
     speed: 1000,
     autoplaySpeed: 4000,
@@ -32,6 +31,7 @@ function About() {
     infinite: true,
     speed: 500,
     slidesToShow: 4,
+    arrows: false,
     slidesToScroll: 1, 
     responsive: [
       {
@@ -74,35 +74,35 @@ function About() {
   };
   const teamMembers = [
     {
-      name: "Rohan Verma",
-      role: "Sr. PHP Developer",
-      image: "/team-members/rohan.webp",
-      linkedin: "#",
-    },
-    {
       name: "MOHD ZAID",
       role: "Android Developer",
       image: "/team-members/zaid.webp",
-      linkedin: "https://www.linkedin.com/in/mohd-zaid-chaudhary-b682a2276",
     },
     {
       name: "Vibudh Rathore",
       role: "Front End Developer",
       image: "/team-members/vibudh.webp",
-      linkedin: "https://www.linkedin.com/in/vibudh08",
     },
     {
-      name: "Gaurav Shrivastav",
-      role: "Front End Developer",
-      image: "/team-members/gaurav.webp",
-      linkedin: "https://www.linkedin.com/in/gaurav-shrivastav-649b852a2/",
+      name: "Rohan",
+      role: "Back  End Developer",
+      image: "/team-members/rohan.webp",
     },
-    {
-      name: "Nishant",
-      role: "Front End Intern",
-      image: "/team-members/nishant.webp",
-      linkedin: "https://www.linkedin.com/in/nishant-kumar-193a0633a/",
-    },
+    // {
+    //   name: "Anshu Shyanda",
+    //   role: "Graphic Designer",
+    //   image: "/team-members/nishant.webp",
+    // },
+    // {
+    //   name: "Nishant",
+    //   role: "Digital Marketer",
+    //   image: "/team-members/nishant.webp",
+    // },
+    // {
+    //   name: "Dhruv Prajapati",
+    //   role: "Digital Marketer",
+    //   image: "/team-members/nishant.webp",
+    // },
   ];
   return (
     <main>
@@ -194,7 +194,7 @@ function About() {
         </div>
       </section>
 
-      <section className="team-area py-12 px-6 max-md:py-2 max-md:px-3">
+      {/* <section className="team-area py-12 px-6 max-md:py-2 max-md:px-3">
         <div className="container mx-auto text-center">
           <div className="text-center mb-10">
             <h5 className="text-yellow-500 text-lg uppercase">
@@ -206,10 +206,10 @@ function About() {
               to deliver innovative digital marketing solutions that elevate
               your brand.
             </p>
-          </div>
+          </div> */}
 
           {/* Slider */}
-          <Slider {...settings} ref={sliderRef}>
+          {/* <Slider {...settings} ref={sliderRef}>
             {teamMembers.map((member, index) => (
               <div key={index} className="flex-shrink-0 p-4">
               <div className="bg-white shadow-lg rounded-lg text-center pb-5 overflow-hidden">
@@ -229,10 +229,10 @@ function About() {
             </div>
             
             ))}
-          </Slider>
+          </Slider> */}
 
           {/* Navigation Buttons */}
-          <div className="flex justify-center  mt-8">
+          {/* <div className="flex justify-center  mt-8">
             <button
               onClick={handlePrev}
               className="text-3xl rounded text-slate-600 hover:text-slate-950"
@@ -250,7 +250,7 @@ function About() {
             </button>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="p-10 flex max-lg:block max-md:p-4">
         <div className="w-1/2 max-lg:w-full">

@@ -37,9 +37,10 @@ function Home() {
   const handleMouseOut = () => {
     setHoveredId(null);
   };
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, []);
+  
+  // useEffect(() => {
+  //   window.scrollTo({ top: 0, behavior: "smooth" });
+  // }, []);
 
   const [activeTab, setActiveTab] = useState("SEO");
   const handleTabClick = (service) => {
@@ -60,7 +61,7 @@ function Home() {
               muted
               preload="auto"
               poster="/fallback_img.png"
-              className="w-full h-full object-cover"
+              className="w-full h-[100vh] object-cover"
             >
               <source src={video} type="video/mp4" />
               Your browser does not support the video tag.
@@ -71,14 +72,14 @@ function Home() {
 
           {/* Content */}
           <div className="relative flex flex-col md:flex-row py-[80px] items-center justify-center h-full text-white">
-            <div className="text-white p-8 md:w-1/2">
-              <h2 className="text-[#fb9c24] text-lg font-semibold ">
+            <div className="text-white p-8 max-md:px-6 md:w-1/2">
+              <h2 className="text-[#fb9c24] text-lg max-md:text-base font-semibold ">
                 GET STARTED WITH US
               </h2>
-              <h1 className="text-5xl font-bold mt-2">
+              <h1 className="text-5xl max-md:text-4xl font-bold mt-2">
                 Grow Smarter, Not Harder
               </h1>
-              <p className="mt-4 text-lg w-[80%]">
+              <p className="mt-4 text-lg w-[80%] max-md:leading-6">
                 Partner with experts who ensure your business connects, the
                 right audience and thrives faster.
               </p>
@@ -118,7 +119,7 @@ function Home() {
               <h1 className="text-[42px] font-semibold mb-4 mt-0 leading-[4rem] max-lg:text-[36px] max-lg:leading-[3rem]">
                 Hey, We're A Team Of Creators
               </h1>
-              <p className="leading-8 w-[95%] text-[17px] max-lg:w-[100%] max-lg:text-[14px]">
+              <p className="leading-8 w-[95%] text-[17px] max-lg:w-[100%] max-md:leading-6 max-lg:text-[14px]">
                 At BTJ ALPHA TECHNOLOGY PVT LTD, we’re a dynamic team of
                 creators who breathe life into technology. Passionate about
                 innovation, we design and develop tailored software and digital
@@ -132,24 +133,24 @@ function Home() {
                 </Link>
               </p>
             </div>
-            <div className="flex gap-10 mt-5 justify-between w-[95%] max-lg:w-[100%]">
+            <div className="flex gap-10 max-md:gap-4 mt-5 justify-between w-[95%] max-lg:w-[100%]">
               <div>
-                <h1 className="text-[38px] font-semibold max-md:text-[40px]">
+                <h1 className="text-[38px] font-semibold max-md:text-[30px]">
                   50+
                 </h1>
-                <p className="text-[18px]">Employees</p>
+                <p className="text-[18px] max-md:text-[14px]">Employees</p>
               </div>
               <div>
-                <h1 className="text-[38px] font-semibold max-md:text-[40px]">
+                <h1 className="text-[38px] font-semibold max-md:text-[30px]">
                   378+
                 </h1>
-                <p className="text-[18px]">Completed Projects</p>
+                <p className="text-[18px] max-md:text-[14px]">Completed Projects</p>
               </div>
               <div>
-                <h1 className="text-[38px] font-semibold max-md:text-[40px]">
+                <h1 className="text-[38px] font-semibold max-md:text-[30px]">
                   326+
                 </h1>
-                <p className="text-[18px]">Trusted Customers</p>
+                <p className="text-[18px] max-md:text-[14px]">Trusted Customers</p>
               </div>
             </div>
           </div>
@@ -160,17 +161,17 @@ function Home() {
         {/* Services Section Start here */}
 
         <div className="flex flex-col text-center">
-          <h1 className="text-[3rem] font-semibold mb-4 max-md:text-[2.8rem]">
+          <h1 className="text-[3rem] font-semibold mb-4 max-md:text-[2.5rem]">
             Areas of Expertise
           </h1>
-          <p className="text-[1.5rem] font-medium mb-4">
+          <p className="text-[1.5rem] max-md:text-[1.3rem] max-md:px-1 font-medium mb-4">
             #1 Affordable{" "}
             <span className="text-[#fb9c24]">
               Digital Marketing Agency In India
             </span>{" "}
             - An Extended Team
           </p>
-          <p className="p-3 w-[77%] m-auto text-[1.1rem] max-md:w-[100%]">
+          <p className="p-3 max-md:px-1 w-[77%] m-auto text-[1.1rem] max-md:w-[100%]">
             BTJ ALPHA TECHNOLOGY PVT LTD is a professionally managed full
             service web design & development company in Mumbai, India. Since
             2005, we have been helping businesses in India, UK, Canada,
@@ -228,7 +229,7 @@ function Home() {
             {/* <div className="absolute inset-0 bg-black opacity-50"></div> */}
           </div>
           <div className="relative flex flex-col m-10 max-lg:m-2">
-            <h1 className="self-center text-[50px] font-semibold mb-5 mt-10">
+            <h1 className="self-center text-[50px] max-md:text-[40px] font-semibold mb-5 max-md:mb-1 mt-10">
               About Us
             </h1>
             <div className="flex max-lg:flex-col-reverse">
@@ -299,7 +300,7 @@ function Home() {
         <div className="m-16 max-lg:m-2 ">
           <div className="flex justify-between items-center max-lg:block ">
             <div className="w-[70%] max-lg:w-[100%]">
-              <h1 className="text-[2.5rem] font-semibold mb-4 max-md:text-[2.8rem]">
+              <h1 className="text-[2.5rem] font-semibold mb-4 max-md:text-[2rem]">
                 Digital Marketing Services
               </h1>
               <p className="text-[1.1rem] mb-6">
@@ -354,7 +355,7 @@ function Home() {
                     className="w-[40%] rounded-tl-[150px] mr-8 max-md:w-[100%] max-md:mb-5"
                   />
                   <div className="w-[60%] max-md:w-[100%]">
-                    <h2 className="text-[2rem] font-semibold mb-3">
+                    <h2 className="text-[2rem] max-md:text-[1.8rem] font-semibold mb-3">
                       Search Engine Optimization
                     </h2>
                     <h4 className="text-[1.2rem] font-semibold mb-3">
@@ -387,7 +388,7 @@ function Home() {
                     className="w-[40%] rounded-tl-[150px] mr-8 max-md:w-[100%] max-md:mb-5"
                   />
                   <div className="w-[60%] max-md:w-[100%]">
-                    <h2 className="text-[2rem] font-semibold mb-3">
+                    <h2 className="text-[2rem] max-md:text-[1.8rem] font-semibold mb-3">
                       Social Media Optimization
                     </h2>
                     <h4 className="text-[1.2rem] font-semibold mb-3">
@@ -425,7 +426,7 @@ function Home() {
                     className="w-[40%] rounded-tl-[150px] mr-8 max-md:w-[100%] max-md:mb-5"
                   />
                   <div className="w-[60%] max-md:w-[100%]">
-                    <h2 className="text-[2rem] font-semibold mb-3">
+                    <h2 className="text-[2rem] max-md:text-[1.8rem] font-semibold mb-3">
                       Content Marketing
                     </h2>
                     <h4 className="text-[1.2rem] font-semibold mb-3">
@@ -464,7 +465,7 @@ function Home() {
                     className="w-[40%] rounded-tl-[150px] mr-8 max-md:w-[100%] max-md:mb-5"
                   />
                   <div className="w-[60%] max-md:w-[100%]">
-                    <h2 className="text-[2rem] font-semibold mb-3">
+                    <h2 className="text-[2rem] max-md:text-[1.8rem] font-semibold mb-3">
                       PPC Management Services
                     </h2>
                     <h4 className="text-[1.2rem] font-semibold mb-3">

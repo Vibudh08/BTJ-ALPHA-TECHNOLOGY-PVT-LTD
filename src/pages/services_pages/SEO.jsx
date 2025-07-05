@@ -32,7 +32,7 @@ function SEO() {
     <main>
       {/* Banner section start here */}
 
-      <section className="flex flex-wrap justify-between items-center p-10 max-md:px-1 bg-[#0A192F] text-white mt-[75px] pt-20 pb-28">
+      <section className="flex flex-wrap justify-between items-center p-10 max-md:px-1 bg-[#0A192F] text-white mt-[65px] pt-20 pb-28">
         {/* Content Section */}
         <div className="w-full lg:w-[45%] mb-8 lg:mb-0 px-4 ml-5 max-lg:ml-0">
           <p className="text-lg lg:text-xl mb-6 max-md:mb-1">

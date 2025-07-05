@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { IoClose } from "react-icons/io5";
 import { FiArrowRightCircle } from "react-icons/fi";
@@ -7,8 +7,17 @@ import { IoIosArrowDown } from "react-icons/io";
 const Header = () => {
   const [show, setShow] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  
+  const [scrolled, setScrolled] = useState(false); // 👈 add this line
   const handleClick = () => setShow(!show);
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10); // blur starts after 10px scroll
+    };
 
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   const menuItems = (
     <ul className=" flex-col gap-6  flex text-lg font-semibold md:flex-row md:items-center md:gap-8">
       <Link to="/">
@@ -216,7 +225,18 @@ const Header = () => {
       </div>
 
       {/* Header */}
-      <main className=" fixed top-0 left-0 z-50 w-full pb-[1px] pt-[1px] bg-white max-md:bg-transparent shadow-md ">
+      
+      <main
+  className={`fixed top-0 left-0 z-50 w-full transition-all duration-300
+    ${
+      scrolled
+        ? "bg-white/20 backdrop-blur-md shadow-md border-b border-white/30"
+        : "bg-white shadow-md"
+    }
+    md:bg-white md:backdrop-blur-none`}
+>
+
+
         <div className="w-[95%] max-md:w-full px-4 flex justify-between items-center">
           {/* Mobile Menu Icon */}
 
@@ -224,7 +244,7 @@ const Header = () => {
           <Link to="/">
             <img
               src="/btlogo.png"
-              className="w-[70px] max-md:[60px] ml-8 max-md:ml-0  object-cover"
+              className="w-[70px] max-md:w-[60px] ml-8 max-md:ml-0  object-cover"
               alt="Admirer Logo"
             />
           </Link>

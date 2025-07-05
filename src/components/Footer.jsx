@@ -10,52 +10,110 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer
-  className="text-white pt-[110px] pb-[40px] relative overflow-hidden"
-  style={{ backgroundImage: "url('/footer-bgimage2.jpg')" }}
->
+      className="text-white pt-[110px] pb-[40px] relative overflow-hidden"
+      style={{ backgroundImage: "url('/footer-bgimage2.jpg')" }}
+    >
       <div className="relative z-10 container mx-auto w-[90%] max-md:w-[95%] px-4">
         <div className="flex flex-wrap justify-between mb-8 max-md:mb-0">
           {/* Left: Logo & Description */}
           <div className="w-full md:w-[30%] mb-10 mt-[-40px]">
-            <img src="logo.jpg" alt="" className="w-[90px] mb-6"/>
+            <img src="logo.jpg" alt="" className="w-[90px] mb-6" />
             <p className="text-white/80 font-medium leading-relaxed w-[80%]">
               We’re passionate about helping businesses grow with tailored
               digital solutions driving success, boosting engagement, and
               building your online presence.
             </p>
             <div className="flex items-center gap-4 mt-6 text-white text-xl">
-              <FaInstagram />
+              <a
+                href="https://www.instagram.com/btjalphatechnology/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:scale-110"
+              >
+                <FaInstagram />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/tanya-gupta-bb598834b/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:scale-110"
+              >
               <FaLinkedinIn />
-              <ImFacebook />
-              <FaWhatsapp />
-              <FaPhoneAlt />
+              </a>
+              <a
+                href="https://www.facebook.com/btj.alpha"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:scale-110"
+              >
+                <ImFacebook />
+              </a>
+
+              {/* <FaWhatsapp /> */}
+
+              {/* <FaPhoneAlt /> */}
             </div>
           </div>
 
           {/* Useful Links */}
           <div className="w-full md:w-[20%] mb-10">
             <h3 className="text-2xl font-semibold mb-4">Useful Links</h3>
-            <ul className="space-y-2 text-white/80 text-base">
+            <ul className="space-y-2 max-md:space-y-0 max-md:gap-2 text-white/80 text-base max-md:grid max-md:grid-cols-2">
               <li>
-                <Link to="/" className="hover:text-white transition-all duration-200">Home</Link>
+                <Link
+                  to="/"
+                  className="hover:text-white transition-all duration-200 "
+                >
+                  Home
+                </Link>
               </li>
               <li>
-                <Link to="/about" className="hover:text-white transition-all duration-200">About</Link>
+                <Link
+                  to="/about"
+                  className="hover:text-white transition-all duration-200"
+                >
+                  About
+                </Link>
               </li>
               <li>
-                <Link to="/portfolio  " className="hover:text-white transition-all duration-200">Portfolio</Link>
+                <Link
+                  to="/portfolio  "
+                  className="hover:text-white transition-all duration-200"
+                >
+                  Portfolio
+                </Link>
               </li>
               <li>
-                <Link to="/bulk-sms" className="hover:text-white transition-all duration-200">Bulk SMS</Link>
+                <Link
+                  to="/bulk-sms"
+                  className="hover:text-white transition-all duration-200"
+                >
+                  Bulk SMS
+                </Link>
               </li>
               <li>
-                <Link to="/privacy-policy" className="hover:text-white transition-all duration-200">Privacy Policy</Link>
+                <Link
+                  to="/privacy-policy"
+                  className="hover:text-white transition-all duration-200"
+                >
+                  Privacy Policy
+                </Link>
               </li>
               <li>
-                <Link to="/terms-condition" className="hover:text-white transition-all duration-200">Terms & Conditions</Link>
+                <Link
+                  to="/terms-condition"
+                  className="hover:text-white transition-all duration-200"
+                >
+                  Terms & Conditions
+                </Link>
               </li>
               <li>
-                <Link to="/contact" className="hover:text-white transition-all duration-200">Contact</Link>
+                <Link
+                  to="/contact"
+                  className="hover:text-white transition-all duration-200"
+                >
+                  Contact
+                </Link>
               </li>
             </ul>
           </div>
@@ -158,9 +216,7 @@ const Footer = () => {
 
             {/* Right: Legal Info */}
             <div>
-              <h4 className="text-xl font-semibold mb-4">
-                Legal Information:
-              </h4>
+              <h4 className="text-xl font-semibold mb-4">Legal Information:</h4>
               <p>
                 <strong>Company Name:</strong> BTJ Alpha Technology Private
                 Limited
