@@ -381,7 +381,7 @@ function WebsiteDevelopment() {
           SEO- <span className="text-blue-800">Friendly Web Design</span>
         </h2>
         <p className="text-gray-600 max-w-3xl mx-auto mb-12">
-          our clients nurture a passion for digital growth, and it shows in
+          Our clients nurture a passion for digital growth, and it shows in
           their success. Brands that believe in outperforming the market love to
           associate with us. Greatest success lies in the success.
         </p>

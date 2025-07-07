@@ -9,7 +9,7 @@ import figma from "../assets/images/Home-page/icons/figma.png";
 import illustrator from "../assets/images/Home-page/icons/illustrator.png";
 import js from "../assets/images/Home-page/icons/js.png";
 import laravel from "../assets/images/Home-page/icons/laravel.png";
-import magento from "../assets/images/Home-page/icons/magento.png";
+import shopify from "../assets/images/Home-page/icons/shopify.png";
 import mysql from "../assets/images/Home-page/icons/mysql.png";
 import photoshop from "../assets/images/Home-page/icons/photoshop.png";
 import wordpress from "../assets/images/Home-page/icons/wordpress.png";
@@ -25,7 +25,7 @@ const technologies = [
   { name: "JavaScript", icon: js },
   { name: "CodeIgniter", icon: ci },
   { name: "Laravel", icon: laravel },
-  { name: "Magento", icon: magento },
+  { name: "Shopify", icon: shopify },
   { name: "Angular", icon: angular },
   { name: "CSS", icon: css },
   { name: "Photoshop", icon: photoshop },

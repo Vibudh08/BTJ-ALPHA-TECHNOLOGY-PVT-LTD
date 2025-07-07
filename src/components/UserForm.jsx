@@ -95,12 +95,12 @@ const UserForm = () => {
             )}
           </div>
 
-          <div className="w-1/2">
+          <div className="w-1/2 ">
             <select
               name="service"
               value={selected}
               onChange={(e) => setSelected(e.target.value)}
-              className={`w-full p-2 border rounded-lg 
+              className={`w-full h-[50px] p-2 border rounded-lg 
                           ${selected === "" ? "text-gray-500" : "text-black"} 
                           bg-white focus:outline-none`}
               required

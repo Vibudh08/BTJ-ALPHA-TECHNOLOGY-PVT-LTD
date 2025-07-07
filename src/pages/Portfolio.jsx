@@ -1,7 +1,5 @@
 import { useEffect } from "react";
 
-
-
 function Portfolio() {
   const images = [
     { src: "/admirer.png", alt: "Portfolio 1" },

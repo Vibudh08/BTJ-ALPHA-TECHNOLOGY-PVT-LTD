@@ -38,9 +38,9 @@ function Home() {
     setHoveredId(null);
   };
   
-  // useEffect(() => {
-  //   window.scrollTo({ top: 0, behavior: "smooth" });
-  // }, []);
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
 
   const [activeTab, setActiveTab] = useState("SEO");
   const handleTabClick = (service) => {
