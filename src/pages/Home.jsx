@@ -25,8 +25,6 @@ import { RiArrowRightSLine } from "react-icons/ri";
 import { useEffect } from "react";
 import UserForm from "../components/UserForm";
 
-
-
 function Home() {
   const [hoveredId, setHoveredId] = useState(null);
 
@@ -37,7 +35,7 @@ function Home() {
   const handleMouseOut = () => {
     setHoveredId(null);
   };
-  
+
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
@@ -94,7 +92,7 @@ function Home() {
               <h2 className="text-2xl font-semibold mb-6 text-black flex justify-center text-center">
                 Get A Free Consultation With Our Marketing Expert
               </h2>
-              <UserForm/>
+              <UserForm />
             </div>
           </div>
         </div>
@@ -144,13 +142,17 @@ function Home() {
                 <h1 className="text-[38px] font-semibold max-md:text-[30px]">
                   378+
                 </h1>
-                <p className="text-[18px] max-md:text-[14px]">Completed Projects</p>
+                <p className="text-[18px] max-md:text-[14px]">
+                  Completed Projects
+                </p>
               </div>
               <div>
                 <h1 className="text-[38px] font-semibold max-md:text-[30px]">
                   326+
                 </h1>
-                <p className="text-[18px] max-md:text-[14px]">Trusted Customers</p>
+                <p className="text-[18px] max-md:text-[14px]">
+                  Trusted Customers
+                </p>
               </div>
             </div>
           </div>
@@ -173,11 +175,11 @@ function Home() {
           </p>
           <p className="p-3 max-md:px-1 w-[77%] m-auto text-[1.1rem] max-md:w-[100%]">
             BTJ ALPHA TECHNOLOGY PVT LTD is a professionally managed full
-            service web design & development company in Noida, India. We 
-            have been helping businesses to adapt and grow in an ever-changing 
-            online world by offering fully functional
-            mobile-friendly responsive, cheap Website Designing, Web
-            Development, App Development, SEO Services, SMM Services etc.
+            service web design & development company in Noida, India. We have
+            been helping businesses to adapt and grow in an ever-changing online
+            world by offering fully functional mobile-friendly responsive, cheap
+            Website Designing, Web Development, App Development, SEO Services,
+            SMM Services etc.
           </p>
           <div className="m-10 grid grid-cols-3 gap-0 relative max-md:grid-cols-1 max-md:m-2">
             <div className="absolute inset-0">
@@ -202,9 +204,9 @@ function Home() {
                   <>
                     <p className="ml-5 mr-5 text-[1rem]">{item.content}</p>
                     <Link to={item.url}>
-                    <button className="border w-[150px] h-[50px] self-center mt-4 text-[1.2rem] bg-white text-black hover:bg-[#3979f8] hover:text-white">
-                      Learn More
-                    </button>
+                      <button className="border w-[150px] h-[50px] self-center mt-4 text-[1.2rem] bg-white text-black hover:bg-[#3979f8] hover:text-white">
+                        Learn More
+                      </button>
                     </Link>
                   </>
                 )}
@@ -238,10 +240,9 @@ function Home() {
                 </h1>
                 <p className="text-[18px] mb-6">
                   BTJ ALPHA TECHNOLOGY PVT LTD is a professionally managed full
-                  service web design & development company in Noida, India.
-                  We 
-            have been helping businesses to adapt and grow in an ever-changing 
-            online world.
+                  service web design & development company in Noida, India. We
+                  have been helping businesses to adapt and grow in an
+                  ever-changing online world.
                 </p>
                 <div>
                   <div className="flex border p-5 rounded-xl bg-white mb-5">
@@ -316,7 +317,7 @@ function Home() {
           <hr className="h-[1.5px] bg-black" />
           <div className="mt-10 flex max-lg:block ">
             <div className="leading-10 ml-6 text-[18px] w-[25%] font-semibold max-lg:w-[100%] max-lg:ml-2 flex flex-col justify-start items-start mb-5  ">
-              <button 
+              <button
                 className="flex items-center "
                 onClick={() => handleTabClick("SEO")}
               >
@@ -614,7 +615,9 @@ function Home() {
                   Social Media Marketing (SMM)
                 </h3>
                 <p className="text-gray-600 mt-2">
-                Boost your brand visibility and engagement across platforms like Instagram, Facebook, and LinkedIn. Reach your target audience with tailored content and paid campaigns.
+                  Boost your brand visibility and engagement across platforms
+                  like Instagram, Facebook, and LinkedIn. Reach your target
+                  audience with tailored content and paid campaigns.
                 </p>
               </div>
             </div>
